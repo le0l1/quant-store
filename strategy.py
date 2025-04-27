@@ -1,55 +1,44 @@
 import pandas as pd
 import logging
-from typing import List, Dict, Optional, Any
 from datetime import datetime
 
-# 从其他模块导入必要的类
-from trader.base.event import Event, MarketEvent, SignalEvent, FillEvent, OrderEvent, TimerEvent
-from trader.base.event_engine import EventEngine
-from trader.base.data_handler import IDataHandler
-from trader.base.portfolio import Position # Import the Position dataclass
-from trader.base.strategy import IStrategy # Import the IStrategy base class
-from trader.base.portfolio import IPortfolioManager # Import the PortfolioManager interface
-
 logger = logging.getLogger(__name__)
+
+from trader.base import IStrategy
 
 # --- 示例策略：适配新的基类 ---
 class MovingAverageCrossStrategy(IStrategy):
     """
     移动平均线交叉策略示例，适配 Revision 2 的 IStrategy。
     """
-    def __init__(self, strategy_id: str, symbols: List[str], event_engine: EventEngine,
-                 data_handler: IDataHandler, portfolio_manager: Optional[IPortfolioManager], # 接收 PM
-                 short_window: int = 10, long_window: int = 30):
-        # 将所有依赖项传递给父类
-        super().__init__(strategy_id, symbols, event_engine, data_handler, portfolio_manager)
-        self.short_window = short_window
-        self.long_window = long_window
-
+    # 策略参数声明
+    def _validate_parameters(self):
+        short_window = self.params.get('short_window') # Use .get for safety
+        long_window = self.params.get('long_window')
+        if short_window is None or long_window is None:
+            raise ValueError("Missing required parameter(s): 'short_window' or 'long_window'")
         if short_window >= long_window:
-            raise ValueError("短期窗口必须小于长期窗口")
-
-        # !! 不再需要内部状态 self.symbol_invested_status !!
-        # 我们现在依赖 self.get_position_size()
-
-        logger.info(f"移动平均线交叉策略 '{self.strategy_id}' 初始化完成。")
+            raise ValueError("Short window must be smaller than long window")
 
 
-    def on_market_data(self, event: MarketEvent):
+    def on_market_data(self, event):
         symbol = event.symbol
         signal_time = event.timestamp
-
         # --- 1. 获取历史数据 (使用新方法) ---
-        required_bars = self.long_window + 1
+        short_window = self.params.get('short_window')
+        long_window = self.params.get('long_window')
+
+        required_bars = long_window + 1
         bars_df = self.get_history(symbol, N=required_bars) # 使用基类方法
+
 
         if bars_df is None or len(bars_df) < required_bars: return
 
         # --- 2. 计算指标 ---
         try:
             close_prices = bars_df['close'].astype(float)
-            short_sma = close_prices.rolling(window=self.short_window).mean()
-            long_sma = close_prices.rolling(window=self.long_window).mean()
+            short_sma = close_prices.rolling(window=short_window).mean()
+            long_sma = close_prices.rolling(window=long_window).mean()
             current_short = short_sma.iloc[-1]
             previous_short = short_sma.iloc[-2]
             current_long = long_sma.iloc[-1]

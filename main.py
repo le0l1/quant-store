@@ -30,8 +30,8 @@ config = {
     'strategy_config': {
         'class': MovingAverageCrossStrategy,  # 保持类名不变，确保导入路径已修正,
         'params': {
-            'short_window': 15,
-            'long_window': 45
+            'short_window': 20,
+            'long_window': 60
         }
     },
 
