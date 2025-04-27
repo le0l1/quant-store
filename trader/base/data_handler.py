@@ -5,8 +5,8 @@ from collections import defaultdict, deque
 import logging
 from typing import List, Optional, Dict
 
-from event import MarketEvent, Event # Import necessary events
-from event_engine import EventEngine # Needed to register handler
+from trader.base.event import MarketEvent, Event  # 修正后的正确导入路径
+from trader.base.event_engine import EventEngine  # 统一使用绝对路径
 
 logger = logging.getLogger(__name__)
 

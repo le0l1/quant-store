@@ -1,12 +1,13 @@
 import logging
 from datetime import datetime
+import asyncio
 
 # 从框架导入 Backtester
-from backtester import Backtester
+from trader.backtest.backtester import Backtester
 # 从策略文件导入用户的策略类
 from strategy import MovingAverageCrossStrategy
 # 从数据源文件导入使用的数据源类
-from akshare_data_source import AkshareDataSource
+from trader.data_source.csv_data_source import CSVDataSource
 
 
 # --- 用户配置 (简化版) ---
@@ -19,12 +20,15 @@ config = {
 
     # === 数据源配置 (必须) ===
     'data_source_config': {
-        'class': AkshareDataSource,
+        'class': CSVDataSource,  # 注意：此处无需修改类名，只需确认导入路径正确,
+        'params': {
+            'file_path': 'etf.csv'
+        }
     },
 
     # === 策略配置 (必须) ===
     'strategy_config': {
-        'class': MovingAverageCrossStrategy,
+        'class': MovingAverageCrossStrategy,  # 保持类名不变，确保导入路径已修正,
         'params': {
             'short_window': 15,
             'long_window': 45
@@ -51,7 +55,7 @@ if __name__ == "__main__":
     # (Dummy data generation code can remain here)
 
     backtester = Backtester(config)
-    results = backtester.run()
+    results = asyncio.run(backtester.run())
 
     # (Result printing code remains the same)
     print("\n--- Backtest Summary ---")

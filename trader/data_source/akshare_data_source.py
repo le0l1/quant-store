@@ -1,7 +1,6 @@
-from data_source import IDataSource
-import akshare as ak
-from event_engine import EventEngine
-from event import MarketEvent
+from trader.base.data_source import IDataSource
+from trader.base.event_engine import EventEngine
+from trader.base.event import MarketEvent
 from typing import List, Optional
 import pandas as pd
 from datetime import datetime
