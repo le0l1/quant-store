@@ -9,8 +9,7 @@ from trader.base.event_engine import EventEngine
 
 logger = logging.getLogger(__name__)
 
-# --- Redesigned Execution Handler Interface ---
-class IExecutionHandler(ABC):
+class Execution(ABC):
     """
     执行处理器接口 (抽象基类) - Redesigned。
     提供事件分发机制，子类需实现核心的 handle_order 方法。

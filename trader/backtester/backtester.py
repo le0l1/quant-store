@@ -6,14 +6,10 @@ from datetime import datetime
 from typing import Dict, Any, Type, Optional, List, Tuple
 import importlib
 from abc import ABC, abstractmethod
-import asyncio # <--- Import asyncio
+import asyncio 
 
-# Import framework components
-# --- Import the Async Event Engine ---
 from trader.base.event_engine import EventEngine # 修正后的正确导入路径
-# --- Event imports remain the same ---
 from trader.base.event import Event, SystemEvent, FillEvent, PortfolioUpdateEvent
-# --- Other component imports remain the same ---
 from trader.base import IDataSource,IStrategy,IPortfolioManager,IExecutionHandler
 from trader.backtest.execution import BacktestExecutionHandler
 from trader.backtest.portfolio import BasicPortfolioManager
@@ -21,7 +17,7 @@ from trader.base.data_handler import BasicDataHandler, IDataHandler
 
 logger = logging.getLogger(__name__)
 
-# --- Performance Analyzer Interface & Basic Implementation ---
+# --- Performance Analyzer Interfacfrom trader.base.event import Evene & Basic Implementation ---
 # (This part remains unchanged conceptually, but handlers might need async)
 class IPerformanceAnalyzer(ABC):
     """性能分析器接口。"""
@@ -190,7 +186,6 @@ class Backtester:
 
     # --- Make run method asynchronous ---
     async def run(self) -> Dict[str, Any]:
-        """执行完整的的回测流程 (使用 asyncio 同步逻辑)。"""
         self._start_time = time.time()
         logger.info(f"========== Running Async Backtest (Mode: {self.mode}) ==========")
 
@@ -226,12 +221,6 @@ class Backtester:
 
         self._print_summary(self._results)
         return self._results
-
-    def get_valid_data_stream(self):
-        """Helper to get the data stream."""
-        # (Remains the same if data source yields sync)
-        if not self._data_source: raise RuntimeError("DataSource not initialized.")
-        return self._data_source.get_stream()
 
     def _collect_results(self) -> Dict[str, Any]:
         """Collects results from portfolio manager and performance analyzer."""

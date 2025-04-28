@@ -8,12 +8,12 @@ import logging
 
 from trader.base.event import Event, FillEvent, MarketEvent, PortfolioUpdateEvent
 from trader.base.event_engine import EventEngine
-from trader.base.portfolio import IPortfolioManager, Position
+from trader.base.portfolio import PortfolioManager, Position
 
 logger = logging.getLogger(__name__)
 
 # --- Basic Portfolio Manager Implementation ---
-class BasicPortfolioManager(IPortfolioManager):
+class BacktestPortfolioManager(PortfolioManager):
     """
     基础的投资组合管理器实现。
     处理 FillEvent 更新持仓和现金。

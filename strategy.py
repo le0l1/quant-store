@@ -4,10 +4,10 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-from trader.base import IStrategy
+from trader.base import Strategy
 
 # --- 示例策略：适配新的基类 ---
-class MovingAverageCrossStrategy(IStrategy):
+class MovingAverageCrossStrategy(Strategy):
     """
     移动平均线交叉策略示例，适配 Revision 2 的 IStrategy。
     """

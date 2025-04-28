@@ -1,4 +1,4 @@
-from trader.base.data_source import IDataSource
+from trader.base.datafeed import DataFeed
 from trader.base.event_engine import EventEngine
 from trader.base.event import MarketEvent
 from typing import List, Optional
@@ -8,7 +8,7 @@ from datetime import datetime
 import logging
 logger = logging.getLogger(__name__)
 
-class AkshareDataSource(IDataSource):
+class AkshareDataFeed(DataFeed):
     def __init__(self, event_engine: EventEngine, symbols: List[str],
                  start_date: Optional[datetime] = None,
                  end_date: Optional[datetime] = None):

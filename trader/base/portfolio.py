@@ -23,7 +23,7 @@ class Position:
     unrealized_pnl: float = 0.0     # Profit/Loss if position were closed now
 
 # --- Portfolio Manager Interface ---
-class IPortfolioManager(ABC):
+class PortfolioManager(ABC):
     """
     投资组合管理器接口 (抽象基类)。
     """

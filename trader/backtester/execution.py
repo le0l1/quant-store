@@ -2,14 +2,11 @@ import logging
 from typing import List, Optional, Dict
 from trader.base.event import Event, MarketEvent, OrderEvent, FillEvent
 from trader.base.event_engine import EventEngine
-from trader.base.execution import IExecutionHandler
+from trader.base.execution import Execution
 
 logger = logging.getLogger(__name__)
 
-class BacktestExecutionHandler(IExecutionHandler):
-    """
-    回测执行处理器 (适配新的 IExecutionHandler)。
-    """
+class BacktestExecution(Execution):
     def __init__(self,
                  event_engine: EventEngine,
                  commission_rate: float = 0.0, # Default to 0
@@ -32,10 +29,6 @@ class BacktestExecutionHandler(IExecutionHandler):
 
     # Implement the mandatory handle_order method
     def handle_order(self, order_event: OrderEvent):
-        """
-        处理新订单：将其暂存，等待下一个市场数据事件。
-        (Previously _handle_new_order logic)
-        """
         symbol = order_event.symbol
 
         if symbol not in self._pending_orders:
@@ -45,10 +38,6 @@ class BacktestExecutionHandler(IExecutionHandler):
 
     # Implement the optional handle_market_data method
     def handle_market_data(self, market_event: MarketEvent):
-        """
-        处理市场数据：执行对应标的的待处理订单。
-        (Previously _handle_market_data logic)
-        """
         symbol = market_event.symbol
         timestamp = market_event.timestamp
 
@@ -72,17 +61,12 @@ class BacktestExecutionHandler(IExecutionHandler):
                     fill_price_adjusted = fill_price_base - slippage_amount
                 else: logger.error(f"未知订单方向: {order.direction}"); continue
 
-                # Check LMT price condition (Basic Check - could be more complex)
                 if order.order_type == 'LMT' and order.limit_price is not None:
                      if order.direction == 'BUY' and fill_price_adjusted > order.limit_price:
                          logger.warning(f"LMT BUY 订单未成交: 成交价 ${fill_price_adjusted:.4f} > 限价 ${order.limit_price:.4f}. Order: {order}")
-                         # Re-queue or reject? For simplicity, reject here.
-                         # self._pending_orders.setdefault(symbol, []).append(order) # Re-queue example
                          continue # Skip fill generation
                      elif order.direction == 'SELL' and fill_price_adjusted < order.limit_price:
                          logger.warning(f"LMT SELL 订单未成交: 成交价 ${fill_price_adjusted:.4f} < 限价 ${order.limit_price:.4f}. Order: {order}")
-                         # Re-queue or reject? For simplicity, reject here.
-                         # self._pending_orders.setdefault(symbol, []).append(order) # Re-queue example
                          continue # Skip fill generation
 
 
@@ -103,5 +87,3 @@ class BacktestExecutionHandler(IExecutionHandler):
                 self.event_engine.put(fill_event)
             else:
                 logger.warning(f"未支持的订单类型 '{order.order_type}'，订单被忽略: {order}")
-
-        # No need to manage _pending_orders[symbol] deletion, pop handles it
