@@ -17,11 +17,10 @@ from components.execution_handler import SimulatedExecutionHandler # Import Simu
 
 
 # 配置日志
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.CRITICAL, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logging.getLogger("MomentumStrategy").setLevel(logging.DEBUG)
-logging.getLogger("MomentumPortfolio").setLevel(logging.DEBUG)
-logging.getLogger("SimulatedExecutionHandler").setLevel(logging.DEBUG) # Keep DEBUG for execution details
-logging.getLogger("MockDataFeed").setLevel(logging.DEBUG)
+logging.getLogger("components.portfolio").setLevel(logging.DEBUG)
+logging.getLogger("components.execution_handler").setLevel(logging.DEBUG) # Keep DEBUG for execution details
 
 
 logger = logging.getLogger(__name__)
@@ -96,8 +95,8 @@ async def main():
 
     # 3. 创建组件实例并注入 Event Bus
     data_feed = MockDataFeed(bus, market_data=mock_data)
-    strategy = MomentumStrategy(bus, momentum_period=5, default_weight=0.05)
-    portfolio = MomentumPortfolio(bus, initial_cash=100000.0, lot_size=100)
+    strategy = MomentumStrategy(bus, momentum_period=5, default_weight=0.5)
+    portfolio = MomentumPortfolio(bus, initial_cash=100000.0, lot_size=10)
     # --- Add commission and slippage parameters to SimulatedExecutionHandler ---
     # Example: 0.1% commission, 0.05% slippage
     execution_handler = SimulatedExecutionHandler(bus, commission_percent=0.001, slippage_percent=0.0005)
