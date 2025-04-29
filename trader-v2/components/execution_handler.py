@@ -1,4 +1,3 @@
-# components/execution_handler.py
 import logging
 import asyncio
 from datetime import datetime, timezone
@@ -12,6 +11,7 @@ from core.events import OrderEvent, FillEvent, MarketEvent
 logger = logging.getLogger(__name__)
 
 class BaseExecutionHandler(BaseComponent):
+    # ... (BaseExecutionHandler class code remains the same) ...
     """
     Base class for Execution Handlers.
     Responsible for executing orders and publishing FillEvents.
@@ -21,63 +21,50 @@ class BaseExecutionHandler(BaseComponent):
         logger.info(f"{self.__class__.__name__} initialized.")
 
     def _setup_event_handlers(self):
-        """Register execution handler's event handlers."""
         self.event_bus.subscribe(OrderEvent, self._on_order_event)
 
     async def _on_order_event(self, event: OrderEvent):
-        """Internal handler for OrderEvents. Calls the user-defined execution logic."""
         await self.execute_order(event)
 
     async def execute_order(self, order_event: OrderEvent):
-        """
-        This method contains the logic for executing orders.
-        Override this in subclasses (Simulated vs. Broker).
-        """
         logger.debug(f"BaseExecutionHandler received order {order_event.id}. Override execute_order in subclass.")
-        pass # Subclasses must override
+        pass
 
-
-# --- Simulated Execution Handler for Backtesting ---
 
 class SimulatedExecutionHandler(BaseExecutionHandler):
-    """
-    A simulated execution handler for backtesting.
-    It receives OrderEvents and simulates fills based on subsequent MarketEvents.
-    """
-    def __init__(self, event_bus: EventBus):
+    def __init__(self, event_bus: EventBus, commission_percent: float = 0.0, slippage_percent: float = 0.0):
+        """
+        Args:
+            event_bus: The central Event Bus instance.
+            commission_percent: Commission percentage per trade (e.g., 0.001 for 0.1%).
+            slippage_percent: Slippage percentage per trade (e.g., 0.0005 for 0.05%).
+        """
         super().__init__(event_bus)
         self._pending_orders: Dict[str, OrderEvent] = {}
         self._last_market_timestamp: Optional[datetime] = None
-        # --- FIX: Initialize _last_market_prices ---
-        self._last_market_prices: Dict[str, float] = {}
-        # --------------------------------------------
-        logger.info(f"{self.__class__.__name__} initialized.")
+        self._last_market_prices: Dict[str, float] = {} # Store latest market prices for potential fill price reference
+
+        self.commission_percent = commission_percent # Store commission rate
+        self.slippage_percent = slippage_percent     # Store slippage rate
+
+        logger.info(f"{self.__class__.__name__} initialized with commission={self.commission_percent:.4f}, slippage={self.slippage_percent:.4f}.")
+    # -------------------------------------------------------------
 
 
     def _setup_event_handlers(self):
-        """Register simulated execution handler's event handlers."""
         super()._setup_event_handlers()
-
         self.event_bus.subscribe(MarketEvent, self._on_market_event_for_settlement)
 
 
     async def _on_order_event(self, order_event: OrderEvent):
-        """Handles incoming OrderEvents by adding them to pending orders."""
-        logger.debug(f"SimulatedExecutionHandler received OrderEvent {order_event.id} for {order_event.direction} {order_event.quantity} of {order_event.symbol}")
-        # Store the order. It will be processed when the next relevant MarketEvent arrives.
+        logger.debug(f"SimulatedExecutionHandler received OrderEvent {order_event.id}. Adding to pending list.")
         self._pending_orders[order_event.id] = order_event
-        logger.info(f"SimulatedExecutionHandler: Order {order_event.id} added to pending list ({len(self._pending_orders)} pending).")
-        # Note: The base class calls execute_order after receiving the event.
-        # We keep it and use it to add to pending state.
+        # logger.info(f"SimulatedExecutionHandler: Order {order_event.id} added to pending list ({len(self._pending_orders)} pending).")
         await self.execute_order(order_event)
 
 
     async def execute_order(self, order_event: OrderEvent):
-         """Adds the order to the pending list for simulation."""
-         # This method is called by _on_order_event.
-         # The actual simulation happens when _on_market_event_for_settlement is called.
          logger.debug(f"SimulatedExecutionHandler executing (adding to pending) Order: {order_event.id}")
-         # The adding is already done in _on_order_event, nothing more needed here for now.
          pass
 
 
@@ -85,41 +72,65 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
         current_timestamp = market_event.timestamp
         logger.debug(f"SimulatedExecutionHandler received MarketEvent for {market_event.symbol} at {current_timestamp} to check for settlements.")
 
+        # Update the last known price for this symbol regardless of whether it's a new timestep
         self._update_last_price_for_symbol(market_event.symbol, market_event.data)
 
         is_new_time_step = (self._last_market_timestamp is None or current_timestamp > self._last_market_timestamp)
 
+        # Store current timestamp for the next step *before* checking settlements for the *previous* step
+        # self._last_market_timestamp = current_timestamp # Moved update to end
 
 
         if not is_new_time_step:
             logger.debug(f"SimulatedExecutionHandler: Still processing data for timestamp {current_timestamp}. No settlement triggered yet.")
-            return # Wait for the next time step to settle orders from the *previous* step
+            return
 
         # --- New Time Step - Settle Orders ---
-        logger.info(f"SimulatedExecutionHandler: New time step arrived: {current_timestamp}. Checking pending orders for settlement.")
-
-        # IMPORTANT: Get keys before modifying the dictionary during iteration
         orders_to_settle_ids = list(self._pending_orders.keys())
 
-        # Iterate through pending orders and simulate fills using the NEW market data
         for order_id in orders_to_settle_ids:
             order = self._pending_orders.get(order_id)
             if not order:
                  logger.warning(f"SimulatedExecutionHandler: Pending order {order_id} not found during settlement check.")
                  continue
 
-            simulated_fill_price = None
+            # Determine base simulated fill price using the NEW market data
+            # For simplicity, use the 'open' price of the new bar for MARKET orders
+            base_simulated_price = None
             if 'open' in market_event.data:
-                 simulated_fill_price = market_event.data['open']
-            elif 'close' in market_event.data:
-                 simulated_fill_price = market_event.data['close']
+                 base_simulated_price = market_event.data['open']
+            elif 'close' in market_event.data: # Fallback
+                 base_simulated_price = market_event.data['close']
+            # Add logic for LIMIT/STOP orders checking price levels
 
-            if simulated_fill_price is None:
-                 logger.warning(f"SimulatedExecutionHandler: Cannot determine settlement price for {order.symbol} at {current_timestamp}. Order {order.id} remains pending.")
+            if base_simulated_price is None or base_simulated_price <= 0:
+                 logger.warning(f"SimulatedExecutionHandler: Cannot determine valid settlement price for {order.symbol} at {current_timestamp} ({base_simulated_price}). Order {order.id} remains pending.")
+                 continue # Order remains pending
+
+            # --- Apply Slippage ---
+            final_fill_price = base_simulated_price
+            slippage_amount = base_simulated_price * self.slippage_percent
+
+            if order.direction == "BUY":
+                # Slippage increases buy price
+                final_fill_price = base_simulated_price + slippage_amount
+                logger.debug(f"SimulatedExecutionHandler: Applied BUY slippage ({self.slippage_percent:.4f}) of ${slippage_amount:.4f} to {order.id}. Base price ${base_simulated_price:.4f} -> Final price ${final_fill_price:.4f}")
+            elif order.direction == "SELL":
+                # Slippage decreases sell price
+                final_fill_price = base_simulated_price - slippage_amount
+                logger.debug(f"SimulatedExecutionHandler: Applied SELL slippage ({self.slippage_percent:.4f}) of ${slippage_amount:.4f} to {order.id}. Base price ${base_simulated_price:.4f} -> Final price ${final_fill_price:.4f}")
+
+            # Ensure final price is positive after slippage (shouldn't be an issue with typical market data)
+            if final_fill_price <= 0:
+                 logger.warning(f"SimulatedExecutionHandler: Final fill price for {order.symbol} is zero or negative ({final_fill_price}) after slippage. Order {order.id} remains pending.")
                  continue
 
-            # Calculate simulated commission (example: fixed percentage)
-            simulated_commission = order.quantity * simulated_fill_price * 0.001 # 0.1% commission example
+
+            # --- Calculate Commission ---
+            # Commission is based on the final fill price and quantity
+            simulated_commission = final_fill_price * order.quantity * self.commission_percent
+            logger.debug(f"SimulatedExecutionHandler: Calculated commission ({self.commission_percent:.4f}) of ${simulated_commission:.4f} for order {order.id} (Value: ${final_fill_price * order.quantity:.4f})")
+
 
             # Create FillEvent
             fill_event = FillEvent(
@@ -127,34 +138,31 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
                 symbol=order.symbol,
                 direction=order.direction,
                 quantity=order.quantity, # Assume full fill for simplicity
-                price=simulated_fill_price,
-                commission=simulated_commission
+                price=final_fill_price,  # Use the final price after slippage
+                commission=simulated_commission # Use the calculated commission
             )
 
-            logger.info(f"SimulatedExecutionHandler: Settled Order {order.id} with FillEvent {fill_event.id}: {fill_event.direction} {fill_event.quantity} of {fill_event.symbol} at {fill_event.price} (using data at {current_timestamp})")
+            logger.info(f"SimulatedExecutionHandler: Settled Order {order.id} with FillEvent {fill_event.id}: {fill_event.direction} {fill_event.quantity} of {fill_event.symbol} at ${fill_event.price:.4f} (Commission: ${fill_event.commission:.4f}, using data at {current_timestamp})")
 
             # Publish FillEvent
             self.event_bus.publish(fill_event)
 
             # Remove order from pending list
-            if order_id in self._pending_orders: # Check exists before deleting
+            if order_id in self._pending_orders:
                 del self._pending_orders[order_id]
                 logger.debug(f"SimulatedExecutionHandler: Order {order_id} removed from pending list.")
             else:
                  logger.warning(f"SimulatedExecutionHandler: Order {order_id} was already removed from pending list?")
 
 
-        # After processing settlements for the previous step using the current data,
-        # update the last market timestamp to the current timestamp.
-        # This happens *after* the loop.
+        logger.info(f"SimulatedExecutionHandler: Settlement check for {current_timestamp} complete. {len(self._pending_orders)} orders still pending.")
+        # Update the last market timestamp to the current timestamp *after* processing settlements
         self._last_market_timestamp = current_timestamp
-        logger.info(f"SimulatedExecutionHandler: Settlement check for {current_timestamp} complete. {len(self._pending_orders)} orders still pending. Updated last market timestamp to {self._last_market_timestamp}.")
 
 
     def _update_last_price_for_symbol(self, symbol: str, data: Dict[str, Any]):
+        # ... (This method remains the same) ...
         """Helper to store latest prices."""
-        # This method is called for *every* MarketEvent, regardless of time step,
-        # to keep the most recent price updated.
         price = None
         if 'close' in data:
              price = data['close']
@@ -163,6 +171,5 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
         elif 'open' in data: # Might store open too
              price = data['open']
 
-        if price is not None:
+        if price is not None and price > 0: # Ensure price is valid and positive
             self._last_market_prices[symbol] = price
-            # logger.debug(f"SimulatedExecutionHandler updated last price for {symbol}: {self._last_market_prices[symbol]}")

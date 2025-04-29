@@ -29,9 +29,9 @@ class SignalEvent(Event):
     # 定义子类特有的非默认字段
     symbol: str      # 交易标的
     direction: str   # "LONG", "SHORT", "FLAT"
+    weight: Optional[float] = None # 仓位占比
 
     # quantity: Optional[int] = None # 数量
-    # weight: Optional[float] = None # 占比
     type: str = "SIGNAL"
 
 
