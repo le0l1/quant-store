@@ -1,0 +1,1112 @@
+2025-04-29 15:21:06,422 - root - INFO - 测试日志输出到文件
+2025-04-29 15:21:06,422 - __main__ - DEBUG - Starting the trading framework in BACKTEST mode...
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Created subscription list for event type: SignalEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Subscribed handler _on_signal_event to event type: SignalEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Created subscription list for event type: FillEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Subscribed handler _on_fill_event to event type: FillEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Created subscription list for event type: MarketEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Subscribed handler _on_market_event_for_price to event type: MarketEvent
+2025-04-29 15:21:06,426 - components.portfolio - INFO - MomentumPortfolio initialized with $100000.00 cash.
+2025-04-29 15:21:06,426 - components.portfolio - INFO - MomentumPortfolio initialized with lot_size=100.
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Subscribed handler _on_market_event to event type: MarketEvent
+2025-04-29 15:21:06,426 - components.strategy - INFO - MomentumStrategy initialized.
+2025-04-29 15:21:06,426 - components.strategy - INFO - MomentumStrategy initialized with period=20, weight=0.5.
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Created subscription list for event type: OrderEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Subscribed handler _on_order_event to event type: OrderEvent
+2025-04-29 15:21:06,426 - core.event_bus - INFO - Subscribed handler _on_market_event_for_settlement to event type: MarketEvent
+2025-04-29 15:21:06,427 - components.execution_handler - INFO - SimulatedExecutionHandler initialized.
+2025-04-29 15:21:06,427 - components.execution_handler - INFO - SimulatedExecutionHandler initialized with commission=0.0010, slippage=0.0005.
+2025-04-29 15:21:06,427 - __main__ - INFO - Event Bus run task created.
+2025-04-29 15:21:06,427 - core.event_bus - INFO - Event Bus started.
+2025-04-29 15:21:06,427 - components.csv_data_feed - INFO - CSVDataFeed started. Reading from etf.csv
+2025-04-29 15:21:06,427 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-07 to check for settlements.
+2025-04-29 15:21:06,428 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-08 to check for settlements.
+2025-04-29 15:21:06,428 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-09 to check for settlements.
+2025-04-29 15:21:06,428 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-10 to check for settlements.
+2025-04-29 15:21:06,429 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-11 to check for settlements.
+2025-04-29 15:21:06,429 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-14 to check for settlements.
+2025-04-29 15:21:06,429 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-15 to check for settlements.
+2025-04-29 15:21:06,430 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-16 to check for settlements.
+2025-04-29 15:21:06,430 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-17 to check for settlements.
+2025-04-29 15:21:06,430 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-18 to check for settlements.
+2025-04-29 15:21:06,431 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-21 to check for settlements.
+2025-04-29 15:21:06,431 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-22 to check for settlements.
+2025-04-29 15:21:06,432 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-23 to check for settlements.
+2025-04-29 15:21:06,432 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-24 to check for settlements.
+2025-04-29 15:21:06,433 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-25 to check for settlements.
+2025-04-29 15:21:06,433 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-02-28 to check for settlements.
+2025-04-29 15:21:06,433 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-01 to check for settlements.
+2025-04-29 15:21:06,434 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-02 to check for settlements.
+2025-04-29 15:21:06,434 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-03 to check for settlements.
+2025-04-29 15:21:06,434 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-04 to check for settlements.
+2025-04-29 15:21:06,435 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-07 to check for settlements.
+2025-04-29 15:21:06,435 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-08 to check for settlements.
+2025-04-29 15:21:06,436 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-09 to check for settlements.
+2025-04-29 15:21:06,436 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-10 to check for settlements.
+2025-04-29 15:21:06,437 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-11 to check for settlements.
+2025-04-29 15:21:06,437 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-14 to check for settlements.
+2025-04-29 15:21:06,438 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-15 to check for settlements.
+2025-04-29 15:21:06,438 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-16 to check for settlements.
+2025-04-29 15:21:06,438 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-17 to check for settlements.
+2025-04-29 15:21:06,439 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-03-18 
+2025-04-29 15:21:06,439 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-18 to check for settlements.
+2025-04-29 15:21:06,439 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 439090), id='4b57bc12-2a19-4ee7-9cce-d3a87bd3fcdf', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,439 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 439500), id='3ac13f42-0d79-4b2a-a5cb-fab5f85618fd', symbol=np.float64(513500.0), direction='BUY', quantity=19000, order_type='MARKET', price=None)
+2025-04-29 15:21:06,439 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-21 to check for settlements.
+2025-04-29 15:21:06,439 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-22 to check for settlements.
+2025-04-29 15:21:06,440 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 3ac13f42-0d79-4b2a-a5cb-fab5f85618fd with FillEvent 6a31c5d8-ce10-481a-80a4-b3c5a12a2017: BUY 19000 of 513500.0 at $2.6683 (Commission: $50.6983, using data at 2022-03-22)
+2025-04-29 15:21:06,440 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19000 of 513500.0 at 2.6683334999999997. Cash reduced by 50749.03. New cash: $49250.97
+2025-04-29 15:21:06,440 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19000, Avg Cost: $2.6683
+2025-04-29 15:21:06,440 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49250.97, Reserved Cash: $0.00, Available Cash: $49250.97, Total Value: $99923.97
+2025-04-29 15:21:06,440 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-23 to check for settlements.
+2025-04-29 15:21:06,440 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-24 to check for settlements.
+2025-04-29 15:21:06,441 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-25 to check for settlements.
+2025-04-29 15:21:06,441 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-28 to check for settlements.
+2025-04-29 15:21:06,441 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-30 to check for settlements.
+2025-04-29 15:21:06,442 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-03-31 to check for settlements.
+2025-04-29 15:21:06,442 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-01 to check for settlements.
+2025-04-29 15:21:06,442 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-06 to check for settlements.
+2025-04-29 15:21:06,443 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-07 to check for settlements.
+2025-04-29 15:21:06,443 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-08 to check for settlements.
+2025-04-29 15:21:06,443 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-11 to check for settlements.
+2025-04-29 15:21:06,443 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-12 to check for settlements.
+2025-04-29 15:21:06,444 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-13 to check for settlements.
+2025-04-29 15:21:06,444 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-14 to check for settlements.
+2025-04-29 15:21:06,444 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-15 to check for settlements.
+2025-04-29 15:21:06,445 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-18 to check for settlements.
+2025-04-29 15:21:06,445 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-19 to check for settlements.
+2025-04-29 15:21:06,445 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-20 to check for settlements.
+2025-04-29 15:21:06,446 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-21 to check for settlements.
+2025-04-29 15:21:06,446 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-22 to check for settlements.
+2025-04-29 15:21:06,446 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-04-25 
+2025-04-29 15:21:06,446 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-25 to check for settlements.
+2025-04-29 15:21:06,447 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 446647), id='d30b7e02-07b3-4abf-b35e-ed13d1871dd4', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,447 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19000).
+2025-04-29 15:21:06,447 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 447187), id='57a21e39-9869-43ee-888f-d1afc32de521', symbol=np.float64(513500.0), direction='SELL', quantity=19000, order_type='MARKET', price=None)
+2025-04-29 15:21:06,447 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-26 to check for settlements.
+2025-04-29 15:21:06,447 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-27 to check for settlements.
+2025-04-29 15:21:06,447 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 57a21e39-9869-43ee-888f-d1afc32de521 with FillEvent 84f01ecb-4dbc-4377-8dc7-2bb80aa4aae7: SELL 19000 of 513500.0 at $2.5967 (Commission: $49.3373, using data at 2022-04-27)
+2025-04-29 15:21:06,447 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19000 of 513500.0 at 2.596701. Cash increased by 49287.98. New cash: $98538.95
+2025-04-29 15:21:06,448 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,448 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98538.95, Reserved Cash: $0.00, Available Cash: $98538.95, Total Value: $98538.95
+2025-04-29 15:21:06,448 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-28 to check for settlements.
+2025-04-29 15:21:06,448 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-04-29 to check for settlements.
+2025-04-29 15:21:06,448 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-05 to check for settlements.
+2025-04-29 15:21:06,449 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-06 to check for settlements.
+2025-04-29 15:21:06,449 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-09 to check for settlements.
+2025-04-29 15:21:06,449 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-10 to check for settlements.
+2025-04-29 15:21:06,449 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-11 to check for settlements.
+2025-04-29 15:21:06,450 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-12 to check for settlements.
+2025-04-29 15:21:06,450 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-13 to check for settlements.
+2025-04-29 15:21:06,450 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-16 to check for settlements.
+2025-04-29 15:21:06,451 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-17 to check for settlements.
+2025-04-29 15:21:06,451 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-18 to check for settlements.
+2025-04-29 15:21:06,451 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-19 to check for settlements.
+2025-04-29 15:21:06,452 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-20 to check for settlements.
+2025-04-29 15:21:06,452 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-23 to check for settlements.
+2025-04-29 15:21:06,452 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-24 to check for settlements.
+2025-04-29 15:21:06,452 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-25 to check for settlements.
+2025-04-29 15:21:06,453 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-26 to check for settlements.
+2025-04-29 15:21:06,453 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-27 to check for settlements.
+2025-04-29 15:21:06,453 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-05-30 
+2025-04-29 15:21:06,453 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-30 to check for settlements.
+2025-04-29 15:21:06,454 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 453890), id='bf476e8d-0be9-48ee-a584-eebfe45ff093', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,454 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 454289), id='1d41169e-4024-431e-aeb9-0824daad9c5c', symbol=np.float64(513500.0), direction='BUY', quantity=18800, order_type='MARKET', price=None)
+2025-04-29 15:21:06,454 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-05-31 
+2025-04-29 15:21:06,454 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-05-31 to check for settlements.
+2025-04-29 15:21:06,454 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 454458), id='7b17a7f7-8c25-4489-ae32-93163b539448', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,454 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-01 
+2025-04-29 15:21:06,454 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-01 to check for settlements.
+2025-04-29 15:21:06,455 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1d41169e-4024-431e-aeb9-0824daad9c5c with FillEvent c675f48b-b33e-4e0d-a991-c89c91c8496a: BUY 18800 of 513500.0 at $2.6113 (Commission: $49.0925, using data at 2022-06-01)
+2025-04-29 15:21:06,455 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 454911), id='0e1f423b-782c-4138-8c75-d4820a506e9f', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,455 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18800 of 513500.0 at 2.6113049999999998. Cash reduced by 49141.63. New cash: $49397.32
+2025-04-29 15:21:06,455 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18800, Avg Cost: $2.6113
+2025-04-29 15:21:06,455 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49397.32, Reserved Cash: $37.66, Available Cash: $49359.66, Total Value: $98390.12
+2025-04-29 15:21:06,455 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-02 
+2025-04-29 15:21:06,455 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-02 to check for settlements.
+2025-04-29 15:21:06,455 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 455671), id='74442f49-ccf3-4174-acfb-0fc43deb4372', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,456 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18800).
+2025-04-29 15:21:06,456 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 456177), id='78344456-4743-46ac-9995-605cd99aa153', symbol=np.float64(513500.0), direction='SELL', quantity=18800, order_type='MARKET', price=None)
+2025-04-29 15:21:06,456 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-06 to check for settlements.
+2025-04-29 15:21:06,456 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-07 to check for settlements.
+2025-04-29 15:21:06,456 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 78344456-4743-46ac-9995-605cd99aa153 with FillEvent 49bb828e-559f-4755-9352-9ad6dfcc4df3: SELL 18800 of 513500.0 at $2.5827 (Commission: $48.5549, using data at 2022-06-07)
+2025-04-29 15:21:06,456 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18800 of 513500.0 at 2.5827080000000002. Cash increased by 48506.36. New cash: $97903.68
+2025-04-29 15:21:06,457 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,457 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $97903.68, Reserved Cash: $37.66, Available Cash: $97866.02, Total Value: $97903.68
+2025-04-29 15:21:06,457 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-06-08 
+2025-04-29 15:21:06,457 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-08 to check for settlements.
+2025-04-29 15:21:06,457 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 457270), id='bfde3c0d-d8dc-465a-9b46-6033c31d7d39', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,457 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 457656), id='40ba72b2-0a21-438b-8001-5b27468c7c12', symbol=np.float64(513500.0), direction='BUY', quantity=18700, order_type='MARKET', price=None)
+2025-04-29 15:21:06,457 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-09 to check for settlements.
+2025-04-29 15:21:06,458 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-10 to check for settlements.
+2025-04-29 15:21:06,458 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 40ba72b2-0a21-438b-8001-5b27468c7c12 with FillEvent 1406d462-2963-4b89-8484-d8554d37118c: BUY 18700 of 513500.0 at $2.5373 (Commission: $47.4469, using data at 2022-06-10)
+2025-04-29 15:21:06,458 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18700 of 513500.0 at 2.537268. Cash reduced by 47494.36. New cash: $50409.32
+2025-04-29 15:21:06,458 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18700, Avg Cost: $2.5373
+2025-04-29 15:21:06,458 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $50409.32, Reserved Cash: $1386.08, Available Cash: $49023.24, Total Value: $97757.72
+2025-04-29 15:21:06,458 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-13 
+2025-04-29 15:21:06,458 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-13 to check for settlements.
+2025-04-29 15:21:06,459 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 458740), id='8e62d4ae-f87f-44fa-ad7f-bd0abc5eb976', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,459 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18700).
+2025-04-29 15:21:06,459 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 459264), id='b2bf2197-8b3f-4fca-94c3-9eaaea157661', symbol=np.float64(513500.0), direction='SELL', quantity=18700, order_type='MARKET', price=None)
+2025-04-29 15:21:06,459 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-14 to check for settlements.
+2025-04-29 15:21:06,459 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-15 to check for settlements.
+2025-04-29 15:21:06,459 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b2bf2197-8b3f-4fca-94c3-9eaaea157661 with FillEvent 51a297ea-3191-422f-8c33-60c013ec9f71: SELL 18700 of 513500.0 at $2.3908 (Commission: $44.7080, using data at 2022-06-15)
+2025-04-29 15:21:06,460 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18700 of 513500.0 at 2.3908039999999997. Cash increased by 44663.33. New cash: $95072.64
+2025-04-29 15:21:06,460 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,460 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $95072.64, Reserved Cash: $1386.08, Available Cash: $93686.57, Total Value: $95072.64
+2025-04-29 15:21:06,460 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-16 to check for settlements.
+2025-04-29 15:21:06,460 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-17 to check for settlements.
+2025-04-29 15:21:06,460 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-20 to check for settlements.
+2025-04-29 15:21:06,461 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-21 to check for settlements.
+2025-04-29 15:21:06,461 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-22 to check for settlements.
+2025-04-29 15:21:06,461 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-23 to check for settlements.
+2025-04-29 15:21:06,462 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-24 to check for settlements.
+2025-04-29 15:21:06,462 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-27 to check for settlements.
+2025-04-29 15:21:06,462 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-28 to check for settlements.
+2025-04-29 15:21:06,463 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-29 to check for settlements.
+2025-04-29 15:21:06,463 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-06-30 to check for settlements.
+2025-04-29 15:21:06,463 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-01 to check for settlements.
+2025-04-29 15:21:06,464 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-04 to check for settlements.
+2025-04-29 15:21:06,464 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-05 to check for settlements.
+2025-04-29 15:21:06,464 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-06 to check for settlements.
+2025-04-29 15:21:06,465 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-07 to check for settlements.
+2025-04-29 15:21:06,465 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-08 to check for settlements.
+2025-04-29 15:21:06,465 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-07-11 
+2025-04-29 15:21:06,465 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-11 to check for settlements.
+2025-04-29 15:21:06,466 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 465698), id='6af48780-e2ab-4350-9e20-3d2a58e1a0ed', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,466 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 466100), id='e6e880d5-bf26-4e17-8c4b-a43b18b9013d', symbol=np.float64(513500.0), direction='BUY', quantity=19400, order_type='MARKET', price=None)
+2025-04-29 15:21:06,466 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-12 to check for settlements.
+2025-04-29 15:21:06,466 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-13 to check for settlements.
+2025-04-29 15:21:06,466 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order e6e880d5-bf26-4e17-8c4b-a43b18b9013d with FillEvent 55223cc6-9959-4218-8957-6bcadb085866: BUY 19400 of 513500.0 at $2.4312 (Commission: $47.1656, using data at 2022-07-13)
+2025-04-29 15:21:06,466 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19400 of 513500.0 at 2.4312150000000003. Cash reduced by 47212.74. New cash: $47859.91
+2025-04-29 15:21:06,466 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19400, Avg Cost: $2.4312
+2025-04-29 15:21:06,467 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $47859.91, Reserved Cash: $1774.66, Available Cash: $46085.25, Total Value: $94885.51
+2025-04-29 15:21:06,467 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-14 to check for settlements.
+2025-04-29 15:21:06,467 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-15 to check for settlements.
+2025-04-29 15:21:06,467 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-18 to check for settlements.
+2025-04-29 15:21:06,468 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-19 to check for settlements.
+2025-04-29 15:21:06,468 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-20 to check for settlements.
+2025-04-29 15:21:06,468 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-21 to check for settlements.
+2025-04-29 15:21:06,468 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-22 to check for settlements.
+2025-04-29 15:21:06,469 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-25 to check for settlements.
+2025-04-29 15:21:06,469 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-26 to check for settlements.
+2025-04-29 15:21:06,469 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-27 to check for settlements.
+2025-04-29 15:21:06,470 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-28 to check for settlements.
+2025-04-29 15:21:06,470 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-07-29 to check for settlements.
+2025-04-29 15:21:06,470 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-01 to check for settlements.
+2025-04-29 15:21:06,470 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-02 to check for settlements.
+2025-04-29 15:21:06,471 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-03 to check for settlements.
+2025-04-29 15:21:06,471 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-04 to check for settlements.
+2025-04-29 15:21:06,471 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-05 to check for settlements.
+2025-04-29 15:21:06,472 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-08 to check for settlements.
+2025-04-29 15:21:06,472 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-09 to check for settlements.
+2025-04-29 15:21:06,472 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-10 to check for settlements.
+2025-04-29 15:21:06,473 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-11 to check for settlements.
+2025-04-29 15:21:06,473 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-12 to check for settlements.
+2025-04-29 15:21:06,473 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-15 to check for settlements.
+2025-04-29 15:21:06,473 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-16 to check for settlements.
+2025-04-29 15:21:06,474 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-17 to check for settlements.
+2025-04-29 15:21:06,474 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-18 to check for settlements.
+2025-04-29 15:21:06,474 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-19 to check for settlements.
+2025-04-29 15:21:06,475 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-22 to check for settlements.
+2025-04-29 15:21:06,475 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-23 to check for settlements.
+2025-04-29 15:21:06,475 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-24 to check for settlements.
+2025-04-29 15:21:06,475 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-25 to check for settlements.
+2025-04-29 15:21:06,476 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-26 to check for settlements.
+2025-04-29 15:21:06,476 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-08-29 
+2025-04-29 15:21:06,476 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-29 to check for settlements.
+2025-04-29 15:21:06,476 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 476594), id='659bed78-017c-410e-adf0-573ab8193d38', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,477 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19400).
+2025-04-29 15:21:06,477 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 477102), id='34b14bc1-d2c9-4df2-905d-1fcc8c4bb765', symbol=np.float64(513500.0), direction='SELL', quantity=19400, order_type='MARKET', price=None)
+2025-04-29 15:21:06,477 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-08-30 
+2025-04-29 15:21:06,477 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-30 to check for settlements.
+2025-04-29 15:21:06,477 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 477267), id='55d520f1-c99f-41e7-8131-f18a49b3aebf', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,477 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 18800 513500.0. Required: ~$49405.22, Available (Cash - Reserved): ~$46085.25 (Current Cash: $47859.91, Reserved: $1774.66)
+2025-04-29 15:21:06,477 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 477640), id='e6deeac2-05f4-4719-bdb7-fedc0ac53982', symbol=np.float64(513500.0), direction='BUY', quantity=18800, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,477 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-08-31 to check for settlements.
+2025-04-29 15:21:06,477 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 34b14bc1-d2c9-4df2-905d-1fcc8c4bb765 with FillEvent d7025374-218e-4c50-b94a-f62376ab87d4: SELL 19400 of 513500.0 at $2.6027 (Commission: $50.4923, using data at 2022-08-31)
+2025-04-29 15:21:06,478 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19400 of 513500.0 at 2.602698. Cash increased by 50441.85. New cash: $98301.76
+2025-04-29 15:21:06,478 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,478 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98301.76, Reserved Cash: $1774.66, Available Cash: $96527.10, Total Value: $98301.76
+2025-04-29 15:21:06,478 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-01 to check for settlements.
+2025-04-29 15:21:06,478 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-02 to check for settlements.
+2025-04-29 15:21:06,479 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-05 to check for settlements.
+2025-04-29 15:21:06,479 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-06 to check for settlements.
+2025-04-29 15:21:06,479 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-07 to check for settlements.
+2025-04-29 15:21:06,479 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-08 to check for settlements.
+2025-04-29 15:21:06,480 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-09 to check for settlements.
+2025-04-29 15:21:06,480 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-13 to check for settlements.
+2025-04-29 15:21:06,480 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-14 to check for settlements.
+2025-04-29 15:21:06,481 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-15 to check for settlements.
+2025-04-29 15:21:06,481 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-16 to check for settlements.
+2025-04-29 15:21:06,481 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-19 to check for settlements.
+2025-04-29 15:21:06,482 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-20 to check for settlements.
+2025-04-29 15:21:06,482 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-21 to check for settlements.
+2025-04-29 15:21:06,482 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-22 to check for settlements.
+2025-04-29 15:21:06,482 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-23 to check for settlements.
+2025-04-29 15:21:06,483 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-26 to check for settlements.
+2025-04-29 15:21:06,483 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-27 to check for settlements.
+2025-04-29 15:21:06,483 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-28 to check for settlements.
+2025-04-29 15:21:06,484 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-29 to check for settlements.
+2025-04-29 15:21:06,484 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-09-30 to check for settlements.
+2025-04-29 15:21:06,484 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-10 to check for settlements.
+2025-04-29 15:21:06,484 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-11 to check for settlements.
+2025-04-29 15:21:06,485 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-12 to check for settlements.
+2025-04-29 15:21:06,485 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-13 to check for settlements.
+2025-04-29 15:21:06,485 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-14 to check for settlements.
+2025-04-29 15:21:06,486 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-17 to check for settlements.
+2025-04-29 15:21:06,486 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-18 to check for settlements.
+2025-04-29 15:21:06,486 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-19 to check for settlements.
+2025-04-29 15:21:06,486 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-20 to check for settlements.
+2025-04-29 15:21:06,487 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-21 to check for settlements.
+2025-04-29 15:21:06,487 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-24 to check for settlements.
+2025-04-29 15:21:06,487 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-10-25 
+2025-04-29 15:21:06,487 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-25 to check for settlements.
+2025-04-29 15:21:06,488 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 487849), id='3b88fd65-73fa-46d4-a38c-a8813463d751', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,488 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 488278), id='17551f0a-f7de-4d1c-a77a-21a7101c3be3', symbol=np.float64(513500.0), direction='BUY', quantity=19100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,488 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-26 to check for settlements.
+2025-04-29 15:21:06,488 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-27 to check for settlements.
+2025-04-29 15:21:06,488 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 17551f0a-f7de-4d1c-a77a-21a7101c3be3 with FillEvent e87c81e5-4f0e-4f12-aee8-d68cb7c46ac1: BUY 19100 of 513500.0 at $2.5833 (Commission: $49.3409, using data at 2022-10-27)
+2025-04-29 15:21:06,489 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19100 of 513500.0 at 2.583291. Cash reduced by 49390.20. New cash: $48911.56
+2025-04-29 15:21:06,489 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19100, Avg Cost: $2.5833
+2025-04-29 15:21:06,489 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48911.56, Reserved Cash: $1468.60, Available Cash: $47442.96, Total Value: $98189.56
+2025-04-29 15:21:06,489 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-28 to check for settlements.
+2025-04-29 15:21:06,489 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-10-31 to check for settlements.
+2025-04-29 15:21:06,489 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-01 to check for settlements.
+2025-04-29 15:21:06,490 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-02 to check for settlements.
+2025-04-29 15:21:06,490 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-03 to check for settlements.
+2025-04-29 15:21:06,490 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-04 to check for settlements.
+2025-04-29 15:21:06,491 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-07 to check for settlements.
+2025-04-29 15:21:06,491 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-08 to check for settlements.
+2025-04-29 15:21:06,491 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-09 to check for settlements.
+2025-04-29 15:21:06,491 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-10 to check for settlements.
+2025-04-29 15:21:06,492 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-11 to check for settlements.
+2025-04-29 15:21:06,492 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-14 to check for settlements.
+2025-04-29 15:21:06,492 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-15 to check for settlements.
+2025-04-29 15:21:06,493 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-16 to check for settlements.
+2025-04-29 15:21:06,493 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-17 to check for settlements.
+2025-04-29 15:21:06,493 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-18 to check for settlements.
+2025-04-29 15:21:06,494 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-21 to check for settlements.
+2025-04-29 15:21:06,494 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-22 to check for settlements.
+2025-04-29 15:21:06,494 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-23 to check for settlements.
+2025-04-29 15:21:06,494 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-24 to check for settlements.
+2025-04-29 15:21:06,495 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-25 to check for settlements.
+2025-04-29 15:21:06,495 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-28 to check for settlements.
+2025-04-29 15:21:06,495 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-29 to check for settlements.
+2025-04-29 15:21:06,496 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-11-30 to check for settlements.
+2025-04-29 15:21:06,496 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-01 to check for settlements.
+2025-04-29 15:21:06,496 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-02 to check for settlements.
+2025-04-29 15:21:06,496 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-05 to check for settlements.
+2025-04-29 15:21:06,497 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-06 to check for settlements.
+2025-04-29 15:21:06,497 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-07 
+2025-04-29 15:21:06,497 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-07 to check for settlements.
+2025-04-29 15:21:06,497 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 497582), id='2fad2981-ec84-47d4-b1bb-147ab6131e17', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,497 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19100).
+2025-04-29 15:21:06,498 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 498015), id='001a5eb3-1d73-45db-a4ad-631fe16fa5f1', symbol=np.float64(513500.0), direction='SELL', quantity=19100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,498 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-12-08 
+2025-04-29 15:21:06,498 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-08 to check for settlements.
+2025-04-29 15:21:06,498 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 498178), id='70fb8f4c-5b07-4148-90a1-6c55a9895d38', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,498 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 19000 513500.0. Required: ~$49055.50, Available (Cash - Reserved): ~$47442.96 (Current Cash: $48911.56, Reserved: $1468.60)
+2025-04-29 15:21:06,498 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 498552), id='f2ec45d4-229f-43be-b0bb-dd9f8c65d63a', symbol=np.float64(513500.0), direction='BUY', quantity=19000, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,498 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-09 to check for settlements.
+2025-04-29 15:21:06,498 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 001a5eb3-1d73-45db-a4ad-631fe16fa5f1 with FillEvent 3bea36c4-e932-4033-b2d8-4988590c7b61: SELL 19100 of 513500.0 at $2.5987 (Commission: $49.6352, using data at 2022-12-09)
+2025-04-29 15:21:06,499 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19100 of 513500.0 at 2.5987. Cash increased by 49585.53. New cash: $98497.09
+2025-04-29 15:21:06,499 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,499 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98497.09, Reserved Cash: $1468.60, Available Cash: $97028.49, Total Value: $98497.09
+2025-04-29 15:21:06,499 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-12 to check for settlements.
+2025-04-29 15:21:06,499 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-13 to check for settlements.
+2025-04-29 15:21:06,499 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-12-14 
+2025-04-29 15:21:06,500 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-14 to check for settlements.
+2025-04-29 15:21:06,500 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 500028), id='ad241ef0-ae19-4d5a-bb77-b8664a731b8a', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,500 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 500412), id='911f6767-f031-4a63-99c2-8acc721a1830', symbol=np.float64(513500.0), direction='BUY', quantity=18600, order_type='MARKET', price=None)
+2025-04-29 15:21:06,500 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-15 
+2025-04-29 15:21:06,500 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-15 to check for settlements.
+2025-04-29 15:21:06,500 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 500578), id='0912bed0-28e7-45ec-b16b-5dd1dcdb9a11', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,500 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-16 
+2025-04-29 15:21:06,501 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-16 to check for settlements.
+2025-04-29 15:21:06,501 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 911f6767-f031-4a63-99c2-8acc721a1830 with FillEvent 3b0e71db-f9ca-4fc0-bbf4-93776def1e13: BUY 18600 of 513500.0 at $2.5653 (Commission: $47.7142, using data at 2022-12-16)
+2025-04-29 15:21:06,501 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 501030), id='e9d9a1ef-3302-4c6c-8d84-818e8ac9b2a4', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,501 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18600 of 513500.0 at 2.565282. Cash reduced by 47761.96. New cash: $50735.13
+2025-04-29 15:21:06,501 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18600, Avg Cost: $2.5653
+2025-04-29 15:21:06,501 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $50735.13, Reserved Cash: $2958.83, Available Cash: $47776.30, Total Value: $98388.33
+2025-04-29 15:21:06,501 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-19 
+2025-04-29 15:21:06,501 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-19 to check for settlements.
+2025-04-29 15:21:06,502 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 501820), id='681aa8ca-42de-4c10-b6d0-96a1ce36f1bb', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,502 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18600).
+2025-04-29 15:21:06,502 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 502267), id='1b77164d-d084-4744-9c93-11a54f890bf7', symbol=np.float64(513500.0), direction='SELL', quantity=18600, order_type='MARKET', price=None)
+2025-04-29 15:21:06,502 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-20 to check for settlements.
+2025-04-29 15:21:06,502 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-21 to check for settlements.
+2025-04-29 15:21:06,502 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1b77164d-d084-4744-9c93-11a54f890bf7 with FillEvent 514034d9-90c1-406f-8bbd-11416037b923: SELL 18600 of 513500.0 at $2.5227 (Commission: $46.9229, using data at 2022-12-21)
+2025-04-29 15:21:06,503 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18600 of 513500.0 at 2.522738. Cash increased by 46876.00. New cash: $97611.14
+2025-04-29 15:21:06,503 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,503 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $97611.14, Reserved Cash: $2958.83, Available Cash: $94652.30, Total Value: $97611.14
+2025-04-29 15:21:06,503 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-22 to check for settlements.
+2025-04-29 15:21:06,503 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-23 to check for settlements.
+2025-04-29 15:21:06,503 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-26 to check for settlements.
+2025-04-29 15:21:06,504 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-27 to check for settlements.
+2025-04-29 15:21:06,504 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-28 to check for settlements.
+2025-04-29 15:21:06,504 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-29 to check for settlements.
+2025-04-29 15:21:06,505 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2022-12-30 to check for settlements.
+2025-04-29 15:21:06,505 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-03 to check for settlements.
+2025-04-29 15:21:06,505 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-04 to check for settlements.
+2025-04-29 15:21:06,505 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-05 to check for settlements.
+2025-04-29 15:21:06,506 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-06 to check for settlements.
+2025-04-29 15:21:06,506 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-09 to check for settlements.
+2025-04-29 15:21:06,506 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-10 to check for settlements.
+2025-04-29 15:21:06,507 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-11 to check for settlements.
+2025-04-29 15:21:06,507 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-12 to check for settlements.
+2025-04-29 15:21:06,507 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-13 to check for settlements.
+2025-04-29 15:21:06,508 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-16 to check for settlements.
+2025-04-29 15:21:06,508 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-17 to check for settlements.
+2025-04-29 15:21:06,508 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-01-18 
+2025-04-29 15:21:06,508 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-18 to check for settlements.
+2025-04-29 15:21:06,509 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 508706), id='957204e0-f548-498f-bad4-f0faf9ba685a', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,509 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 509103), id='b120b386-52cc-4d5b-b8be-f1020b614e2d', symbol=np.float64(513500.0), direction='BUY', quantity=19200, order_type='MARKET', price=None)
+2025-04-29 15:21:06,509 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-01-19 
+2025-04-29 15:21:06,509 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-19 to check for settlements.
+2025-04-29 15:21:06,509 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 509272), id='8e5c5ec9-96c2-4097-a008-823c9319e9c4', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,509 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-01-20 
+2025-04-29 15:21:06,509 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-20 to check for settlements.
+2025-04-29 15:21:06,509 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b120b386-52cc-4d5b-b8be-f1020b614e2d with FillEvent 3990f614-8fdd-4ef9-a826-ca45811ecb06: BUY 19200 of 513500.0 at $2.4872 (Commission: $47.7551, using data at 2023-01-20)
+2025-04-29 15:21:06,510 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 509720), id='6bfdd1d4-a06e-451c-8c7b-86c7bb3d14a7', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,510 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19200 of 513500.0 at 2.4872430000000003. Cash reduced by 47802.82. New cash: $49808.32
+2025-04-29 15:21:06,510 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19200, Avg Cost: $2.4872
+2025-04-29 15:21:06,510 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49808.32, Reserved Cash: $3843.36, Available Cash: $45964.96, Total Value: $97501.12
+2025-04-29 15:21:06,510 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-30 to check for settlements.
+2025-04-29 15:21:06,510 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-01-31 to check for settlements.
+2025-04-29 15:21:06,511 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-01 to check for settlements.
+2025-04-29 15:21:06,511 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-02 to check for settlements.
+2025-04-29 15:21:06,511 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-03 to check for settlements.
+2025-04-29 15:21:06,511 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-06 to check for settlements.
+2025-04-29 15:21:06,512 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-07 to check for settlements.
+2025-04-29 15:21:06,512 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-08 to check for settlements.
+2025-04-29 15:21:06,512 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-09 to check for settlements.
+2025-04-29 15:21:06,513 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-10 to check for settlements.
+2025-04-29 15:21:06,513 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-13 to check for settlements.
+2025-04-29 15:21:06,514 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-14 to check for settlements.
+2025-04-29 15:21:06,514 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-15 to check for settlements.
+2025-04-29 15:21:06,514 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-16 to check for settlements.
+2025-04-29 15:21:06,515 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-17 to check for settlements.
+2025-04-29 15:21:06,515 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-20 to check for settlements.
+2025-04-29 15:21:06,515 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-21 to check for settlements.
+2025-04-29 15:21:06,516 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-22 to check for settlements.
+2025-04-29 15:21:06,516 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-23 to check for settlements.
+2025-04-29 15:21:06,516 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-24 to check for settlements.
+2025-04-29 15:21:06,516 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-27 to check for settlements.
+2025-04-29 15:21:06,517 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-02-28 to check for settlements.
+2025-04-29 15:21:06,517 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-01 to check for settlements.
+2025-04-29 15:21:06,517 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-02 
+2025-04-29 15:21:06,517 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-02 to check for settlements.
+2025-04-29 15:21:06,518 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 517888), id='1840bd91-bfc8-4920-a8ab-7b2ccfbaa429', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,518 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19200).
+2025-04-29 15:21:06,518 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 518338), id='ec35d755-02a6-493f-8d26-9e8a6bdd18e7', symbol=np.float64(513500.0), direction='SELL', quantity=19200, order_type='MARKET', price=None)
+2025-04-29 15:21:06,518 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-03 to check for settlements.
+2025-04-29 15:21:06,518 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-06 
+2025-04-29 15:21:06,518 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-06 to check for settlements.
+2025-04-29 15:21:06,518 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order ec35d755-02a6-493f-8d26-9e8a6bdd18e7 with FillEvent 454d0dfe-d153-4725-8166-2655005f633a: SELL 19200 of 513500.0 at $2.6227 (Commission: $50.3556, using data at 2023-03-06)
+2025-04-29 15:21:06,519 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 518846), id='e6c607f9-638f-4dda-ae24-88f7d22dadfb', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,519 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 19000 513500.0. Required: ~$49892.75, Available (Cash - Reserved): ~$45964.96 (Current Cash: $49808.32, Reserved: $3843.36)
+2025-04-29 15:21:06,519 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 519302), id='e2a05a1f-2b33-42f5-b703-1aa20f44679a', symbol=np.float64(513500.0), direction='BUY', quantity=19000, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,519 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19200 of 513500.0 at 2.622688. Cash increased by 50305.25. New cash: $100113.57
+2025-04-29 15:21:06,519 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,519 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $100113.57, Reserved Cash: $3843.36, Available Cash: $96270.21, Total Value: $100113.57
+2025-04-29 15:21:06,519 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-07 
+2025-04-29 15:21:06,519 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-07 to check for settlements.
+2025-04-29 15:21:06,520 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 519744), id='7e732164-d25f-4a03-a1ad-972e5f820711', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,520 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 520131), id='cf6150f3-6b24-4053-815b-66ecf9bce11f', symbol=np.float64(513500.0), direction='BUY', quantity=18900, order_type='MARKET', price=None)
+2025-04-29 15:21:06,520 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-08 
+2025-04-29 15:21:06,520 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-08 to check for settlements.
+2025-04-29 15:21:06,520 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 520293), id='b2e46bef-d476-4e80-ab21-7adce85ce6d1', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,520 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-09 
+2025-04-29 15:21:06,520 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-09 to check for settlements.
+2025-04-29 15:21:06,520 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order cf6150f3-6b24-4053-815b-66ecf9bce11f with FillEvent 63cd6845-c25e-422d-a207-1af433d65fc9: BUY 18900 of 513500.0 at $2.6113 (Commission: $49.3537, using data at 2023-03-09)
+2025-04-29 15:21:06,521 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 520747), id='efbf36d4-4594-4f95-a74d-c86f5548631c', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,521 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18900 of 513500.0 at 2.6113049999999998. Cash reduced by 49403.02. New cash: $50710.55
+2025-04-29 15:21:06,521 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18900, Avg Cost: $2.6113
+2025-04-29 15:21:06,521 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $50710.55, Reserved Cash: $4486.92, Available Cash: $46223.63, Total Value: $99963.95
+2025-04-29 15:21:06,521 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-10 
+2025-04-29 15:21:06,521 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-10 to check for settlements.
+2025-04-29 15:21:06,521 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 521551), id='0960cfc9-984a-4ea2-87ff-c896e9bf15f0', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,521 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18900).
+2025-04-29 15:21:06,522 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 522028), id='75369df2-542f-4bba-ac72-8e37888a0283', symbol=np.float64(513500.0), direction='SELL', quantity=18900, order_type='MARKET', price=None)
+2025-04-29 15:21:06,522 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-13 to check for settlements.
+2025-04-29 15:21:06,522 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-14 to check for settlements.
+2025-04-29 15:21:06,522 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 75369df2-542f-4bba-ac72-8e37888a0283 with FillEvent 61103343-2411-484e-807c-0fddb6135bfd: SELL 18900 of 513500.0 at $2.5007 (Commission: $47.2642, using data at 2023-03-14)
+2025-04-29 15:21:06,522 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18900 of 513500.0 at 2.500749. Cash increased by 47216.89. New cash: $97927.44
+2025-04-29 15:21:06,522 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,523 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $97927.44, Reserved Cash: $4486.92, Available Cash: $93440.52, Total Value: $97927.44
+2025-04-29 15:21:06,523 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-15 to check for settlements.
+2025-04-29 15:21:06,523 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-16 to check for settlements.
+2025-04-29 15:21:06,523 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-17 to check for settlements.
+2025-04-29 15:21:06,524 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-20 to check for settlements.
+2025-04-29 15:21:06,524 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-21 to check for settlements.
+2025-04-29 15:21:06,524 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-22 to check for settlements.
+2025-04-29 15:21:06,525 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-23 to check for settlements.
+2025-04-29 15:21:06,525 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-24 to check for settlements.
+2025-04-29 15:21:06,525 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-27 to check for settlements.
+2025-04-29 15:21:06,526 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-28 to check for settlements.
+2025-04-29 15:21:06,526 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-29 to check for settlements.
+2025-04-29 15:21:06,526 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-30 
+2025-04-29 15:21:06,526 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-30 to check for settlements.
+2025-04-29 15:21:06,527 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 526770), id='d0a92f01-98c7-4c21-bf7c-52d164c0052a', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,527 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 527201), id='b1f0f9fc-d7bf-428a-910d-0aaa4353596e', symbol=np.float64(513500.0), direction='BUY', quantity=18700, order_type='MARKET', price=None)
+2025-04-29 15:21:06,527 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-03-31 to check for settlements.
+2025-04-29 15:21:06,527 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-03 to check for settlements.
+2025-04-29 15:21:06,527 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b1f0f9fc-d7bf-428a-910d-0aaa4353596e with FillEvent 01fcb1de-6862-4f0a-a982-57bc5e96ccf0: BUY 18700 of 513500.0 at $2.6513 (Commission: $49.5798, using data at 2023-04-03)
+2025-04-29 15:21:06,528 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18700 of 513500.0 at 2.651325. Cash reduced by 49629.36. New cash: $48298.09
+2025-04-29 15:21:06,528 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18700, Avg Cost: $2.6513
+2025-04-29 15:21:06,528 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48298.09, Reserved Cash: $3737.80, Available Cash: $44560.29, Total Value: $97815.69
+2025-04-29 15:21:06,528 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-04 to check for settlements.
+2025-04-29 15:21:06,528 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-06 to check for settlements.
+2025-04-29 15:21:06,528 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-07 to check for settlements.
+2025-04-29 15:21:06,529 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-10 to check for settlements.
+2025-04-29 15:21:06,529 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-11 to check for settlements.
+2025-04-29 15:21:06,529 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-12 to check for settlements.
+2025-04-29 15:21:06,530 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-13 to check for settlements.
+2025-04-29 15:21:06,530 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-14 to check for settlements.
+2025-04-29 15:21:06,530 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-17 to check for settlements.
+2025-04-29 15:21:06,531 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-18 to check for settlements.
+2025-04-29 15:21:06,531 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-19 to check for settlements.
+2025-04-29 15:21:06,531 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-20 to check for settlements.
+2025-04-29 15:21:06,532 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-21 to check for settlements.
+2025-04-29 15:21:06,532 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-24 to check for settlements.
+2025-04-29 15:21:06,532 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-25 to check for settlements.
+2025-04-29 15:21:06,532 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-26 to check for settlements.
+2025-04-29 15:21:06,533 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-27 to check for settlements.
+2025-04-29 15:21:06,533 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-04-28 to check for settlements.
+2025-04-29 15:21:06,533 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-04 to check for settlements.
+2025-04-29 15:21:06,534 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-05-05 
+2025-04-29 15:21:06,534 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-05 to check for settlements.
+2025-04-29 15:21:06,534 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 534094), id='491ae2f4-bf6e-41ec-8a04-9dccc3f0eced', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,534 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18700).
+2025-04-29 15:21:06,534 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 534534), id='ac721da7-f878-493a-a9b5-1d202eba5ecc', symbol=np.float64(513500.0), direction='SELL', quantity=18700, order_type='MARKET', price=None)
+2025-04-29 15:21:06,534 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-05-08 
+2025-04-29 15:21:06,534 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-08 to check for settlements.
+2025-04-29 15:21:06,535 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 534704), id='a0523428-54aa-44cd-bae8-d8373d522788', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,535 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 18300 513500.0. Required: ~$49190.90, Available (Cash - Reserved): ~$44560.29 (Current Cash: $48298.09, Reserved: $3737.80)
+2025-04-29 15:21:06,535 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 535092), id='fe509cf0-d9c5-440f-9f66-05fa3801a518', symbol=np.float64(513500.0), direction='BUY', quantity=18300, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,535 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-05-09 
+2025-04-29 15:21:06,535 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-09 to check for settlements.
+2025-04-29 15:21:06,535 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order ac721da7-f878-493a-a9b5-1d202eba5ecc with FillEvent f55cbcfa-326b-42f8-9ba0-ddcb2e70c781: SELL 18700 of 513500.0 at $2.6867 (Commission: $50.2405, using data at 2023-05-09)
+2025-04-29 15:21:06,535 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 535326), id='ffc67035-190d-4bf2-8bc2-f73d0bd85211', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,535 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 18300 513500.0. Required: ~$49264.21, Available (Cash - Reserved): ~$44560.29 (Current Cash: $48298.09, Reserved: $3737.80)
+2025-04-29 15:21:06,535 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 535831), id='76c48f94-a939-4f16-9f25-25c5b822c870', symbol=np.float64(513500.0), direction='BUY', quantity=18300, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,536 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18700 of 513500.0 at 2.686656. Cash increased by 50190.23. New cash: $98488.31
+2025-04-29 15:21:06,536 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,536 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98488.31, Reserved Cash: $3737.80, Available Cash: $94750.51, Total Value: $98488.31
+2025-04-29 15:21:06,536 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-05-10 
+2025-04-29 15:21:06,536 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-10 to check for settlements.
+2025-04-29 15:21:06,536 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 536275), id='8a33d20d-c395-4f2b-96d4-8eb580784377', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,536 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 536657), id='06624d94-7c22-4c2a-8b2d-3a0839e32efc', symbol=np.float64(513500.0), direction='BUY', quantity=18300, order_type='MARKET', price=None)
+2025-04-29 15:21:06,536 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-11 to check for settlements.
+2025-04-29 15:21:06,537 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-12 to check for settlements.
+2025-04-29 15:21:06,537 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 06624d94-7c22-4c2a-8b2d-3a0839e32efc with FillEvent 290df944-aa95-4ce9-8030-bd72a492e54a: BUY 18300 of 513500.0 at $2.7094 (Commission: $49.5812, using data at 2023-05-12)
+2025-04-29 15:21:06,537 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18300 of 513500.0 at 2.7093540000000003. Cash reduced by 49630.76. New cash: $48857.55
+2025-04-29 15:21:06,537 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18300, Avg Cost: $2.7094
+2025-04-29 15:21:06,537 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48857.55, Reserved Cash: $3334.60, Available Cash: $45522.96, Total Value: $98340.75
+2025-04-29 15:21:06,537 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-15 to check for settlements.
+2025-04-29 15:21:06,538 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-16 to check for settlements.
+2025-04-29 15:21:06,538 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-17 to check for settlements.
+2025-04-29 15:21:06,538 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-18 to check for settlements.
+2025-04-29 15:21:06,539 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-19 to check for settlements.
+2025-04-29 15:21:06,539 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-22 to check for settlements.
+2025-04-29 15:21:06,539 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-23 to check for settlements.
+2025-04-29 15:21:06,539 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-24 to check for settlements.
+2025-04-29 15:21:06,540 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-25 to check for settlements.
+2025-04-29 15:21:06,540 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-26 to check for settlements.
+2025-04-29 15:21:06,540 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-29 to check for settlements.
+2025-04-29 15:21:06,541 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-30 to check for settlements.
+2025-04-29 15:21:06,541 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-05-31 to check for settlements.
+2025-04-29 15:21:06,541 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-01 to check for settlements.
+2025-04-29 15:21:06,541 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-02 to check for settlements.
+2025-04-29 15:21:06,542 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-05 to check for settlements.
+2025-04-29 15:21:06,542 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-06 to check for settlements.
+2025-04-29 15:21:06,542 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-07 to check for settlements.
+2025-04-29 15:21:06,543 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-08 to check for settlements.
+2025-04-29 15:21:06,543 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-09 to check for settlements.
+2025-04-29 15:21:06,543 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-12 to check for settlements.
+2025-04-29 15:21:06,544 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-13 to check for settlements.
+2025-04-29 15:21:06,544 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-14 to check for settlements.
+2025-04-29 15:21:06,544 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-15 to check for settlements.
+2025-04-29 15:21:06,544 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-16 to check for settlements.
+2025-04-29 15:21:06,545 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-19 to check for settlements.
+2025-04-29 15:21:06,545 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-20 to check for settlements.
+2025-04-29 15:21:06,545 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-21 to check for settlements.
+2025-04-29 15:21:06,546 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-26 to check for settlements.
+2025-04-29 15:21:06,546 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-27 to check for settlements.
+2025-04-29 15:21:06,546 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-28 to check for settlements.
+2025-04-29 15:21:06,547 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-29 to check for settlements.
+2025-04-29 15:21:06,547 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-06-30 to check for settlements.
+2025-04-29 15:21:06,547 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-03 to check for settlements.
+2025-04-29 15:21:06,547 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-04 to check for settlements.
+2025-04-29 15:21:06,548 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-05 to check for settlements.
+2025-04-29 15:21:06,548 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-06 to check for settlements.
+2025-04-29 15:21:06,548 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-07 to check for settlements.
+2025-04-29 15:21:06,549 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-10 to check for settlements.
+2025-04-29 15:21:06,549 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-11 to check for settlements.
+2025-04-29 15:21:06,549 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-12 to check for settlements.
+2025-04-29 15:21:06,549 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-13 to check for settlements.
+2025-04-29 15:21:06,550 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-14 to check for settlements.
+2025-04-29 15:21:06,550 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-17 to check for settlements.
+2025-04-29 15:21:06,550 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-18 to check for settlements.
+2025-04-29 15:21:06,551 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-19 to check for settlements.
+2025-04-29 15:21:06,551 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-20 to check for settlements.
+2025-04-29 15:21:06,551 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-21 to check for settlements.
+2025-04-29 15:21:06,551 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-24 to check for settlements.
+2025-04-29 15:21:06,552 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-25 to check for settlements.
+2025-04-29 15:21:06,552 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-26 to check for settlements.
+2025-04-29 15:21:06,552 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-27 to check for settlements.
+2025-04-29 15:21:06,553 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-28 to check for settlements.
+2025-04-29 15:21:06,553 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-07-31 to check for settlements.
+2025-04-29 15:21:06,553 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-01 to check for settlements.
+2025-04-29 15:21:06,554 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-02 to check for settlements.
+2025-04-29 15:21:06,554 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-03 to check for settlements.
+2025-04-29 15:21:06,554 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-04 to check for settlements.
+2025-04-29 15:21:06,554 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-07 to check for settlements.
+2025-04-29 15:21:06,555 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-08 to check for settlements.
+2025-04-29 15:21:06,555 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-09 to check for settlements.
+2025-04-29 15:21:06,555 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-10 to check for settlements.
+2025-04-29 15:21:06,556 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-11 to check for settlements.
+2025-04-29 15:21:06,556 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-14 to check for settlements.
+2025-04-29 15:21:06,556 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-15 to check for settlements.
+2025-04-29 15:21:06,556 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-08-16 
+2025-04-29 15:21:06,557 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-16 to check for settlements.
+2025-04-29 15:21:06,557 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 557033), id='83bade07-bbf3-4b73-9b73-1ceaf3e20903', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,557 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18300).
+2025-04-29 15:21:06,557 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 557467), id='a1c2fa4f-a112-445a-9a1c-126f2e8534b6', symbol=np.float64(513500.0), direction='SELL', quantity=18300, order_type='MARKET', price=None)
+2025-04-29 15:21:06,557 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-17 to check for settlements.
+2025-04-29 15:21:06,557 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-18 to check for settlements.
+2025-04-29 15:21:06,557 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a1c2fa4f-a112-445a-9a1c-126f2e8534b6 with FillEvent ce4d5356-d4ee-47b9-a585-bf030edbdaa4: SELL 18300 of 513500.0 at $2.9885 (Commission: $54.6896, using data at 2023-08-18)
+2025-04-29 15:21:06,558 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18300 of 513500.0 at 2.9885050000000004. Cash increased by 54634.95. New cash: $103492.51
+2025-04-29 15:21:06,558 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,558 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $103492.51, Reserved Cash: $3334.60, Available Cash: $100157.91, Total Value: $103492.51
+2025-04-29 15:21:06,558 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-21 to check for settlements.
+2025-04-29 15:21:06,558 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-22 to check for settlements.
+2025-04-29 15:21:06,559 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-23 to check for settlements.
+2025-04-29 15:21:06,559 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-24 to check for settlements.
+2025-04-29 15:21:06,559 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-25 to check for settlements.
+2025-04-29 15:21:06,559 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-28 to check for settlements.
+2025-04-29 15:21:06,560 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-29 to check for settlements.
+2025-04-29 15:21:06,560 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-08-30 
+2025-04-29 15:21:06,560 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-30 to check for settlements.
+2025-04-29 15:21:06,560 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 560656), id='ee9ba1d7-d498-481f-8a95-094a0f641614', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,561 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 561057), id='86769dd0-8f83-41a1-bc25-59a5d448b65b', symbol=np.float64(513500.0), direction='BUY', quantity=16700, order_type='MARKET', price=None)
+2025-04-29 15:21:06,561 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-08-31 to check for settlements.
+2025-04-29 15:21:06,561 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-01 to check for settlements.
+2025-04-29 15:21:06,561 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 86769dd0-8f83-41a1-bc25-59a5d448b65b with FillEvent 769a1274-abc7-481f-9d35-82b3e7b8096c: BUY 16700 of 513500.0 at $3.0855 (Commission: $51.5286, using data at 2023-09-01)
+2025-04-29 15:21:06,561 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16700 of 513500.0 at 3.0855420000000002. Cash reduced by 51580.08. New cash: $51912.43
+2025-04-29 15:21:06,561 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16700, Avg Cost: $3.0855
+2025-04-29 15:21:06,561 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $51912.43, Reserved Cash: $3434.95, Available Cash: $48477.48, Total Value: $103381.83
+2025-04-29 15:21:06,562 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-04 to check for settlements.
+2025-04-29 15:21:06,562 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-05 to check for settlements.
+2025-04-29 15:21:06,562 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-06 to check for settlements.
+2025-04-29 15:21:06,562 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-07 to check for settlements.
+2025-04-29 15:21:06,563 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-08 to check for settlements.
+2025-04-29 15:21:06,563 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-11 to check for settlements.
+2025-04-29 15:21:06,563 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-12 to check for settlements.
+2025-04-29 15:21:06,564 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-13 to check for settlements.
+2025-04-29 15:21:06,564 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-14 to check for settlements.
+2025-04-29 15:21:06,564 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-15 to check for settlements.
+2025-04-29 15:21:06,565 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-18 to check for settlements.
+2025-04-29 15:21:06,565 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-19 to check for settlements.
+2025-04-29 15:21:06,565 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-20 to check for settlements.
+2025-04-29 15:21:06,565 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-09-21 
+2025-04-29 15:21:06,566 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-21 to check for settlements.
+2025-04-29 15:21:06,566 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 565990), id='31beff7e-a8b0-44ce-a106-5f4be6a94872', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,566 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16700).
+2025-04-29 15:21:06,566 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 566422), id='a3f3e53d-017a-4466-add7-1ce4ad214137', symbol=np.float64(513500.0), direction='SELL', quantity=16700, order_type='MARKET', price=None)
+2025-04-29 15:21:06,566 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-22 to check for settlements.
+2025-04-29 15:21:06,566 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-25 to check for settlements.
+2025-04-29 15:21:06,566 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a3f3e53d-017a-4466-add7-1ce4ad214137 with FillEvent b933d9d5-6ee9-43c7-8789-b1b5674d1afa: SELL 16700 of 513500.0 at $2.9745 (Commission: $49.6744, using data at 2023-09-25)
+2025-04-29 15:21:06,567 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16700 of 513500.0 at 2.974512. Cash increased by 49624.68. New cash: $101537.10
+2025-04-29 15:21:06,567 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,567 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $101537.10, Reserved Cash: $3434.95, Available Cash: $98102.16, Total Value: $101537.10
+2025-04-29 15:21:06,567 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-26 to check for settlements.
+2025-04-29 15:21:06,567 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-27 to check for settlements.
+2025-04-29 15:21:06,568 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-09-28 to check for settlements.
+2025-04-29 15:21:06,568 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-09 to check for settlements.
+2025-04-29 15:21:06,568 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-10 to check for settlements.
+2025-04-29 15:21:06,568 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-11 to check for settlements.
+2025-04-29 15:21:06,569 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-12 to check for settlements.
+2025-04-29 15:21:06,569 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-13 to check for settlements.
+2025-04-29 15:21:06,569 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-16 to check for settlements.
+2025-04-29 15:21:06,570 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-17 to check for settlements.
+2025-04-29 15:21:06,570 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-18 to check for settlements.
+2025-04-29 15:21:06,570 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-19 to check for settlements.
+2025-04-29 15:21:06,571 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-20 to check for settlements.
+2025-04-29 15:21:06,571 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-23 to check for settlements.
+2025-04-29 15:21:06,571 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-24 to check for settlements.
+2025-04-29 15:21:06,571 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-25 to check for settlements.
+2025-04-29 15:21:06,572 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-26 to check for settlements.
+2025-04-29 15:21:06,572 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-27 to check for settlements.
+2025-04-29 15:21:06,572 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-30 to check for settlements.
+2025-04-29 15:21:06,573 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-10-31 to check for settlements.
+2025-04-29 15:21:06,573 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-01 to check for settlements.
+2025-04-29 15:21:06,573 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-02 to check for settlements.
+2025-04-29 15:21:06,573 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-11-03 
+2025-04-29 15:21:06,574 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-03 to check for settlements.
+2025-04-29 15:21:06,574 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 574021), id='b2c32b70-8e70-4df5-96a7-b6b7d22d5b8b', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,574 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 574395), id='1262a330-155b-4c99-b28a-e1f3e7616d92', symbol=np.float64(513500.0), direction='BUY', quantity=17100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,574 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-06 to check for settlements.
+2025-04-29 15:21:06,574 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-07 to check for settlements.
+2025-04-29 15:21:06,574 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1262a330-155b-4c99-b28a-e1f3e7616d92 with FillEvent fbfd55fe-098f-4e63-8dc8-421f51235497: BUY 17100 of 513500.0 at $2.9855 (Commission: $51.0519, using data at 2023-11-07)
+2025-04-29 15:21:06,575 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 17100 of 513500.0 at 2.985492. Cash reduced by 51102.97. New cash: $50434.14
+2025-04-29 15:21:06,575 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 17100, Avg Cost: $2.9855
+2025-04-29 15:21:06,575 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $50434.14, Reserved Cash: $3229.44, Available Cash: $47204.70, Total Value: $101392.14
+2025-04-29 15:21:06,575 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-08 to check for settlements.
+2025-04-29 15:21:06,575 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-11-09 
+2025-04-29 15:21:06,575 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-09 to check for settlements.
+2025-04-29 15:21:06,576 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 575841), id='686076a4-59d7-4105-bca2-f132b91efeca', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,576 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 17100).
+2025-04-29 15:21:06,576 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 576274), id='43261f7a-2a49-4500-b48e-e654f8a936e6', symbol=np.float64(513500.0), direction='SELL', quantity=17100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,576 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-10 to check for settlements.
+2025-04-29 15:21:06,576 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-11-13 
+2025-04-29 15:21:06,576 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-13 to check for settlements.
+2025-04-29 15:21:06,576 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 43261f7a-2a49-4500-b48e-e654f8a936e6 with FillEvent a28a17c4-634c-4f70-a4b6-afa856da6c01: SELL 17100 of 513500.0 at $3.0225 (Commission: $51.6845, using data at 2023-11-13)
+2025-04-29 15:21:06,577 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 576760), id='3bf78c0b-2f37-4661-9584-2db5a25558ad', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,577 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 16900 513500.0. Required: ~$51114.58, Available (Cash - Reserved): ~$47204.70 (Current Cash: $50434.14, Reserved: $3229.44)
+2025-04-29 15:21:06,577 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 577216), id='806b60e1-75c3-4b1c-b6a0-8a0b85073ebc', symbol=np.float64(513500.0), direction='BUY', quantity=16900, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,577 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 17100 of 513500.0 at 3.022488. Cash increased by 51632.86. New cash: $102067.00
+2025-04-29 15:21:06,577 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,577 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $102067.00, Reserved Cash: $3229.44, Available Cash: $98837.56, Total Value: $102067.00
+2025-04-29 15:21:06,577 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-11-14 
+2025-04-29 15:21:06,577 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-14 to check for settlements.
+2025-04-29 15:21:06,578 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 577656), id='da516fc4-ce9e-4450-8396-0d5f30170088', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,578 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 578100), id='6624b174-7329-4bc4-b241-177a4a4c4ec2', symbol=np.float64(513500.0), direction='BUY', quantity=16800, order_type='MARKET', price=None)
+2025-04-29 15:21:06,578 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-15 to check for settlements.
+2025-04-29 15:21:06,578 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-16 to check for settlements.
+2025-04-29 15:21:06,578 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 6624b174-7329-4bc4-b241-177a4a4c4ec2 with FillEvent 6440bdcd-87be-4080-ab06-5bced930a371: BUY 16800 of 513500.0 at $3.0775 (Commission: $51.7026, using data at 2023-11-16)
+2025-04-29 15:21:06,578 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16800 of 513500.0 at 3.077538. Cash reduced by 51754.34. New cash: $50312.66
+2025-04-29 15:21:06,578 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16800, Avg Cost: $3.0775
+2025-04-29 15:21:06,579 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $50312.66, Reserved Cash: $2421.83, Available Cash: $47890.83, Total Value: $101888.66
+2025-04-29 15:21:06,579 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-17 to check for settlements.
+2025-04-29 15:21:06,579 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-20 to check for settlements.
+2025-04-29 15:21:06,579 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-21 to check for settlements.
+2025-04-29 15:21:06,580 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-22 to check for settlements.
+2025-04-29 15:21:06,580 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-23 to check for settlements.
+2025-04-29 15:21:06,580 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-24 to check for settlements.
+2025-04-29 15:21:06,580 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-27 to check for settlements.
+2025-04-29 15:21:06,581 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-28 to check for settlements.
+2025-04-29 15:21:06,581 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-29 to check for settlements.
+2025-04-29 15:21:06,581 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-11-30 to check for settlements.
+2025-04-29 15:21:06,582 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-01 to check for settlements.
+2025-04-29 15:21:06,582 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-04 to check for settlements.
+2025-04-29 15:21:06,582 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-05 to check for settlements.
+2025-04-29 15:21:06,582 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-06 to check for settlements.
+2025-04-29 15:21:06,583 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-07 to check for settlements.
+2025-04-29 15:21:06,583 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-08 to check for settlements.
+2025-04-29 15:21:06,583 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-11 to check for settlements.
+2025-04-29 15:21:06,584 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-12 to check for settlements.
+2025-04-29 15:21:06,584 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-13 to check for settlements.
+2025-04-29 15:21:06,584 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-14 to check for settlements.
+2025-04-29 15:21:06,585 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-15 to check for settlements.
+2025-04-29 15:21:06,585 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-18 to check for settlements.
+2025-04-29 15:21:06,585 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-19 to check for settlements.
+2025-04-29 15:21:06,585 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-20 to check for settlements.
+2025-04-29 15:21:06,586 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-21 to check for settlements.
+2025-04-29 15:21:06,586 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-22 to check for settlements.
+2025-04-29 15:21:06,586 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-25 to check for settlements.
+2025-04-29 15:21:06,587 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-26 to check for settlements.
+2025-04-29 15:21:06,587 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-27 to check for settlements.
+2025-04-29 15:21:06,587 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-28 to check for settlements.
+2025-04-29 15:21:06,587 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2023-12-29 to check for settlements.
+2025-04-29 15:21:06,588 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-02 to check for settlements.
+2025-04-29 15:21:06,588 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-03 to check for settlements.
+2025-04-29 15:21:06,588 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-04 to check for settlements.
+2025-04-29 15:21:06,589 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-05 to check for settlements.
+2025-04-29 15:21:06,589 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-08 to check for settlements.
+2025-04-29 15:21:06,589 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-09 to check for settlements.
+2025-04-29 15:21:06,589 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-10 to check for settlements.
+2025-04-29 15:21:06,590 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-11 to check for settlements.
+2025-04-29 15:21:06,590 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-12 to check for settlements.
+2025-04-29 15:21:06,590 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-15 to check for settlements.
+2025-04-29 15:21:06,591 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-16 to check for settlements.
+2025-04-29 15:21:06,591 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-17 to check for settlements.
+2025-04-29 15:21:06,591 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-18 to check for settlements.
+2025-04-29 15:21:06,592 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-19 to check for settlements.
+2025-04-29 15:21:06,592 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-22 to check for settlements.
+2025-04-29 15:21:06,592 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-23 to check for settlements.
+2025-04-29 15:21:06,592 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-24 to check for settlements.
+2025-04-29 15:21:06,593 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-25 to check for settlements.
+2025-04-29 15:21:06,593 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-26 to check for settlements.
+2025-04-29 15:21:06,593 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-29 to check for settlements.
+2025-04-29 15:21:06,594 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-30 to check for settlements.
+2025-04-29 15:21:06,594 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-01-31 to check for settlements.
+2025-04-29 15:21:06,594 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-01 to check for settlements.
+2025-04-29 15:21:06,595 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-02 to check for settlements.
+2025-04-29 15:21:06,595 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-05 to check for settlements.
+2025-04-29 15:21:06,595 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-06 to check for settlements.
+2025-04-29 15:21:06,595 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-07 to check for settlements.
+2025-04-29 15:21:06,596 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-08 to check for settlements.
+2025-04-29 15:21:06,596 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-19 to check for settlements.
+2025-04-29 15:21:06,596 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-20 to check for settlements.
+2025-04-29 15:21:06,597 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-21 to check for settlements.
+2025-04-29 15:21:06,597 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-22 to check for settlements.
+2025-04-29 15:21:06,597 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-23 to check for settlements.
+2025-04-29 15:21:06,597 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-26 to check for settlements.
+2025-04-29 15:21:06,598 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-27 to check for settlements.
+2025-04-29 15:21:06,598 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-28 to check for settlements.
+2025-04-29 15:21:06,598 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-02-29 to check for settlements.
+2025-04-29 15:21:06,599 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-01 to check for settlements.
+2025-04-29 15:21:06,599 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-04 to check for settlements.
+2025-04-29 15:21:06,599 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-05 to check for settlements.
+2025-04-29 15:21:06,599 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-06 to check for settlements.
+2025-04-29 15:21:06,600 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-07 to check for settlements.
+2025-04-29 15:21:06,600 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-08 to check for settlements.
+2025-04-29 15:21:06,600 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-11 to check for settlements.
+2025-04-29 15:21:06,601 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-12 to check for settlements.
+2025-04-29 15:21:06,601 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-13 to check for settlements.
+2025-04-29 15:21:06,601 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-14 to check for settlements.
+2025-04-29 15:21:06,602 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-15 to check for settlements.
+2025-04-29 15:21:06,602 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-18 to check for settlements.
+2025-04-29 15:21:06,602 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-19 to check for settlements.
+2025-04-29 15:21:06,602 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-20 to check for settlements.
+2025-04-29 15:21:06,603 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-21 to check for settlements.
+2025-04-29 15:21:06,603 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-22 to check for settlements.
+2025-04-29 15:21:06,603 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-25 to check for settlements.
+2025-04-29 15:21:06,604 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-26 to check for settlements.
+2025-04-29 15:21:06,604 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-27 to check for settlements.
+2025-04-29 15:21:06,604 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-28 to check for settlements.
+2025-04-29 15:21:06,604 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-03-29 to check for settlements.
+2025-04-29 15:21:06,605 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-01 to check for settlements.
+2025-04-29 15:21:06,605 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-02 to check for settlements.
+2025-04-29 15:21:06,605 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-03 to check for settlements.
+2025-04-29 15:21:06,606 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-08 to check for settlements.
+2025-04-29 15:21:06,606 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-09 to check for settlements.
+2025-04-29 15:21:06,606 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-10 to check for settlements.
+2025-04-29 15:21:06,607 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-04-11 
+2025-04-29 15:21:06,607 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-11 to check for settlements.
+2025-04-29 15:21:06,607 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 607147), id='6bc5134d-b937-4225-b786-405567041117', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,607 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16800).
+2025-04-29 15:21:06,607 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 607583), id='ec90a9e6-bf6a-4838-a67a-e73f5b42e3e8', symbol=np.float64(513500.0), direction='SELL', quantity=16800, order_type='MARKET', price=None)
+2025-04-29 15:21:06,607 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-04-12 
+2025-04-29 15:21:06,607 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-12 to check for settlements.
+2025-04-29 15:21:06,608 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 607747), id='b374721f-21ef-40db-9511-60c0034bffc0', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,608 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 15300 513500.0. Required: ~$55132.00, Available (Cash - Reserved): ~$47890.83 (Current Cash: $50312.66, Reserved: $2421.83)
+2025-04-29 15:21:06,608 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 608141), id='d9f2c70e-5402-4581-9467-fa82e2fd6d7e', symbol=np.float64(513500.0), direction='BUY', quantity=15300, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,608 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-15 to check for settlements.
+2025-04-29 15:21:06,608 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order ec90a9e6-bf6a-4838-a67a-e73f5b42e3e8 with FillEvent 57bb9382-fecd-4ef3-bb67-30cefdb017ab: SELL 16800 of 513500.0 at $3.5502 (Commission: $59.6438, using data at 2024-04-15)
+2025-04-29 15:21:06,608 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16800 of 513500.0 at 3.550224. Cash increased by 59584.12. New cash: $109896.78
+2025-04-29 15:21:06,608 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,608 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $109896.78, Reserved Cash: $2421.83, Available Cash: $107474.95, Total Value: $109896.78
+2025-04-29 15:21:06,608 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-16 to check for settlements.
+2025-04-29 15:21:06,609 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-17 to check for settlements.
+2025-04-29 15:21:06,609 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-18 to check for settlements.
+2025-04-29 15:21:06,609 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-19 to check for settlements.
+2025-04-29 15:21:06,610 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-22 to check for settlements.
+2025-04-29 15:21:06,610 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-23 to check for settlements.
+2025-04-29 15:21:06,610 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-24 to check for settlements.
+2025-04-29 15:21:06,611 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-25 to check for settlements.
+2025-04-29 15:21:06,611 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-26 to check for settlements.
+2025-04-29 15:21:06,611 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-29 to check for settlements.
+2025-04-29 15:21:06,611 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-04-30 to check for settlements.
+2025-04-29 15:21:06,612 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-06 to check for settlements.
+2025-04-29 15:21:06,612 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-07 to check for settlements.
+2025-04-29 15:21:06,612 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-08 to check for settlements.
+2025-04-29 15:21:06,613 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-09 to check for settlements.
+2025-04-29 15:21:06,613 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-10 to check for settlements.
+2025-04-29 15:21:06,613 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-13 to check for settlements.
+2025-04-29 15:21:06,613 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-05-14 
+2025-04-29 15:21:06,614 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-14 to check for settlements.
+2025-04-29 15:21:06,614 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 614061), id='21cb0977-bbb9-4b72-8e74-a6636a41a37f', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,614 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 614432), id='a89a45f9-1c30-4fff-9bf4-2926d7638f1a', symbol=np.float64(513500.0), direction='BUY', quantity=15200, order_type='MARKET', price=None)
+2025-04-29 15:21:06,614 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-15 to check for settlements.
+2025-04-29 15:21:06,614 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-16 to check for settlements.
+2025-04-29 15:21:06,614 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a89a45f9-1c30-4fff-9bf4-2926d7638f1a with FillEvent 0398c748-b98f-4472-af00-9483ff1ae94d: BUY 15200 of 513500.0 at $3.6998 (Commission: $56.2377, using data at 2024-05-16)
+2025-04-29 15:21:06,615 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 15200 of 513500.0 at 3.699849. Cash reduced by 56293.94. New cash: $53602.83
+2025-04-29 15:21:06,615 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 15200, Avg Cost: $3.6998
+2025-04-29 15:21:06,615 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $53602.83, Reserved Cash: $960.44, Available Cash: $52642.39, Total Value: $109690.83
+2025-04-29 15:21:06,615 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-17 to check for settlements.
+2025-04-29 15:21:06,615 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-20 to check for settlements.
+2025-04-29 15:21:06,616 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-21 to check for settlements.
+2025-04-29 15:21:06,616 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-22 to check for settlements.
+2025-04-29 15:21:06,616 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-23 to check for settlements.
+2025-04-29 15:21:06,616 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-24 to check for settlements.
+2025-04-29 15:21:06,617 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-27 to check for settlements.
+2025-04-29 15:21:06,617 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-28 to check for settlements.
+2025-04-29 15:21:06,617 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-29 to check for settlements.
+2025-04-29 15:21:06,618 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-30 to check for settlements.
+2025-04-29 15:21:06,618 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-05-31 to check for settlements.
+2025-04-29 15:21:06,618 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-03 to check for settlements.
+2025-04-29 15:21:06,619 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-04 to check for settlements.
+2025-04-29 15:21:06,619 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-05 to check for settlements.
+2025-04-29 15:21:06,619 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-06 to check for settlements.
+2025-04-29 15:21:06,619 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-07 to check for settlements.
+2025-04-29 15:21:06,620 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-11 to check for settlements.
+2025-04-29 15:21:06,620 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-12 to check for settlements.
+2025-04-29 15:21:06,620 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-13 to check for settlements.
+2025-04-29 15:21:06,621 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-14 to check for settlements.
+2025-04-29 15:21:06,621 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-17 to check for settlements.
+2025-04-29 15:21:06,621 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-18 to check for settlements.
+2025-04-29 15:21:06,621 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-19 to check for settlements.
+2025-04-29 15:21:06,622 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-20 to check for settlements.
+2025-04-29 15:21:06,622 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-21 to check for settlements.
+2025-04-29 15:21:06,622 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-24 to check for settlements.
+2025-04-29 15:21:06,623 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-25 to check for settlements.
+2025-04-29 15:21:06,623 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-26 to check for settlements.
+2025-04-29 15:21:06,623 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-27 to check for settlements.
+2025-04-29 15:21:06,623 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-06-28 to check for settlements.
+2025-04-29 15:21:06,624 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-01 to check for settlements.
+2025-04-29 15:21:06,624 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-02 to check for settlements.
+2025-04-29 15:21:06,624 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-03 to check for settlements.
+2025-04-29 15:21:06,625 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-04 to check for settlements.
+2025-04-29 15:21:06,625 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-05 to check for settlements.
+2025-04-29 15:21:06,625 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-08 to check for settlements.
+2025-04-29 15:21:06,625 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-09 to check for settlements.
+2025-04-29 15:21:06,626 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-10 to check for settlements.
+2025-04-29 15:21:06,626 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-11 to check for settlements.
+2025-04-29 15:21:06,626 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-12 to check for settlements.
+2025-04-29 15:21:06,627 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-15 to check for settlements.
+2025-04-29 15:21:06,627 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-16 to check for settlements.
+2025-04-29 15:21:06,627 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-17 to check for settlements.
+2025-04-29 15:21:06,628 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-18 to check for settlements.
+2025-04-29 15:21:06,628 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-19 to check for settlements.
+2025-04-29 15:21:06,628 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-22 to check for settlements.
+2025-04-29 15:21:06,628 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-23 to check for settlements.
+2025-04-29 15:21:06,629 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-24 to check for settlements.
+2025-04-29 15:21:06,629 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-07-25 
+2025-04-29 15:21:06,629 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-25 to check for settlements.
+2025-04-29 15:21:06,629 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 629550), id='9603010f-5e94-4e5e-bf2e-7a967b75f05a', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,629 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 15200).
+2025-04-29 15:21:06,630 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 629984), id='cc41aaf4-af3f-45c1-80c2-87c662d11d36', symbol=np.float64(513500.0), direction='SELL', quantity=15200, order_type='MARKET', price=None)
+2025-04-29 15:21:06,630 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-26 to check for settlements.
+2025-04-29 15:21:06,630 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-29 to check for settlements.
+2025-04-29 15:21:06,630 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order cc41aaf4-af3f-45c1-80c2-87c662d11d36 with FillEvent 947a21b6-effb-4082-8efc-cbc38131173c: SELL 15200 of 513500.0 at $3.8941 (Commission: $59.1896, using data at 2024-07-29)
+2025-04-29 15:21:06,630 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 15200 of 513500.0 at 3.894052. Cash increased by 59130.40. New cash: $112733.23
+2025-04-29 15:21:06,630 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,630 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $112733.23, Reserved Cash: $960.44, Available Cash: $111772.79, Total Value: $112733.23
+2025-04-29 15:21:06,630 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-30 to check for settlements.
+2025-04-29 15:21:06,631 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-07-31 to check for settlements.
+2025-04-29 15:21:06,631 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-01 to check for settlements.
+2025-04-29 15:21:06,631 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-02 to check for settlements.
+2025-04-29 15:21:06,632 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-05 to check for settlements.
+2025-04-29 15:21:06,632 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-06 to check for settlements.
+2025-04-29 15:21:06,632 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-07 to check for settlements.
+2025-04-29 15:21:06,633 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-08 to check for settlements.
+2025-04-29 15:21:06,633 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-09 to check for settlements.
+2025-04-29 15:21:06,633 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-12 to check for settlements.
+2025-04-29 15:21:06,633 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-13 to check for settlements.
+2025-04-29 15:21:06,634 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-14 to check for settlements.
+2025-04-29 15:21:06,634 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-15 to check for settlements.
+2025-04-29 15:21:06,634 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-16 to check for settlements.
+2025-04-29 15:21:06,635 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-19 to check for settlements.
+2025-04-29 15:21:06,635 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-20 to check for settlements.
+2025-04-29 15:21:06,635 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-21 to check for settlements.
+2025-04-29 15:21:06,636 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-22 
+2025-04-29 15:21:06,636 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-22 to check for settlements.
+2025-04-29 15:21:06,636 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 636094), id='7850899f-beeb-4198-8256-5e583305eadc', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,636 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 636471), id='73b36677-3b13-402e-b749-d4942e203c47', symbol=np.float64(513500.0), direction='BUY', quantity=14300, order_type='MARKET', price=None)
+2025-04-29 15:21:06,636 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-23 to check for settlements.
+2025-04-29 15:21:06,636 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-26 to check for settlements.
+2025-04-29 15:21:06,636 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 73b36677-3b13-402e-b749-d4942e203c47 with FillEvent b45e292e-2385-4a05-a68f-7545fec00964: BUY 14300 of 513500.0 at $3.9780 (Commission: $56.8852, using data at 2024-08-26)
+2025-04-29 15:21:06,637 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14300 of 513500.0 at 3.977988. Cash reduced by 56942.11. New cash: $55791.12
+2025-04-29 15:21:06,637 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14300, Avg Cost: $3.9780
+2025-04-29 15:21:06,637 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $55791.12, Reserved Cash: $759.94, Available Cash: $55031.18, Total Value: $112133.12
+2025-04-29 15:21:06,637 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-27 to check for settlements.
+2025-04-29 15:21:06,637 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-28 to check for settlements.
+2025-04-29 15:21:06,638 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-08-29 
+2025-04-29 15:21:06,638 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-29 to check for settlements.
+2025-04-29 15:21:06,638 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 638142), id='68ae1793-231d-41b2-bbab-003bd2147212', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,638 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14300).
+2025-04-29 15:21:06,638 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 638582), id='655b91bf-96b7-41f7-a533-0fb5a4c67220', symbol=np.float64(513500.0), direction='SELL', quantity=14300, order_type='MARKET', price=None)
+2025-04-29 15:21:06,638 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-30 
+2025-04-29 15:21:06,638 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-08-30 to check for settlements.
+2025-04-29 15:21:06,639 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 638803), id='9c05d2d0-0a1d-446e-bd43-3ca48ae3fde5', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,639 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 14200 513500.0. Required: ~$56088.84, Available (Cash - Reserved): ~$55031.18 (Current Cash: $55791.12, Reserved: $759.94)
+2025-04-29 15:21:06,639 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 639191), id='eac35ac4-3eea-473e-9179-3b77d8ad6c03', symbol=np.float64(513500.0), direction='BUY', quantity=14200, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,639 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-09-02 
+2025-04-29 15:21:06,639 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-02 to check for settlements.
+2025-04-29 15:21:06,639 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 655b91bf-96b7-41f7-a533-0fb5a4c67220 with FillEvent d434fe26-2923-4bac-8db8-88c6cabd2c07: SELL 14300 of 513500.0 at $3.9780 (Commission: $56.8855, using data at 2024-09-02)
+2025-04-29 15:21:06,639 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 639423), id='44329482-5605-4915-823f-f4d6ea34862f', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,639 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 14100 513500.0. Required: ~$56202.21, Available (Cash - Reserved): ~$55031.18 (Current Cash: $55791.12, Reserved: $759.94)
+2025-04-29 15:21:06,639 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 639877), id='acad28cc-515b-44e8-affe-f2a32efc0056', symbol=np.float64(513500.0), direction='BUY', quantity=14100, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,640 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14300 of 513500.0 at 3.97801. Cash increased by 56828.66. New cash: $112619.78
+2025-04-29 15:21:06,640 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,640 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $112619.78, Reserved Cash: $759.94, Available Cash: $111859.84, Total Value: $112619.78
+2025-04-29 15:21:06,640 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-09-03 
+2025-04-29 15:21:06,640 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-03 to check for settlements.
+2025-04-29 15:21:06,640 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 640337), id='1fbb21f0-b898-4212-9016-9d93b6a821fb', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,640 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 640714), id='5285113d-400e-468c-b79a-1cb755da2450', symbol=np.float64(513500.0), direction='BUY', quantity=14100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,640 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-04 to check for settlements.
+2025-04-29 15:21:06,641 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-05 to check for settlements.
+2025-04-29 15:21:06,641 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 5285113d-400e-468c-b79a-1cb755da2450 with FillEvent f1b0c4c6-15da-47b2-87b9-ed543c351388: BUY 14100 of 513500.0 at $3.8679 (Commission: $54.5379, using data at 2024-09-05)
+2025-04-29 15:21:06,641 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14100 of 513500.0 at 3.8679330000000003. Cash reduced by 54592.39. New cash: $58027.38
+2025-04-29 15:21:06,641 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14100, Avg Cost: $3.8679
+2025-04-29 15:21:06,641 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $58027.38, Reserved Cash: $2708.66, Available Cash: $55318.73, Total Value: $112255.98
+2025-04-29 15:21:06,641 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-06 to check for settlements.
+2025-04-29 15:21:06,642 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-09 to check for settlements.
+2025-04-29 15:21:06,642 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-10 to check for settlements.
+2025-04-29 15:21:06,642 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-09-11 
+2025-04-29 15:21:06,642 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-11 to check for settlements.
+2025-04-29 15:21:06,643 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 642733), id='d995fcc8-4819-4a65-b66a-8927c0c35d16', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,643 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14100).
+2025-04-29 15:21:06,643 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 643221), id='dea62f71-02dc-4867-9b51-1d01a426ee8a', symbol=np.float64(513500.0), direction='SELL', quantity=14100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,643 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-12 to check for settlements.
+2025-04-29 15:21:06,643 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-13 to check for settlements.
+2025-04-29 15:21:06,643 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order dea62f71-02dc-4867-9b51-1d01a426ee8a with FillEvent b108fa6e-33eb-42fb-8bbe-118a2c541eef: SELL 14100 of 513500.0 at $3.8861 (Commission: $54.7934, using data at 2024-09-13)
+2025-04-29 15:21:06,644 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14100 of 513500.0 at 3.886056. Cash increased by 54738.60. New cash: $112765.98
+2025-04-29 15:21:06,644 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,644 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $112765.98, Reserved Cash: $2708.66, Available Cash: $110057.32, Total Value: $112765.98
+2025-04-29 15:21:06,644 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-18 to check for settlements.
+2025-04-29 15:21:06,644 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-19 to check for settlements.
+2025-04-29 15:21:06,644 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-09-20 
+2025-04-29 15:21:06,644 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-20 to check for settlements.
+2025-04-29 15:21:06,645 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 644922), id='47ec4033-c174-4c04-9433-ec3386f1e45a', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,645 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 645301), id='1eef015c-061d-4f57-bc19-a5be12e224ad', symbol=np.float64(513500.0), direction='BUY', quantity=14300, order_type='MARKET', price=None)
+2025-04-29 15:21:06,645 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-23 to check for settlements.
+2025-04-29 15:21:06,645 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-24 to check for settlements.
+2025-04-29 15:21:06,645 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1eef015c-061d-4f57-bc19-a5be12e224ad with FillEvent 94eedf8c-0ccc-46db-8c25-c02201195a94: BUY 14300 of 513500.0 at $3.9560 (Commission: $56.5705, using data at 2024-09-24)
+2025-04-29 15:21:06,646 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14300 of 513500.0 at 3.9559770000000003. Cash reduced by 56627.04. New cash: $56138.94
+2025-04-29 15:21:06,646 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14300, Avg Cost: $3.9560
+2025-04-29 15:21:06,646 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $56138.94, Reserved Cash: $3195.59, Available Cash: $52943.35, Total Value: $111908.94
+2025-04-29 15:21:06,646 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-09-25 
+2025-04-29 15:21:06,646 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-25 to check for settlements.
+2025-04-29 15:21:06,646 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 646375), id='8ec2ec04-8bbd-46c3-a4ea-4d14adde42ba', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,646 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14300).
+2025-04-29 15:21:06,646 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 646810), id='a3ff0175-5ab5-4dad-815b-152b65371759', symbol=np.float64(513500.0), direction='SELL', quantity=14300, order_type='MARKET', price=None)
+2025-04-29 15:21:06,646 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-26 to check for settlements.
+2025-04-29 15:21:06,647 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-27 to check for settlements.
+2025-04-29 15:21:06,647 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a3ff0175-5ab5-4dad-815b-152b65371759 with FillEvent 6fcdd9b2-05e4-4b53-89d5-7e5ea59fc987: SELL 14300 of 513500.0 at $3.8381 (Commission: $54.8845, using data at 2024-09-27)
+2025-04-29 15:21:06,647 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14300 of 513500.0 at 3.8380799999999997. Cash increased by 54829.66. New cash: $110968.60
+2025-04-29 15:21:06,647 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,647 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $110968.60, Reserved Cash: $3195.59, Available Cash: $107773.01, Total Value: $110968.60
+2025-04-29 15:21:06,647 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-09-30 to check for settlements.
+2025-04-29 15:21:06,648 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-08 to check for settlements.
+2025-04-29 15:21:06,648 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-09 to check for settlements.
+2025-04-29 15:21:06,648 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-10 to check for settlements.
+2025-04-29 15:21:06,649 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-10-11 
+2025-04-29 15:21:06,649 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-11 to check for settlements.
+2025-04-29 15:21:06,649 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 649080), id='ea2e726f-6e8e-4f62-9be5-2fa33bbb6e8c', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,649 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 649460), id='54bfd82e-a08b-4cf3-909f-3518cd046002', symbol=np.float64(513500.0), direction='BUY', quantity=14200, order_type='MARKET', price=None)
+2025-04-29 15:21:06,649 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-14 to check for settlements.
+2025-04-29 15:21:06,649 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-15 to check for settlements.
+2025-04-29 15:21:06,649 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 54bfd82e-a08b-4cf3-909f-3518cd046002 with FillEvent 01fb4e1d-7d42-431b-bfc3-5555c60b9f73: BUY 14200 of 513500.0 at $4.0120 (Commission: $56.9705, using data at 2024-10-15)
+2025-04-29 15:21:06,650 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14200 of 513500.0 at 4.012004999999999. Cash reduced by 57027.44. New cash: $53941.16
+2025-04-29 15:21:06,650 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14200, Avg Cost: $4.0120
+2025-04-29 15:21:06,650 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $53941.16, Reserved Cash: $1659.69, Available Cash: $52281.47, Total Value: $110883.16
+2025-04-29 15:21:06,650 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-16 to check for settlements.
+2025-04-29 15:21:06,650 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-17 to check for settlements.
+2025-04-29 15:21:06,651 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-18 to check for settlements.
+2025-04-29 15:21:06,651 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-21 to check for settlements.
+2025-04-29 15:21:06,651 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-22 to check for settlements.
+2025-04-29 15:21:06,651 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-23 to check for settlements.
+2025-04-29 15:21:06,652 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-24 to check for settlements.
+2025-04-29 15:21:06,652 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-25 to check for settlements.
+2025-04-29 15:21:06,652 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-28 to check for settlements.
+2025-04-29 15:21:06,653 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-29 to check for settlements.
+2025-04-29 15:21:06,653 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-30 to check for settlements.
+2025-04-29 15:21:06,653 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-10-31 to check for settlements.
+2025-04-29 15:21:06,654 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-01 to check for settlements.
+2025-04-29 15:21:06,654 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-04 to check for settlements.
+2025-04-29 15:21:06,654 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-05 to check for settlements.
+2025-04-29 15:21:06,654 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-06 to check for settlements.
+2025-04-29 15:21:06,655 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-07 to check for settlements.
+2025-04-29 15:21:06,655 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-08 to check for settlements.
+2025-04-29 15:21:06,655 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-11 to check for settlements.
+2025-04-29 15:21:06,656 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-12 to check for settlements.
+2025-04-29 15:21:06,656 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-13 to check for settlements.
+2025-04-29 15:21:06,656 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-14 to check for settlements.
+2025-04-29 15:21:06,656 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-15 to check for settlements.
+2025-04-29 15:21:06,657 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-18 to check for settlements.
+2025-04-29 15:21:06,657 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-19 to check for settlements.
+2025-04-29 15:21:06,657 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-20 to check for settlements.
+2025-04-29 15:21:06,658 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-21 to check for settlements.
+2025-04-29 15:21:06,658 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-22 to check for settlements.
+2025-04-29 15:21:06,658 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-25 to check for settlements.
+2025-04-29 15:21:06,659 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-26 to check for settlements.
+2025-04-29 15:21:06,659 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-27 to check for settlements.
+2025-04-29 15:21:06,659 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-28 to check for settlements.
+2025-04-29 15:21:06,659 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-11-29 to check for settlements.
+2025-04-29 15:21:06,660 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-02 to check for settlements.
+2025-04-29 15:21:06,660 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-03 to check for settlements.
+2025-04-29 15:21:06,660 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-04 to check for settlements.
+2025-04-29 15:21:06,661 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-05 to check for settlements.
+2025-04-29 15:21:06,661 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-06 to check for settlements.
+2025-04-29 15:21:06,661 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-09 to check for settlements.
+2025-04-29 15:21:06,661 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-10 to check for settlements.
+2025-04-29 15:21:06,662 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-11 to check for settlements.
+2025-04-29 15:21:06,662 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-12 to check for settlements.
+2025-04-29 15:21:06,662 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-13 to check for settlements.
+2025-04-29 15:21:06,663 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-16 to check for settlements.
+2025-04-29 15:21:06,663 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-12-17 
+2025-04-29 15:21:06,663 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-17 to check for settlements.
+2025-04-29 15:21:06,663 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 663473), id='b50c6328-7934-48e9-bce0-9d6b41b75540', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,663 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14200).
+2025-04-29 15:21:06,663 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 663910), id='ec177dd9-f0c2-4e60-8140-1945d5736028', symbol=np.float64(513500.0), direction='SELL', quantity=14200, order_type='MARKET', price=None)
+2025-04-29 15:21:06,664 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-12-18 
+2025-04-29 15:21:06,664 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-18 to check for settlements.
+2025-04-29 15:21:06,664 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 664067), id='7a2482e7-76f2-4916-8884-aceb4b484668', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,664 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 13100 513500.0. Required: ~$58251.28, Available (Cash - Reserved): ~$52281.47 (Current Cash: $53941.16, Reserved: $1659.69)
+2025-04-29 15:21:06,664 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 664439), id='ff8308d4-32dc-4873-a7c7-7ab608a9fff4', symbol=np.float64(513500.0), direction='BUY', quantity=13100, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,664 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-12-19 
+2025-04-29 15:21:06,664 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-19 to check for settlements.
+2025-04-29 15:21:06,664 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order ec177dd9-f0c2-4e60-8140-1945d5736028 with FillEvent c8ec19b3-bcdc-4cf8-8f2a-ce498c77fe8e: SELL 14200 of 513500.0 at $4.2959 (Commission: $61.0011, using data at 2024-12-19)
+2025-04-29 15:21:06,665 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 664668), id='d3f1d7af-c8d4-4733-bbd3-13fc1468d62f', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,665 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 13300 513500.0. Required: ~$57249.17, Available (Cash - Reserved): ~$52281.47 (Current Cash: $53941.16, Reserved: $1659.69)
+2025-04-29 15:21:06,665 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 665173), id='a5d4a7f5-2d89-43be-8b76-218c2cbb0dc5', symbol=np.float64(513500.0), direction='BUY', quantity=13300, order_type='MARKET', price=None) blocked by risk check.
+2025-04-29 15:21:06,665 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14200 of 513500.0 at 4.295851. Cash increased by 60940.08. New cash: $114881.24
+2025-04-29 15:21:06,665 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,665 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $114881.24, Reserved Cash: $1659.69, Available Cash: $113221.55, Total Value: $114881.24
+2025-04-29 15:21:06,665 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-12-20 
+2025-04-29 15:21:06,665 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-20 to check for settlements.
+2025-04-29 15:21:06,665 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 665605), id='e6a84830-cc0d-4f25-966c-9f9e04d678d1', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,666 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 666033), id='6175de71-3e87-468b-a663-0f19a14f7bd5', symbol=np.float64(513500.0), direction='BUY', quantity=13500, order_type='MARKET', price=None)
+2025-04-29 15:21:06,666 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-23 to check for settlements.
+2025-04-29 15:21:06,666 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-24 to check for settlements.
+2025-04-29 15:21:06,666 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 6175de71-3e87-468b-a663-0f19a14f7bd5 with FillEvent 7641c92b-f625-4c96-8267-fa1779168d33: BUY 13500 of 513500.0 at $4.4282 (Commission: $59.7809, using data at 2024-12-24)
+2025-04-29 15:21:06,666 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13500 of 513500.0 at 4.428213. Cash reduced by 59840.66. New cash: $55040.58
+2025-04-29 15:21:06,666 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13500, Avg Cost: $4.4282
+2025-04-29 15:21:06,666 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $55040.58, Reserved Cash: $10.22, Available Cash: $55030.37, Total Value: $113927.58
+2025-04-29 15:21:06,667 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-25 to check for settlements.
+2025-04-29 15:21:06,667 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-26 to check for settlements.
+2025-04-29 15:21:06,667 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-27 to check for settlements.
+2025-04-29 15:21:06,667 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-12-30 
+2025-04-29 15:21:06,668 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-30 to check for settlements.
+2025-04-29 15:21:06,668 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 668040), id='09904580-0c26-4c7f-a378-e9725b2ef327', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,668 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13500).
+2025-04-29 15:21:06,668 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 668476), id='35ae92bc-6ff0-4d9a-88d0-25797e6239ad', symbol=np.float64(513500.0), direction='SELL', quantity=13500, order_type='MARKET', price=None)
+2025-04-29 15:21:06,668 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2024-12-31 to check for settlements.
+2025-04-29 15:21:06,668 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-02 to check for settlements.
+2025-04-29 15:21:06,668 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 35ae92bc-6ff0-4d9a-88d0-25797e6239ad with FillEvent 60b1c719-c0c3-47b7-b862-3785ecfa46f5: SELL 13500 of 513500.0 at $4.3238 (Commission: $58.3718, using data at 2025-01-02)
+2025-04-29 15:21:06,669 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 13500 of 513500.0 at 4.323836999999999. Cash increased by 58313.43. New cash: $113354.01
+2025-04-29 15:21:06,669 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-04-29 15:21:06,669 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $113354.01, Reserved Cash: $10.22, Available Cash: $113343.80, Total Value: $113354.01
+2025-04-29 15:21:06,669 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-03 to check for settlements.
+2025-04-29 15:21:06,669 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-06 to check for settlements.
+2025-04-29 15:21:06,670 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-07 to check for settlements.
+2025-04-29 15:21:06,670 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-08 to check for settlements.
+2025-04-29 15:21:06,670 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-09 to check for settlements.
+2025-04-29 15:21:06,670 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-10 to check for settlements.
+2025-04-29 15:21:06,671 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-13 to check for settlements.
+2025-04-29 15:21:06,671 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-14 to check for settlements.
+2025-04-29 15:21:06,671 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2025-01-15 
+2025-04-29 15:21:06,671 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-15 to check for settlements.
+2025-04-29 15:21:06,672 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 671948), id='f1ff0050-9365-4004-b1fd-9b9de53faa11', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-04-29 15:21:06,672 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 672332), id='83672cb6-e1a0-4585-9d50-123bc3d236a4', symbol=np.float64(513500.0), direction='BUY', quantity=13100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,672 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2025-01-16 
+2025-04-29 15:21:06,672 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-16 to check for settlements.
+2025-04-29 15:21:06,672 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 672549), id='b9d2d503-f31d-4e81-af86-5ef64eda43d9', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,672 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-17 to check for settlements.
+2025-04-29 15:21:06,673 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 83672cb6-e1a0-4585-9d50-123bc3d236a4 with FillEvent d4cc4b56-ffef-4800-bf15-3ee45e6a3931: BUY 13100 of 513500.0 at $4.3802 (Commission: $57.3805, using data at 2025-01-17)
+2025-04-29 15:21:06,673 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13100 of 513500.0 at 4.3801890000000006. Cash reduced by 57437.86. New cash: $55916.15
+2025-04-29 15:21:06,673 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13100, Avg Cost: $4.3802
+2025-04-29 15:21:06,673 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $55916.15, Reserved Cash: $0.00, Available Cash: $55916.15, Total Value: $112953.55
+2025-04-29 15:21:06,673 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-20 to check for settlements.
+2025-04-29 15:21:06,673 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-21 to check for settlements.
+2025-04-29 15:21:06,674 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-22 to check for settlements.
+2025-04-29 15:21:06,674 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-23 to check for settlements.
+2025-04-29 15:21:06,674 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-24 to check for settlements.
+2025-04-29 15:21:06,675 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2025-01-27 
+2025-04-29 15:21:06,675 - components.execution_handler - INFO - SimulatedExecutionHandler received MarketEvent for 513500.0 at 2025-01-27 to check for settlements.
+2025-04-29 15:21:06,675 - __main__ - INFO - Data feed task finished.
+2025-04-29 15:21:06,675 - __main__ - INFO - Waiting for all events in the queue to be processed after data feed finished...
+2025-04-29 15:21:06,675 - __main__ - INFO - Event queue is finally empty.
+2025-04-29 15:21:06,675 - __main__ - INFO - Stopping Event Bus...
+2025-04-29 15:21:06,675 - components.portfolio - INFO - 收到信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 675113), id='ea6b6acc-ec6e-4502-97cd-969ee5effd49', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-04-29 15:21:06,675 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13100).
+2025-04-29 15:21:06,675 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 29, 15, 21, 6, 675632), id='648077e5-a12a-4538-9513-3259e0cb0d06', symbol=np.float64(513500.0), direction='SELL', quantity=13100, order_type='MARKET', price=None)
+2025-04-29 15:21:06,675 - core.event_bus - INFO - Event Bus run loop cancelled.
+2025-04-29 15:21:06,675 - core.event_bus - INFO - Event Bus stopping.
+2025-04-29 15:21:06,675 - core.event_bus - INFO - Waiting for 1 pending tasks to finish...
+2025-04-29 15:21:06,675 - core.event_bus - INFO - Event Bus stopped.
+2025-04-29 15:21:06,676 - __main__ - INFO - Trading framework main process finished.
