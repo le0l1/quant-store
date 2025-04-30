@@ -4,6 +4,7 @@ import asyncio # Import asyncio for potential async operations
 from typing import Any, Dict
 
 from components.base import BaseComponent
+from components.portfolio import BasePortfolio
 from core.event_bus import EventBus
 from core.events import MarketEvent, SignalEvent # Import events strategy interacts with
 from datetime import datetime
@@ -17,9 +18,20 @@ class BaseStrategy(BaseComponent):
     Base class for trading strategies.
     Strategies subscribe to MarketEvents and publish SignalEvents.
     """
-    def __init__(self, event_bus: EventBus):
+    def __init__(self, 
+        event_bus: EventBus, 
+        portfolio: BasePortfolio,
+        **kwargs
+    ):
         super().__init__(event_bus)
         logger.info(f"{self.__class__.__name__} initialized.")
+        self.portfolio = portfolio
+        self.params = {}
+        self.params.update(kwargs)
+        self.on_init()
+
+    def on_init(self):
+        pass
 
     def _setup_event_handlers(self):
         """Register strategy's event handlers."""
@@ -44,18 +56,9 @@ class MomentumStrategy(BaseStrategy):
     A strategy that calculates 20-period momentum and generates signals.
     Suggests a fixed weight (e.g., 10%) for LONG/SHORT signals.
     """
-    def __init__(self, event_bus: EventBus, momentum_period: int = 20, default_weight: float = 0.10):
-        """
-        Args:
-            event_bus: The central Event Bus instance.
-            momentum_period: The lookback period for momentum calculation.
-            default_weight: The suggested allocation percentage for LONG/SHORT signals.
-        """
-        super().__init__(event_bus)
-        self.momentum_period = momentum_period
-        self.default_weight = default_weight
-        # Dictionary to store historical closing prices for each symbol
-        # Using deque with maxlen to automatically handle window size
+    def on_init(self):
+        self.momentum_period = self.params.get('momentum_period', 20)
+        self.default_weight = self.params.get('default_weight', 0.10)
         self._historical_prices: Dict[str, deque[float]] = {}
         logger.info(f"{self.__class__.__name__} initialized with period={self.momentum_period}, weight={self.default_weight}.")
 
@@ -96,26 +99,21 @@ class MomentumStrategy(BaseStrategy):
             direction: str
             weight: Optional[float] = None # Default to no weight (or FLAT signal)
 
-            if momentum > 0:
+            has_position = self.portfolio.get_projected_position_quantity(symbol) != 0
+
+            if momentum > 0 and not has_position:
                 direction = "LONG"
                 weight = self.default_weight # Suggest default_weight for LONG
-                logger.debug(f"MomentumStrategy: {symbol} at {timestamp} - Positive momentum. Generating LONG signal with weight {weight}.")
+                logger.info(f"MomentumStrategy: 做多 {symbol} at {timestamp} ")
                 signal_event = SignalEvent(symbol=symbol, direction=direction, weight=weight)
                 self.event_bus.publish(signal_event)
 
-            elif momentum < 0:
-                direction = "SHORT"
-                weight = self.default_weight # Suggest default_weight for SHORT
-                logger.info(f"MomentumStrategy: {symbol} at {timestamp} - Negative momentum. Generating SHORT signal with weight {weight}.")
-                signal_event = SignalEvent(symbol=symbol, direction=direction, weight=weight)
-                self.event_bus.publish(signal_event)
-
-            else: # momentum == 0
+            elif momentum < 0 and has_position:
                 direction = "FLAT"
-                # Optionally publish a FLAT signal, maybe with weight 0 or None
-                logger.debug(f"MomentumStrategy: {symbol} at {timestamp} - Zero momentum. No signal generated (or would generate FLAT).")
-                # signal_event = SignalEvent(symbol=symbol, direction=direction, weight=0.0) # Or weight=None
-                # self.event_bus.publish(signal_event)
+                weight = self.default_weight # Suggest default_weight for SHORT
+                logger.info(f"MomentumStrategy: 平多 {symbol} at {timestamp} ")
+                signal_event = SignalEvent(symbol=symbol, direction=direction)
+                self.event_bus.publish(signal_event)
 
         else:
             # Not enough history yet

@@ -70,7 +70,7 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
 
     async def _on_market_event_for_settlement(self, market_event: MarketEvent):
         current_timestamp = market_event.timestamp
-        logger.debug(f"SimulatedExecutionHandler received MarketEvent for {market_event.symbol} at {current_timestamp} to check for settlements.")
+        logger.info(f"SimulatedExecutionHandler received MarketEvent for {market_event.symbol} at {current_timestamp} to check for settlements.")
 
         # Update the last known price for this symbol regardless of whether it's a new timestep
         self._update_last_price_for_symbol(market_event.symbol, market_event.data)
@@ -155,7 +155,6 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
                  logger.warning(f"SimulatedExecutionHandler: Order {order_id} was already removed from pending list?")
 
 
-        logger.info(f"SimulatedExecutionHandler: Settlement check for {current_timestamp} complete. {len(self._pending_orders)} orders still pending.")
         # Update the last market timestamp to the current timestamp *after* processing settlements
         self._last_market_timestamp = current_timestamp
 
