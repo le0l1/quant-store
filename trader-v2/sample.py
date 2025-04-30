@@ -13,6 +13,7 @@ from core.event_bus import EventBus
 from components.csv_data_feed import CSVDataFeed
 from components.strategy import MomentumStrategy
 from components.portfolio import MomentumPortfolio
+from components.metrics import Metrics
 from components.execution_handler import SimulatedExecutionHandler # Import SimulatedExecutionHandler
 
 
@@ -42,16 +43,13 @@ async def main():
     bus = EventBus()
 
 
-
     # 3. 创建组件实例并注入 Event Bus
     data_feed = CSVDataFeed(bus, csv_file='etf.csv')
     portfolio = MomentumPortfolio(bus, initial_cash=100000.0, lot_size=100)
-    strategy = MomentumStrategy(bus, portfolio, momentum_period=20, default_weight=0.5)
-    # --- Add commission and slippage parameters to SimulatedExecutionHandler ---
-    # Example: 0.1% commission, 0.05% slippage
+    strategy = MomentumStrategy(bus, data_feed, portfolio, momentum_period=60, default_weight=0.5)
     execution_handler = SimulatedExecutionHandler(bus, commission_percent=0.001, slippage_percent=0.0005)
+    metrics = Metrics(bus, portfolio)
     # -------------------------------------------------------------------------
-
 
     # 4. 启动 Event Bus 运行任务
     bus_task = asyncio.create_task(bus.run())
@@ -61,7 +59,6 @@ async def main():
     start_time = '2023-01-01'
     end_time = '2023-01-31'
     bus.publish(BacktestStartEvent(start_time=start_time, end_time=end_time))
-    await bus.wait_until_queue_empty()
 
     data_feed_task = asyncio.create_task(data_feed.start_feed())
 
@@ -71,7 +68,6 @@ async def main():
 
     # 7. 等待 Event Bus 队列最终清空
     logger.info("Waiting for all events in the queue to be processed after data feed finished...")
-    await bus.wait_until_queue_empty()
     logger.info("Event queue is finally empty.")
 
     # 8. 停止 Event Bus
@@ -82,7 +78,7 @@ async def main():
     except asyncio.CancelledError:
         logger.info("Event Bus run task was cancelled successfully.")
 
-    logger.info("Trading framework main process finished.")
+    metrics.display_metrics()
 
 
 if __name__ == "__main__":

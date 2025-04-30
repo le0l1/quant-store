@@ -41,43 +41,21 @@ class EventBus:
             return
 
         for handler in listeners:
-            task = asyncio.create_task(handler(event))
-            self._processing_tasks.add(task)
-            task.add_done_callback(self._processing_tasks.discard) # Remove task when done
+            await handler(event)
 
     async def run(self):
         logger.info("Event Bus started.")
         self._running = True
-        try:
-            while self._running:
-                try:
-                    # Get the next event from the queue (this awaits if queue is empty)
-                    event = await self._queue.get()
-                    logger.debug(f"Processing event: {event.type} (ID: {event.id})")
-
-                    # Dispatch the event to handlers
-                    await self._dispatch_event(event)
-
-                    # Mark the task as done - signals the queue that the item is processed
-                    self._queue.task_done()
-
-                except asyncio.CancelledError:
-                     logger.info("Event Bus run loop cancelled.")
-                     break # Exit the loop if cancelled
-                except Exception as e:
-                    logger.exception(f"Error processing event: {e}")
-                    # Depending on severity, you might want to put the event back
-                    # or handle differently. For now, we just log and move on.
-                    self._queue.task_done() # Still mark as done to prevent blockage
-
-        finally:
-            self._running = False
-            logger.info("Event Bus stopping.")
-            if self._processing_tasks:
-                 logger.info(f"Waiting for {len(self._processing_tasks)} pending tasks to finish...")
-                 await asyncio.gather(*self._processing_tasks, return_exceptions=True)
-            logger.info("Event Bus stopped.")
-
+        while self._running:
+            try:
+                event = await self._queue.get()
+                logger.debug(f"Processing event: {event.type} (ID: {event.id})")
+                await self._dispatch_event(event)
+            except asyncio.CancelledError:
+                break
+            except Exception as e:
+                logger.exception(f"Error processing event: {e}")
+                self._queue.task_done() 
 
     async def stop(self):
         logger.info("Stopping Event Bus. Waiting for queue to empty...")

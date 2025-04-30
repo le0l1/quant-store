@@ -2,6 +2,7 @@ import pandas as pd
 from components.data_feed import BaseDataFeed
 from core.events import MarketEvent
 from core.event_bus import EventBus
+import asyncio
 
 import logging
 
@@ -41,7 +42,7 @@ class CSVDataFeed(BaseDataFeed):
                 self.event_bus.publish(event)
             
             # Wait for all events to be processed
-            await self.event_bus.wait_until_queue_empty()
+            await asyncio.sleep(0)
             
             # Move to the next timestamp
             self._current_index += len(same_timestamp_data)
@@ -49,6 +50,29 @@ class CSVDataFeed(BaseDataFeed):
     def stop_feed(self):
         self._is_running = False
         self._df = None
+    
+    def get_historical_prices(self, symbol: str, period: int) -> pd.DataFrame:
+        if not self._is_running or self._current_index >= len(self._df):
+            logger.warning("Data feed is not running or exhausted.")
+            return None
+
+        current_timestamp = self._df.index[self._current_index]
+
+        if symbol not in self._df['symbol'].values:
+            logger.warning(f"Symbol {symbol} not found in the data feed.")
+            return None
+        if period <= 0:
+            logger.warning(f"Invalid period {period}. Must be greater than 0.")
+            return None
+
+        # 过滤截至当前时间的数据
+        mask = (self._df['symbol'] == symbol) & (self._df.index <= current_timestamp)
+        historical_data = self._df[mask].tail(period)
+
+        if len(historical_data) < period:
+            logger.warning(f"Not enough data for symbol {symbol} to get {period} periods.")
+
+        return historical_data.copy()  # 返回副本，防止修改原始数据
     
     
         

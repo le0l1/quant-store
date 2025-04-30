@@ -5,10 +5,11 @@ from typing import Any, Dict
 
 from components.base import BaseComponent
 from components.portfolio import BasePortfolio
+from components.data_feed import BaseDataFeed
 from core.event_bus import EventBus
 from core.events import MarketEvent, SignalEvent # Import events strategy interacts with
 from datetime import datetime
-from collections import deque
+import pandas as pd
 
 
 logger = logging.getLogger(__name__)
@@ -20,35 +21,38 @@ class BaseStrategy(BaseComponent):
     """
     def __init__(self, 
         event_bus: EventBus, 
+        data_feed: BaseDataFeed,
         portfolio: BasePortfolio,
         **kwargs
     ):
         super().__init__(event_bus)
         logger.info(f"{self.__class__.__name__} initialized.")
         self.portfolio = portfolio
+        self.data_feed = data_feed
         self.params = {}
         self.params.update(kwargs)
+        self._last_market_timestamp: datetime = None
+        
         self.on_init()
 
     def on_init(self):
         pass
 
     def _setup_event_handlers(self):
-        """Register strategy's event handlers."""
-        # Strategies typically listen to MarketEvents
         self.event_bus.subscribe(MarketEvent, self._on_market_event)
-        # Could also listen to FillEvents, OrderEvents if strategy needs to react to execution
-        # self.event_bus.subscribe(FillEvent, self._on_fill_event)
 
     async def _on_market_event(self, event: MarketEvent):
         await self.on_market_data(event) # Call user-defined market data handling logic
+        self._last_market_timestamp = event.timestamp
 
     async def on_market_data(self, market_event: MarketEvent):
         pass
 
-    # async def _on_fill_event(self, event: FillEvent):
-    #     """Internal handler for FillEvents."""
-    #     await self.on_fill(event) # Call user-defined fill handling logic
+    def get_histroy(self, symbol: str, period: int) -> pd.DataFrame:
+        return self.data_feed.get_historical_prices(
+            symbol,
+            period,
+        )
 
 
 class MomentumStrategy(BaseStrategy):
@@ -59,7 +63,6 @@ class MomentumStrategy(BaseStrategy):
     def on_init(self):
         self.momentum_period = self.params.get('momentum_period', 20)
         self.default_weight = self.params.get('default_weight', 0.10)
-        self._historical_prices: Dict[str, deque[float]] = {}
         logger.info(f"{self.__class__.__name__} initialized with period={self.momentum_period}, weight={self.default_weight}.")
 
     async def on_market_data(self, market_event: MarketEvent):
@@ -76,45 +79,31 @@ class MomentumStrategy(BaseStrategy):
 
         current_price = data['close']
 
-        # Get or create the price history deque for this symbol
-        if symbol not in self._historical_prices:
-            # We need N+1 data points to calculate the difference between T and T-N
-            # So, for 20-period momentum, we need 21 data points.
-            self._historical_prices[symbol] = deque(maxlen=self.momentum_period + 1)
 
-        # Append the current closing price
-        self._historical_prices[symbol].append(current_price)
+        history_df = self.get_histroy(symbol, self.momentum_period + 1) # Get historical prices for the symbol
+        if history_df is None:
+            return
 
+        # Calculate momentum (Current Price - Price N periods ago)
+        momentum = history_df.iloc[0] - history_df.iloc[-1]
+        logger.debug(f"MomentumStrategy: {symbol} at {timestamp} - Momentum ({self.momentum_period} period): {momentum:.2f} (Current: {current_price:.2f}, {self.momentum_period} periods ago: {price_n_periods_ago:.2f})")
 
-        # Check if we have enough history to calculate momentum
-        if len(self._historical_prices[symbol]) > self.momentum_period:
-            # Get the price from N periods ago (the oldest price in the deque of size N+1)
-            price_n_periods_ago = self._historical_prices[symbol][0]
+        # Determine signal direction and weight based on momentum
+        direction: str
+        weight: Optional[float] = None # Default to no weight (or FLAT signal)
 
-            # Calculate momentum (Current Price - Price N periods ago)
-            momentum = current_price - price_n_periods_ago
-            logger.debug(f"MomentumStrategy: {symbol} at {timestamp} - Momentum ({self.momentum_period} period): {momentum:.2f} (Current: {current_price:.2f}, {self.momentum_period} periods ago: {price_n_periods_ago:.2f})")
+        has_position = self.portfolio.get_projected_position_quantity(symbol) != 0
 
-            # Determine signal direction and weight based on momentum
-            direction: str
-            weight: Optional[float] = None # Default to no weight (or FLAT signal)
+        if momentum > 0 and not has_position:
+            direction = "LONG"
+            weight = self.default_weight # Suggest default_weight for LONG
+            logger.info(f"MomentumStrategy: 做多 {symbol} at {timestamp} ")
+            signal_event = SignalEvent(symbol=symbol, direction=direction, weight=weight)
+            self.event_bus.publish(signal_event)
 
-            has_position = self.portfolio.get_projected_position_quantity(symbol) != 0
-
-            if momentum > 0 and not has_position:
-                direction = "LONG"
-                weight = self.default_weight # Suggest default_weight for LONG
-                logger.info(f"MomentumStrategy: 做多 {symbol} at {timestamp} ")
-                signal_event = SignalEvent(symbol=symbol, direction=direction, weight=weight)
-                self.event_bus.publish(signal_event)
-
-            elif momentum < 0 and has_position:
-                direction = "FLAT"
-                weight = self.default_weight # Suggest default_weight for SHORT
-                logger.info(f"MomentumStrategy: 平多 {symbol} at {timestamp} ")
-                signal_event = SignalEvent(symbol=symbol, direction=direction)
-                self.event_bus.publish(signal_event)
-
-        else:
-            # Not enough history yet
-            logger.debug(f"MomentumStrategy: {symbol} at {timestamp} - Not enough history for momentum calculation ({len(self._historical_prices[symbol])}/{self.momentum_period + 1}).")
+        elif momentum < 0 and has_position:
+            direction = "FLAT"
+            weight = self.default_weight # Suggest default_weight for SHORT
+            logger.info(f"MomentumStrategy: 平多 {symbol} at {timestamp} ")
+            signal_event = SignalEvent(symbol=symbol, direction=direction)
+            self.event_bus.publish(signal_event)

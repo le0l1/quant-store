@@ -1,6 +1,7 @@
 # components/data_feed.py
 import asyncio
 import logging
+import pandas as pd
 from datetime import datetime, timezone
 from typing import List, Dict, Any
 
@@ -36,6 +37,8 @@ class BaseDataFeed(BaseComponent):
         logger.info("BaseDataFeed stopping. Override stop_feed in subclass.")
         self._running = False
         # Subclasses will implement logic to stop their data source (e.g., close websocket)
+    def get_historical_prices(self, symbol, period) -> pd.DataFrame:
+        pass
 
 
 class MockDataFeed(BaseDataFeed):

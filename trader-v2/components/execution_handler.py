@@ -70,8 +70,6 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
 
     async def _on_market_event_for_settlement(self, market_event: MarketEvent):
         current_timestamp = market_event.timestamp
-        logger.info(f"SimulatedExecutionHandler received MarketEvent for {market_event.symbol} at {current_timestamp} to check for settlements.")
-
         # Update the last known price for this symbol regardless of whether it's a new timestep
         self._update_last_price_for_symbol(market_event.symbol, market_event.data)
 
@@ -139,7 +137,8 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
                 direction=order.direction,
                 quantity=order.quantity, # Assume full fill for simplicity
                 price=final_fill_price,  # Use the final price after slippage
-                commission=simulated_commission # Use the calculated commission
+                commission=simulated_commission, # Use the calculated commission
+                timestamp=current_timestamp
             )
 
             logger.info(f"SimulatedExecutionHandler: Settled Order {order.id} with FillEvent {fill_event.id}: {fill_event.direction} {fill_event.quantity} of {fill_event.symbol} at ${fill_event.price:.4f} (Commission: ${fill_event.commission:.4f}, using data at {current_timestamp})")
