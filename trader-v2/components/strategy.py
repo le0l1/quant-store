@@ -66,9 +66,6 @@ class MomentumStrategy(BaseStrategy):
         logger.info(f"{self.__class__.__name__} initialized with period={self.momentum_period}, weight={self.default_weight}.")
 
     async def on_market_data(self, market_event: MarketEvent):
-        """
-        Process incoming MarketEvents, update history, calculate momentum, and generate signals.
-        """
         symbol = market_event.symbol
         timestamp = market_event.timestamp
         data = market_event.data
@@ -81,12 +78,13 @@ class MomentumStrategy(BaseStrategy):
 
 
         history_df = self.get_histroy(symbol, self.momentum_period + 1) # Get historical prices for the symbol
-        if history_df is None:
+        if history_df is None or len(history_df) < self.momentum_period + 1:
             return
 
         # Calculate momentum (Current Price - Price N periods ago)
-        momentum = history_df.iloc[0] - history_df.iloc[-1]
-        logger.debug(f"MomentumStrategy: {symbol} at {timestamp} - Momentum ({self.momentum_period} period): {momentum:.2f} (Current: {current_price:.2f}, {self.momentum_period} periods ago: {price_n_periods_ago:.2f})")
+        momentum = history_df.iloc[0].close - history_df.iloc[-1].close
+        logger.debug(f"Strategy Received Market Event at {timestamp}")
+        logger.debug(history_df)
 
         # Determine signal direction and weight based on momentum
         direction: str

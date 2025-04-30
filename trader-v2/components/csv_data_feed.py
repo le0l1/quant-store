@@ -72,7 +72,7 @@ class CSVDataFeed(BaseDataFeed):
         if len(historical_data) < period:
             logger.warning(f"Not enough data for symbol {symbol} to get {period} periods.")
 
-        return historical_data.copy()  # 返回副本，防止修改原始数据
+        return historical_data[::-1]
     
     
         
