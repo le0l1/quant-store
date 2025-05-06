@@ -1,490 +1,460 @@
-2025-04-30 09:31:21,485 - root - INFO - 测试日志输出到文件
-2025-04-30 09:31:21,485 - __main__ - DEBUG - Starting the trading framework in BACKTEST mode...
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Created subscription list for event type: SignalEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler _on_signal_event to event type: SignalEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Created subscription list for event type: FillEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler _on_fill_event to event type: FillEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Created subscription list for event type: MarketEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler _on_market_event to event type: MarketEvent
-2025-04-30 09:31:21,489 - components.portfolio - INFO - MomentumPortfolio initialized with $100000.00 cash.
-2025-04-30 09:31:21,489 - components.portfolio - INFO - MomentumPortfolio initialized with lot_size=100.
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler _on_market_event to event type: MarketEvent
-2025-04-30 09:31:21,489 - components.strategy - INFO - MomentumStrategy initialized.
-2025-04-30 09:31:21,489 - components.strategy - INFO - MomentumStrategy initialized with period=60, weight=0.5.
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Created subscription list for event type: OrderEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler _on_order_event to event type: OrderEvent
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler _on_market_event_for_settlement to event type: MarketEvent
-2025-04-30 09:31:21,489 - components.execution_handler - INFO - SimulatedExecutionHandler initialized.
-2025-04-30 09:31:21,489 - components.execution_handler - INFO - SimulatedExecutionHandler initialized with commission=0.0010, slippage=0.0005.
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Subscribed handler on_market_event to event type: MarketEvent
-2025-04-30 09:31:21,489 - __main__ - INFO - Event Bus run task created.
-2025-04-30 09:31:21,489 - core.event_bus - INFO - Event Bus started.
-2025-04-30 09:31:21,489 - components.csv_data_feed - INFO - CSVDataFeed started. Reading from etf.csv
-2025-04-30 09:31:21,490 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,491 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,492 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,493 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,493 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,494 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,495 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,496 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,496 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,497 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,498 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,498 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,499 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,500 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,501 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,501 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,502 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,503 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,503 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,504 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,505 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,505 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,506 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,507 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,507 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,508 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,509 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,510 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,510 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,511 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,512 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,512 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,513 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,514 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,514 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,515 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,516 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,516 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,517 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,518 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,518 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,519 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,520 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,520 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,521 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,522 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,522 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,523 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,524 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,524 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,525 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,526 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,527 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,527 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,528 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,529 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,529 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,530 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,531 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,531 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
-2025-04-30 09:31:21,541 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-05-27 
-2025-04-30 09:31:21,541 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 541475), id='76a94323-750b-4e02-aaee-274d3986a0c3', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,541 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 541475), id='549adba8-a71d-407f-933f-e92b78af5edc', symbol=np.float64(513500.0), direction='BUY', quantity=19500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,542 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 549adba8-a71d-407f-933f-e92b78af5edc with FillEvent 68837c4f-0708-4dd0-8d6b-11cd65c8eab9: BUY 19500 of 513500.0 at $2.6373 (Commission: $51.4277, using data at 2022-05-30)
-2025-04-30 09:31:21,542 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19500 of 513500.0 at 2.637318. Cash reduced by 51479.13. New cash: $48520.87
-2025-04-30 09:31:21,542 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19500, Avg Cost: $2.6373
-2025-04-30 09:31:21,542 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48520.87, Reserved Cash: $0.00, Available Cash: $48520.87, Total Value: $99376.87
-2025-04-30 09:31:21,545 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-06 
-2025-04-30 09:31:21,545 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 545651), id='a2bdc3c1-4992-4384-917c-552bfd44f3c8', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,545 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19500).
-2025-04-30 09:31:21,545 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 545651), id='b3eb3d33-2116-494c-9813-7ec4987095b1', symbol=np.float64(513500.0), direction='SELL', quantity=19500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,546 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-06-07 
-2025-04-30 09:31:21,546 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b3eb3d33-2116-494c-9813-7ec4987095b1 with FillEvent ffac1c50-8333-49d6-a9fc-a680bb42aeed: SELL 19500 of 513500.0 at $2.5827 (Commission: $50.3628, using data at 2022-06-07)
-2025-04-30 09:31:21,546 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 546652), id='557560d2-ddab-4bf6-9f18-41e36c907133', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,546 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 19100 513500.0. Required: ~$49160.66, Available (Cash - Reserved): ~$48520.87 (Current Cash: $48520.87, Reserved: $0.00)
-2025-04-30 09:31:21,546 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 546810), id='2cf90f7b-d9c3-49c2-87a2-e24c2e9705ee', symbol=np.float64(513500.0), direction='BUY', quantity=19100, order_type='MARKET', price=None) blocked by risk check.
-2025-04-30 09:31:21,546 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19500 of 513500.0 at 2.5827080000000002. Cash increased by 50312.44. New cash: $98833.31
-2025-04-30 09:31:21,546 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,546 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98833.31, Reserved Cash: $0.00, Available Cash: $98833.31, Total Value: $98833.31
-2025-04-30 09:31:21,547 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-06-08 
-2025-04-30 09:31:21,547 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 547814), id='ed67c3f0-965a-421d-ad51-492750e53173', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,547 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 547814), id='0e8b03d7-ff51-40f0-b815-2b52bd7a0bee', symbol=np.float64(513500.0), direction='BUY', quantity=18900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,548 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 0e8b03d7-ff51-40f0-b815-2b52bd7a0bee with FillEvent 5baf9dde-2812-41bb-affa-7495f480d96a: BUY 18900 of 513500.0 at $2.5933 (Commission: $49.0133, using data at 2022-06-09)
-2025-04-30 09:31:21,548 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18900 of 513500.0 at 2.593296. Cash reduced by 49062.31. New cash: $49771.01
-2025-04-30 09:31:21,548 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18900, Avg Cost: $2.5933
-2025-04-30 09:31:21,548 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49771.01, Reserved Cash: $378.57, Available Cash: $49392.44, Total Value: $98608.61
-2025-04-30 09:31:21,550 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-13 
-2025-04-30 09:31:21,550 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 550449), id='8ee2deed-241c-403a-b32e-ca17a06b16b6', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,550 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18900).
-2025-04-30 09:31:21,550 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 550449), id='b7c15b53-7227-4fae-b3a9-affecfe1334d', symbol=np.float64(513500.0), direction='SELL', quantity=18900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,551 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b7c15b53-7227-4fae-b3a9-affecfe1334d with FillEvent adeb4970-24e8-4948-8668-78accc133f70: SELL 18900 of 513500.0 at $2.3988 (Commission: $45.3373, using data at 2022-06-14)
-2025-04-30 09:31:21,551 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18900 of 513500.0 at 2.3988. Cash increased by 45291.98. New cash: $95062.99
-2025-04-30 09:31:21,551 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,551 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $95062.99, Reserved Cash: $378.57, Available Cash: $94684.42, Total Value: $95062.99
-2025-04-30 09:31:21,574 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-08-01 
-2025-04-30 09:31:21,574 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 574495), id='63d34772-9747-442c-952a-e6cac90fbfe3', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,574 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 574495), id='8dbe0314-472f-48aa-951b-30e09dfafb0e', symbol=np.float64(513500.0), direction='BUY', quantity=18100, order_type='MARKET', price=None)
-2025-04-30 09:31:21,575 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 8dbe0314-472f-48aa-951b-30e09dfafb0e with FillEvent bfbc2432-ed31-44e7-b714-899f0aa86821: BUY 18100 of 513500.0 at $2.6213 (Commission: $47.4457, using data at 2022-08-02)
-2025-04-30 09:31:21,575 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18100 of 513500.0 at 2.6213100000000003. Cash reduced by 47493.16. New cash: $47569.83
-2025-04-30 09:31:21,575 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18100, Avg Cost: $2.6213
-2025-04-30 09:31:21,575 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $47569.83, Reserved Cash: $414.82, Available Cash: $47155.01, Total Value: $94847.03
-2025-04-30 09:31:21,590 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-09-01 
-2025-04-30 09:31:21,590 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 590917), id='a755e9c7-959f-4a80-a638-eaf217a75239', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,591 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18100).
-2025-04-30 09:31:21,591 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 590917), id='5e02f03d-fbe8-4c1f-9981-b067a1b0dbfa', symbol=np.float64(513500.0), direction='SELL', quantity=18100, order_type='MARKET', price=None)
-2025-04-30 09:31:21,591 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-09-02 
-2025-04-30 09:31:21,592 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 5e02f03d-fbe8-4c1f-9981-b067a1b0dbfa with FillEvent e2ddd202-6926-4e96-8535-1a6c18e2a66e: SELL 18100 of 513500.0 at $2.5787 (Commission: $46.6747, using data at 2022-09-02)
-2025-04-30 09:31:21,592 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 592018), id='c1e02140-6efa-4423-916a-baed62a0eff6', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,592 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 592018), id='20279fe4-7869-44f3-a82d-dd50e8edb745', symbol=np.float64(513500.0), direction='BUY', quantity=18200, order_type='MARKET', price=None)
-2025-04-30 09:31:21,592 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18100 of 513500.0 at 2.57871. Cash increased by 46627.98. New cash: $94197.81
-2025-04-30 09:31:21,592 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,592 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $94197.81, Reserved Cash: $47404.82, Available Cash: $46792.98, Total Value: $94197.81
-2025-04-30 09:31:21,593 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 20279fe4-7869-44f3-a82d-dd50e8edb745 with FillEvent 4b4a3dd3-557d-477b-8ab1-b1c87674eeab: BUY 18200 of 513500.0 at $2.5633 (Commission: $46.6517, using data at 2022-09-05)
-2025-04-30 09:31:21,593 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18200 of 513500.0 at 2.563281. Cash reduced by 46698.37. New cash: $47499.44
-2025-04-30 09:31:21,593 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18200, Avg Cost: $2.5633
-2025-04-30 09:31:21,593 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $47499.44, Reserved Cash: $706.46, Available Cash: $46792.98, Total Value: $94127.84
-2025-04-30 09:31:21,606 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-09-30 
-2025-04-30 09:31:21,606 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 606122), id='562b8d57-d659-4ea9-a423-7c6151d79d96', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,606 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18200).
-2025-04-30 09:31:21,606 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 606122), id='f6ed1782-fcd7-4c0c-8ede-c984d8053cd9', symbol=np.float64(513500.0), direction='SELL', quantity=18200, order_type='MARKET', price=None)
-2025-04-30 09:31:21,607 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f6ed1782-fcd7-4c0c-8ede-c984d8053cd9 with FillEvent 58f6317d-1394-4da2-95e5-684f0498c1e8: SELL 18200 of 513500.0 at $2.4188 (Commission: $44.0220, using data at 2022-10-10)
-2025-04-30 09:31:21,607 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18200 of 513500.0 at 2.41879. Cash increased by 43977.96. New cash: $91477.40
-2025-04-30 09:31:21,607 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,607 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91477.40, Reserved Cash: $706.46, Available Cash: $90770.94, Total Value: $91477.40
-2025-04-30 09:31:21,610 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-10-14 
-2025-04-30 09:31:21,610 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 610705), id='c2e3abe5-3ddf-4adb-ad32-d280bafa68cf', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,610 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 610705), id='857b5723-2278-4ea7-a077-13da26a9568d', symbol=np.float64(513500.0), direction='BUY', quantity=18600, order_type='MARKET', price=None)
-2025-04-30 09:31:21,611 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 857b5723-2278-4ea7-a077-13da26a9568d with FillEvent 7890059b-c04d-4271-a98b-6b291748b1c5: BUY 18600 of 513500.0 at $2.4252 (Commission: $45.1089, using data at 2022-10-17)
-2025-04-30 09:31:21,611 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18600 of 513500.0 at 2.425212. Cash reduced by 45154.05. New cash: $46323.35
-2025-04-30 09:31:21,611 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18600, Avg Cost: $2.4252
-2025-04-30 09:31:21,611 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $46323.35, Reserved Cash: $1377.06, Available Cash: $44946.28, Total Value: $91335.35
-2025-04-30 09:31:21,613 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-10-20 
-2025-04-30 09:31:21,614 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 614037), id='53b667ab-8466-436d-ba72-40678befa734', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,614 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18600).
-2025-04-30 09:31:21,614 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 614037), id='9a988f5d-6b3f-4d13-a473-eb5c3245b346', symbol=np.float64(513500.0), direction='SELL', quantity=18600, order_type='MARKET', price=None)
-2025-04-30 09:31:21,615 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 9a988f5d-6b3f-4d13-a473-eb5c3245b346 with FillEvent 5667857f-8776-41b8-a220-c1cda27c1b56: SELL 18600 of 513500.0 at $2.4628 (Commission: $45.8075, using data at 2022-10-21)
-2025-04-30 09:31:21,615 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18600 of 513500.0 at 2.462768. Cash increased by 45761.68. New cash: $92085.02
-2025-04-30 09:31:21,615 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,615 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $92085.02, Reserved Cash: $1377.06, Available Cash: $90707.96, Total Value: $92085.02
-2025-04-30 09:31:21,616 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-10-25 
-2025-04-30 09:31:21,616 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 616687), id='dd2a6f29-fe90-4685-ae71-16cb62dcd2cd', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,616 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 616687), id='f3194cc5-f605-4ef7-945e-4d9de59400e5', symbol=np.float64(513500.0), direction='BUY', quantity=17900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,617 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f3194cc5-f605-4ef7-945e-4d9de59400e5 with FillEvent c77a4fd9-291e-4a00-bfd6-20c1a599e4d1: BUY 17900 of 513500.0 at $2.5853 (Commission: $46.2767, using data at 2022-10-26)
-2025-04-30 09:31:21,617 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 17900 of 513500.0 at 2.585292. Cash reduced by 46323.00. New cash: $45762.02
-2025-04-30 09:31:21,617 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 17900, Avg Cost: $2.5853
-2025-04-30 09:31:21,617 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45762.02, Reserved Cash: $1341.21, Available Cash: $44420.81, Total Value: $91693.42
-2025-04-30 09:31:21,621 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-11-03 
-2025-04-30 09:31:21,622 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 621999), id='8d4722e3-3f66-45c6-ba9d-cfbdea577e87', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,622 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 17900).
-2025-04-30 09:31:21,622 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 621999), id='bee0f2a8-67b8-41c9-a9fd-c43666dc9605', symbol=np.float64(513500.0), direction='SELL', quantity=17900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,622 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order bee0f2a8-67b8-41c9-a9fd-c43666dc9605 with FillEvent 549305b2-e5a1-45d1-8b08-ba37df8b7041: SELL 17900 of 513500.0 at $2.5487 (Commission: $45.6222, using data at 2022-11-04)
-2025-04-30 09:31:21,623 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 17900 of 513500.0 at 2.5487249999999997. Cash increased by 45576.56. New cash: $91338.58
-2025-04-30 09:31:21,623 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,623 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91338.58, Reserved Cash: $1341.21, Available Cash: $89997.37, Total Value: $91338.58
-2025-04-30 09:31:21,631 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-11-23 
-2025-04-30 09:31:21,631 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 631859), id='fe92090f-8ab8-4a46-8507-5023e505d345', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,631 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 631859), id='9bc5a2c1-a03f-4d5a-b913-ea9fe27d7138', symbol=np.float64(513500.0), direction='BUY', quantity=16900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,632 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 9bc5a2c1-a03f-4d5a-b913-ea9fe27d7138 with FillEvent 3cfc34e8-ef41-42af-b900-adf5d115cd4e: BUY 16900 of 513500.0 at $2.7254 (Commission: $46.0586, using data at 2022-11-24)
-2025-04-30 09:31:21,632 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16900 of 513500.0 at 2.725362. Cash reduced by 46104.68. New cash: $45233.90
-2025-04-30 09:31:21,632 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16900, Avg Cost: $2.7254
-2025-04-30 09:31:21,632 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45233.90, Reserved Cash: $867.30, Available Cash: $44366.60, Total Value: $91201.90
-2025-04-30 09:31:21,640 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-09 
-2025-04-30 09:31:21,640 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 640252), id='a7a976eb-f6ca-45e4-9984-fd52e4045cfa', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,640 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16900).
-2025-04-30 09:31:21,640 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 640252), id='64ec0f4f-1c76-47a5-86ad-14738b90d8a0', symbol=np.float64(513500.0), direction='SELL', quantity=16900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,641 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 64ec0f4f-1c76-47a5-86ad-14738b90d8a0 with FillEvent 5cd33aa8-2e39-49f5-a2f9-f90b28c39da0: SELL 16900 of 513500.0 at $2.5827 (Commission: $43.6478, using data at 2022-12-12)
-2025-04-30 09:31:21,641 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16900 of 513500.0 at 2.5827080000000002. Cash increased by 43604.12. New cash: $88838.02
-2025-04-30 09:31:21,641 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,641 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $88838.02, Reserved Cash: $867.30, Available Cash: $87970.72, Total Value: $88838.02
-2025-04-30 09:31:21,642 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-12-14 
-2025-04-30 09:31:21,642 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 642831), id='d0a14771-c317-405a-b57b-0987b8797956', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,642 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 642831), id='664fa573-9c23-47ca-b215-ef476123421b', symbol=np.float64(513500.0), direction='BUY', quantity=16800, order_type='MARKET', price=None)
-2025-04-30 09:31:21,643 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 664fa573-9c23-47ca-b215-ef476123421b with FillEvent 3306b37c-675a-4878-a058-579672d7a796: BUY 16800 of 513500.0 at $2.6293 (Commission: $44.1725, using data at 2022-12-15)
-2025-04-30 09:31:21,643 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16800 of 513500.0 at 2.629314. Cash reduced by 44216.65. New cash: $44621.37
-2025-04-30 09:31:21,643 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16800, Avg Cost: $2.6293
-2025-04-30 09:31:21,643 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $44621.37, Reserved Cash: $1237.45, Available Cash: $43383.92, Total Value: $88637.37
-2025-04-30 09:31:21,646 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-20 
-2025-04-30 09:31:21,646 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 646084), id='aff0dec8-af51-49f2-89f1-3974bbeea52b', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,646 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16800).
-2025-04-30 09:31:21,646 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 646084), id='792a688f-3eb9-434c-856d-5d9509af89f6', symbol=np.float64(513500.0), direction='SELL', quantity=16800, order_type='MARKET', price=None)
-2025-04-30 09:31:21,647 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 792a688f-3eb9-434c-856d-5d9509af89f6 with FillEvent be6f5bde-3b7b-4800-866e-15d06c84c713: SELL 16800 of 513500.0 at $2.5227 (Commission: $42.3820, using data at 2022-12-21)
-2025-04-30 09:31:21,647 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16800 of 513500.0 at 2.522738. Cash increased by 42339.62. New cash: $86960.99
-2025-04-30 09:31:21,647 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,647 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86960.99, Reserved Cash: $1237.45, Available Cash: $85723.53, Total Value: $86960.99
-2025-04-30 09:31:21,647 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-12-22 
-2025-04-30 09:31:21,648 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 647974), id='fd309aa9-ce28-4921-aed7-8cbd07322846', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,648 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 647974), id='f47d5255-1578-49a7-993f-79811f1a66ae', symbol=np.float64(513500.0), direction='BUY', quantity=16900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,648 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f47d5255-1578-49a7-993f-79811f1a66ae with FillEvent 8ae10fdb-1403-45a1-8845-be787954223f: BUY 16900 of 513500.0 at $2.5233 (Commission: $42.6431, using data at 2022-12-23)
-2025-04-30 09:31:21,649 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16900 of 513500.0 at 2.5232609999999998. Cash reduced by 42685.75. New cash: $44275.23
-2025-04-30 09:31:21,649 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16900, Avg Cost: $2.5233
-2025-04-30 09:31:21,649 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $44275.23, Reserved Cash: $1914.47, Available Cash: $42360.76, Total Value: $86897.03
-2025-04-30 09:31:21,660 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-01-18 
-2025-04-30 09:31:21,660 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 660439), id='96f16407-9650-4148-8d5e-e154a0b26ce7', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,660 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16900).
-2025-04-30 09:31:21,660 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 660439), id='c88bb1ee-cbf5-4661-bbfa-dec104692c90', symbol=np.float64(513500.0), direction='SELL', quantity=16900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,661 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order c88bb1ee-cbf5-4661-bbfa-dec104692c90 with FillEvent 9114f86c-f47c-4cf7-9d3f-7b92c84db206: SELL 16900 of 513500.0 at $2.4987 (Commission: $42.2289, using data at 2023-01-19)
-2025-04-30 09:31:21,661 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16900 of 513500.0 at 2.49875. Cash increased by 42186.65. New cash: $86461.88
-2025-04-30 09:31:21,661 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,661 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86461.88, Reserved Cash: $1914.47, Available Cash: $84547.41, Total Value: $86461.88
-2025-04-30 09:31:21,663 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-01-30 
-2025-04-30 09:31:21,663 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 663294), id='0d1c0717-23bf-4b02-ba28-08b0a8e3992c', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,663 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 663294), id='8eb7a90c-1648-425a-8638-ee2775c1fdb4', symbol=np.float64(513500.0), direction='BUY', quantity=16800, order_type='MARKET', price=None)
-2025-04-30 09:31:21,664 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-01-31 
-2025-04-30 09:31:21,664 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 8eb7a90c-1648-425a-8638-ee2775c1fdb4 with FillEvent ac120431-8a41-43fb-a24a-25433883d9ce: BUY 16800 of 513500.0 at $2.5533 (Commission: $42.8950, using data at 2023-01-31)
-2025-04-30 09:31:21,664 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 664357), id='c5443d62-7c8b-438d-b44a-e2f6dc3b19ef', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,664 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16800 of 513500.0 at 2.553276. Cash reduced by 42937.93. New cash: $43523.95
-2025-04-30 09:31:21,664 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16800, Avg Cost: $2.5533
-2025-04-30 09:31:21,664 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43523.95, Reserved Cash: $2284.62, Available Cash: $41239.32, Total Value: $86263.15
-2025-04-30 09:31:21,665 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-02-01 
-2025-04-30 09:31:21,665 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 665499), id='55d8616a-a4da-4997-b1f6-5c07860a6640', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,665 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16800).
-2025-04-30 09:31:21,665 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 665499), id='a894701c-1613-4ece-9efa-d351c62c7602', symbol=np.float64(513500.0), direction='SELL', quantity=16800, order_type='MARKET', price=None)
-2025-04-30 09:31:21,666 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a894701c-1613-4ece-9efa-d351c62c7602 with FillEvent e7784435-5b63-46de-8063-917394462e7e: SELL 16800 of 513500.0 at $2.6007 (Commission: $43.6917, using data at 2023-02-02)
-2025-04-30 09:31:21,666 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16800 of 513500.0 at 2.6006989999999996. Cash increased by 43648.05. New cash: $87172.00
-2025-04-30 09:31:21,666 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,666 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $87172.00, Reserved Cash: $2284.62, Available Cash: $84887.37, Total Value: $87172.00
-2025-04-30 09:31:21,667 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-02-03 
-2025-04-30 09:31:21,667 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 667801), id='698f7a45-c481-40c3-811f-e02409f1d498', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,667 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 667801), id='d5801f43-d92e-4ca6-abd8-1828c00c850a', symbol=np.float64(513500.0), direction='BUY', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,668 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order d5801f43-d92e-4ca6-abd8-1828c00c850a with FillEvent 94218b81-b281-4045-bbb3-f9553891c695: BUY 16500 of 513500.0 at $2.6313 (Commission: $43.4167, using data at 2023-02-06)
-2025-04-30 09:31:21,668 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16500 of 513500.0 at 2.631315. Cash reduced by 43460.11. New cash: $43711.88
-2025-04-30 09:31:21,669 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16500, Avg Cost: $2.6313
-2025-04-30 09:31:21,669 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43711.88, Reserved Cash: $2416.82, Available Cash: $41295.06, Total Value: $86908.88
-2025-04-30 09:31:21,672 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-02-13 
-2025-04-30 09:31:21,673 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 672947), id='bcd742ec-6f55-42bf-a818-5cbe45c62289', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,673 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16500).
-2025-04-30 09:31:21,673 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 672947), id='590d486b-b07d-4d09-9224-019a823a09de', symbol=np.float64(513500.0), direction='SELL', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,674 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 590d486b-b07d-4d09-9224-019a823a09de with FillEvent 60cb5831-24af-486c-9aa3-0ee5d8622fb2: SELL 16500 of 513500.0 at $2.6427 (Commission: $43.6042, using data at 2023-02-14)
-2025-04-30 09:31:21,675 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16500 of 513500.0 at 2.642678. Cash increased by 43560.58. New cash: $87272.47
-2025-04-30 09:31:21,675 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,675 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $87272.47, Reserved Cash: $2416.82, Available Cash: $84855.65, Total Value: $87272.47
-2025-04-30 09:31:21,676 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-02-15 
-2025-04-30 09:31:21,676 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 676814), id='0b9531ed-ed70-416a-b1c2-41f82d39f67e', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,677 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 676814), id='ce2f47c7-3f24-4fcb-9aa4-ea5b1595e2ba', symbol=np.float64(513500.0), direction='BUY', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,678 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order ce2f47c7-3f24-4fcb-9aa4-ea5b1595e2ba with FillEvent bf93a88b-16ee-4f59-bfcb-3db51e7d7156: BUY 16500 of 513500.0 at $2.6733 (Commission: $44.1100, using data at 2023-02-16)
-2025-04-30 09:31:21,678 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16500 of 513500.0 at 2.673336. Cash reduced by 44154.15. New cash: $43118.31
-2025-04-30 09:31:21,678 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16500, Avg Cost: $2.6733
-2025-04-30 09:31:21,679 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43118.31, Reserved Cash: $1987.18, Available Cash: $41131.13, Total Value: $87173.31
-2025-04-30 09:31:21,680 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-02-17 
-2025-04-30 09:31:21,680 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 680598), id='ae235b99-47bc-4c48-9f19-5b80a088c007', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,680 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16500).
-2025-04-30 09:31:21,680 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 680598), id='4ac90c9a-0fc9-4fa3-b02c-453b4bb5d6c2', symbol=np.float64(513500.0), direction='SELL', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,682 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 4ac90c9a-0fc9-4fa3-b02c-453b4bb5d6c2 with FillEvent 5e53137c-b841-44dc-bf0f-3c8226433a82: SELL 16500 of 513500.0 at $2.6327 (Commission: $43.4393, using data at 2023-02-20)
-2025-04-30 09:31:21,682 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16500 of 513500.0 at 2.632683. Cash increased by 43395.83. New cash: $86514.14
-2025-04-30 09:31:21,682 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,682 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86514.14, Reserved Cash: $1987.18, Available Cash: $84526.97, Total Value: $86514.14
-2025-04-30 09:31:21,699 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-09 
-2025-04-30 09:31:21,699 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 699780), id='3e2a9610-ebf8-4339-b524-fb0c309d1da7', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,699 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 699780), id='dabd0881-d7b8-419a-820a-5714afac97fc', symbol=np.float64(513500.0), direction='BUY', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,700 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-10 
-2025-04-30 09:31:21,701 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order dabd0881-d7b8-419a-820a-5714afac97fc with FillEvent c112bf18-d8e7-4b20-bf26-7f7b37ade065: BUY 16500 of 513500.0 at $2.5593 (Commission: $42.2281, using data at 2023-03-10)
-2025-04-30 09:31:21,701 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 701059), id='cf3b5e0b-2c28-4676-be91-27f2a0b658d7', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,701 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16500 of 513500.0 at 2.5592789999999996. Cash reduced by 42270.33. New cash: $44243.81
-2025-04-30 09:31:21,701 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16500, Avg Cost: $2.5593
-2025-04-30 09:31:21,701 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $44243.81, Reserved Cash: $2978.66, Available Cash: $41265.15, Total Value: $86252.81
-2025-04-30 09:31:21,702 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-13 
-2025-04-30 09:31:21,702 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 702249), id='56f2b213-4f7b-47dd-bde7-f80f7afd924b', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,702 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16500).
-2025-04-30 09:31:21,702 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 702249), id='73c6264e-84db-42d5-b1d0-43ecde0e7d3d', symbol=np.float64(513500.0), direction='SELL', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,703 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 73c6264e-84db-42d5-b1d0-43ecde0e7d3d with FillEvent 6ec488f4-19d7-4396-95ee-75ed8e1d4b9f: SELL 16500 of 513500.0 at $2.5007 (Commission: $41.2624, using data at 2023-03-14)
-2025-04-30 09:31:21,703 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16500 of 513500.0 at 2.500749. Cash increased by 41221.10. New cash: $85464.91
-2025-04-30 09:31:21,703 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,703 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $85464.91, Reserved Cash: $2978.66, Available Cash: $82486.24, Total Value: $85464.91
-2025-04-30 09:31:21,706 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-21 
-2025-04-30 09:31:21,706 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 706802), id='d040c1cf-be7a-4e93-8355-335a239a1cd1', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,706 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 706802), id='31d63cea-c7b9-463e-aeb6-f0e0e63c9922', symbol=np.float64(513500.0), direction='BUY', quantity=16700, order_type='MARKET', price=None)
-2025-04-30 09:31:21,707 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 31d63cea-c7b9-463e-aeb6-f0e0e63c9922 with FillEvent ed723b32-f845-4cdb-812c-3c809f8778e8: BUY 16700 of 513500.0 at $2.5873 (Commission: $43.2078, using data at 2023-03-22)
-2025-04-30 09:31:21,707 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16700 of 513500.0 at 2.587293. Cash reduced by 43251.00. New cash: $42213.91
-2025-04-30 09:31:21,707 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16700, Avg Cost: $2.5873
-2025-04-30 09:31:21,707 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $42213.91, Reserved Cash: $2476.91, Available Cash: $39737.00, Total Value: $85400.11
-2025-04-30 09:31:21,709 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-24 
-2025-04-30 09:31:21,709 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 709474), id='809f17ad-41f8-4e50-91b1-1e61cbfdec30', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,709 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16700).
-2025-04-30 09:31:21,709 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 709474), id='82472c53-f761-4fb0-afc1-9a34f8baa5b5', symbol=np.float64(513500.0), direction='SELL', quantity=16700, order_type='MARKET', price=None)
-2025-04-30 09:31:21,710 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-27 
-2025-04-30 09:31:21,710 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 82472c53-f761-4fb0-afc1-9a34f8baa5b5 with FillEvent e896d0e3-1f9d-4fa8-b6a3-d1a7948a51b3: SELL 16700 of 513500.0 at $2.5727 (Commission: $42.9643, using data at 2023-03-27)
-2025-04-30 09:31:21,710 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 710439), id='4f2455c0-1f79-4dc5-9a5f-a8858900c86e', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,710 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 16500 513500.0. Required: ~$42534.73, Available (Cash - Reserved): ~$39737.00 (Current Cash: $42213.91, Reserved: $2476.91)
-2025-04-30 09:31:21,710 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 710595), id='daca4ad4-d461-491b-a116-13cb37a23d58', symbol=np.float64(513500.0), direction='BUY', quantity=16500, order_type='MARKET', price=None) blocked by risk check.
-2025-04-30 09:31:21,710 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16700 of 513500.0 at 2.572713. Cash increased by 42921.34. New cash: $85135.25
-2025-04-30 09:31:21,710 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,710 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $85135.25, Reserved Cash: $2476.91, Available Cash: $82658.34, Total Value: $85135.25
-2025-04-30 09:31:21,711 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-28 
-2025-04-30 09:31:21,711 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 711537), id='15334fd4-6c2c-4924-99e4-56a6c6ed2d0b', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,711 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 711537), id='1c007b27-f289-41cc-9875-fd07c18fe6cd', symbol=np.float64(513500.0), direction='BUY', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,712 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1c007b27-f289-41cc-9875-fd07c18fe6cd with FillEvent f33eacc2-8617-42d7-a3c0-ab6c51f306ed: BUY 16500 of 513500.0 at $2.5813 (Commission: $42.5913, using data at 2023-03-29)
-2025-04-30 09:31:21,712 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16500 of 513500.0 at 2.58129. Cash reduced by 42633.88. New cash: $42501.37
-2025-04-30 09:31:21,712 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16500, Avg Cost: $2.5813
-2025-04-30 09:31:21,712 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $42501.37, Reserved Cash: $2410.81, Available Cash: $40090.56, Total Value: $85005.37
-2025-04-30 09:31:21,793 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-09-22 
-2025-04-30 09:31:21,793 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 793266), id='0a3b48a5-1733-4abf-8f64-6fb51e73a4f2', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,793 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16500).
-2025-04-30 09:31:21,793 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 793266), id='7d019881-f3e4-4bef-b992-2933558999f9', symbol=np.float64(513500.0), direction='SELL', quantity=16500, order_type='MARKET', price=None)
-2025-04-30 09:31:21,794 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 7d019881-f3e4-4bef-b992-2933558999f9 with FillEvent 812d82fc-2d04-44cf-ac67-abb0db9ae3d0: SELL 16500 of 513500.0 at $2.9745 (Commission: $49.0794, using data at 2023-09-25)
-2025-04-30 09:31:21,794 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16500 of 513500.0 at 2.974512. Cash increased by 49030.37. New cash: $91531.74
-2025-04-30 09:31:21,794 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,794 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91531.74, Reserved Cash: $2410.81, Available Cash: $89120.93, Total Value: $91531.74
-2025-04-30 09:31:21,799 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-10-12 
-2025-04-30 09:31:21,799 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 799378), id='20cabcb3-af7e-4878-bfe1-ba7662b76447', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,799 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 799378), id='cc7ec2b2-5e1f-4e4b-a05e-aa0385016934', symbol=np.float64(513500.0), direction='BUY', quantity=15100, order_type='MARKET', price=None)
-2025-04-30 09:31:21,800 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-10-13 
-2025-04-30 09:31:21,800 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order cc7ec2b2-5e1f-4e4b-a05e-aa0385016934 with FillEvent fd6caea5-f118-4a57-bc34-4eda528a5a45: BUY 15100 of 513500.0 at $3.0015 (Commission: $45.3227, using data at 2023-10-13)
-2025-04-30 09:31:21,800 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 800368), id='3de5334b-95ee-4d33-9aec-9163d984e6eb', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,800 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 15100 of 513500.0 at 3.0015. Cash reduced by 45367.97. New cash: $46163.77
-2025-04-30 09:31:21,800 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 15100, Avg Cost: $3.0015
-2025-04-30 09:31:21,800 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $46163.77, Reserved Cash: $2743.51, Available Cash: $43420.26, Total Value: $91342.97
-2025-04-30 09:31:21,801 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-10-16 
-2025-04-30 09:31:21,801 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 801346), id='f42d56f4-4eb8-441a-bb81-324cf5ab6c2f', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,801 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 15100).
-2025-04-30 09:31:21,801 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 801346), id='97fa68f5-a148-4ef8-9ffc-8e589c14406c', symbol=np.float64(513500.0), direction='SELL', quantity=15100, order_type='MARKET', price=None)
-2025-04-30 09:31:21,802 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 97fa68f5-a148-4ef8-9ffc-8e589c14406c with FillEvent 8c235e34-37e6-462b-b8ea-2f541c29f67a: SELL 15100 of 513500.0 at $3.0105 (Commission: $45.4585, using data at 2023-10-17)
-2025-04-30 09:31:21,802 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 15100 of 513500.0 at 3.010494. Cash increased by 45413.00. New cash: $91576.77
-2025-04-30 09:31:21,802 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,802 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91576.77, Reserved Cash: $2743.51, Available Cash: $88833.26, Total Value: $91576.77
-2025-04-30 09:31:21,817 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-11-16 
-2025-04-30 09:31:21,817 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 817373), id='d506ca65-af1d-48b1-befe-3d4ca26ba2b5', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,817 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 817373), id='e5227b71-c1cc-40b6-87e5-12a557c94ec8', symbol=np.float64(513500.0), direction='BUY', quantity=14900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,818 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order e5227b71-c1cc-40b6-87e5-12a557c94ec8 with FillEvent c0cd6f71-234e-4b40-af68-982ba89dcb25: BUY 14900 of 513500.0 at $3.0855 (Commission: $45.9746, using data at 2023-11-17)
-2025-04-30 09:31:21,818 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14900 of 513500.0 at 3.0855420000000002. Cash reduced by 46020.55. New cash: $45556.22
-2025-04-30 09:31:21,818 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14900, Avg Cost: $3.0855
-2025-04-30 09:31:21,818 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45556.22, Reserved Cash: $2653.98, Available Cash: $42902.24, Total Value: $91388.62
-2025-04-30 09:31:21,825 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-11-30 
-2025-04-30 09:31:21,825 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 825239), id='e179af1e-760d-4c2d-8447-e95eb8c3f26f', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,825 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14900).
-2025-04-30 09:31:21,825 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 825239), id='95e6c79a-c2e8-42e7-88fb-4c3cd49ea302', symbol=np.float64(513500.0), direction='SELL', quantity=14900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,826 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 95e6c79a-c2e8-42e7-88fb-4c3cd49ea302 with FillEvent 8e9ac305-9f45-43c0-8e14-3cf896603967: SELL 14900 of 513500.0 at $3.0685 (Commission: $45.7201, using data at 2023-12-01)
-2025-04-30 09:31:21,826 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14900 of 513500.0 at 3.0684649999999998. Cash increased by 45674.41. New cash: $91230.63
-2025-04-30 09:31:21,826 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,826 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91230.63, Reserved Cash: $2653.98, Available Cash: $88576.65, Total Value: $91230.63
-2025-04-30 09:31:21,827 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-12-04 
-2025-04-30 09:31:21,827 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 827723), id='e637155d-bc2f-4351-a656-c278a5387d42', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,827 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 827723), id='e4811db7-a149-4a6f-8b63-348877f2a789', symbol=np.float64(513500.0), direction='BUY', quantity=14700, order_type='MARKET', price=None)
-2025-04-30 09:31:21,828 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-12-05 
-2025-04-30 09:31:21,829 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order e4811db7-a149-4a6f-8b63-348877f2a789 with FillEvent 35aa9d39-b505-4f40-a68f-16694995e5c5: BUY 14700 of 513500.0 at $3.0795 (Commission: $45.2692, using data at 2023-12-05)
-2025-04-30 09:31:21,829 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 828973), id='789f34f3-9405-4352-843c-da136293a881', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,829 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14700 of 513500.0 at 3.079539. Cash reduced by 45314.49. New cash: $45916.13
-2025-04-30 09:31:21,829 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14700, Avg Cost: $3.0795
-2025-04-30 09:31:21,829 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45916.13, Reserved Cash: $2918.97, Available Cash: $42997.16, Total Value: $91015.73
-2025-04-30 09:31:21,830 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-12-06 
-2025-04-30 09:31:21,830 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 830070), id='78f9a9ce-5a52-4f1a-b6f6-7859d9de4f42', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,830 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14700).
-2025-04-30 09:31:21,830 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 830070), id='af06b9f2-5c28-4389-87b5-698bda93799e', symbol=np.float64(513500.0), direction='SELL', quantity=14700, order_type='MARKET', price=None)
-2025-04-30 09:31:21,831 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order af06b9f2-5c28-4389-87b5-698bda93799e with FillEvent 35013f85-901f-4ef0-8e09-21329757f88c: SELL 14700 of 513500.0 at $3.0705 (Commission: $45.1358, using data at 2023-12-07)
-2025-04-30 09:31:21,831 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14700 of 513500.0 at 3.070464. Cash increased by 45090.68. New cash: $91006.82
-2025-04-30 09:31:21,831 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,831 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91006.82, Reserved Cash: $2918.97, Available Cash: $88087.85, Total Value: $91006.82
-2025-04-30 09:31:21,832 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-12-08 
-2025-04-30 09:31:21,832 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 832143), id='4fb178e9-d2a6-4082-bf1b-d84370266575', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,832 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 832143), id='09e90f77-376f-4188-89e8-1714768b0e11', symbol=np.float64(513500.0), direction='BUY', quantity=14700, order_type='MARKET', price=None)
-2025-04-30 09:31:21,833 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 09e90f77-376f-4188-89e8-1714768b0e11 with FillEvent 9688426b-ec91-4771-8622-33b3265d70a3: BUY 14700 of 513500.0 at $3.1156 (Commission: $45.7987, using data at 2023-12-11)
-2025-04-30 09:31:21,833 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14700 of 513500.0 at 3.115557. Cash reduced by 45844.49. New cash: $45162.33
-2025-04-30 09:31:21,833 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14700, Avg Cost: $3.1156
-2025-04-30 09:31:21,833 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45162.33, Reserved Cash: $2536.20, Available Cash: $42626.13, Total Value: $90908.73
-2025-04-30 09:31:21,942 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-08-05 
-2025-04-30 09:31:21,942 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 942813), id='5e219b78-3ea3-46ac-b8f7-c5d79db3ee7e', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,942 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14700).
-2025-04-30 09:31:21,942 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 942813), id='0ad32364-b74c-4a9f-b02f-f6b460da06dc', symbol=np.float64(513500.0), direction='SELL', quantity=14700, order_type='MARKET', price=None)
-2025-04-30 09:31:21,943 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 0ad32364-b74c-4a9f-b02f-f6b460da06dc with FillEvent 15a53f0a-1ffb-44b7-a6c5-e873b68f1f0e: SELL 14700 of 513500.0 at $3.6242 (Commission: $53.2755, using data at 2024-08-06)
-2025-04-30 09:31:21,944 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14700 of 513500.0 at 3.624187. Cash increased by 53222.27. New cash: $98384.61
-2025-04-30 09:31:21,944 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,944 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98384.61, Reserved Cash: $2536.20, Available Cash: $95848.41, Total Value: $98384.61
-2025-04-30 09:31:21,944 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-07 
-2025-04-30 09:31:21,944 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 944915), id='93c38312-ae7a-4c3a-a15e-77b582ccb42c', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,945 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 944915), id='117c89b6-7de9-4709-8897-63d17fcc1892', symbol=np.float64(513500.0), direction='BUY', quantity=13600, order_type='MARKET', price=None)
-2025-04-30 09:31:21,945 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-08-08 
-2025-04-30 09:31:21,946 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 117c89b6-7de9-4709-8897-63d17fcc1892 with FillEvent 03b802f2-8c43-474b-9eae-88fae79d8f7c: BUY 13600 of 513500.0 at $3.5878 (Commission: $48.7940, using data at 2024-08-08)
-2025-04-30 09:31:21,946 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 945975), id='3d1f9695-4360-448d-9d48-08bc614cea5d', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,946 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13600 of 513500.0 at 3.587793. Cash reduced by 48842.78. New cash: $49541.83
-2025-04-30 09:31:21,946 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13600, Avg Cost: $3.5878
-2025-04-30 09:31:21,946 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49541.83, Reserved Cash: $3108.26, Available Cash: $46433.57, Total Value: $98012.23
-2025-04-30 09:31:21,947 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-08-09 
-2025-04-30 09:31:21,947 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 947091), id='6171e8ce-219c-433a-9ea9-337cdef58e35', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,947 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13600).
-2025-04-30 09:31:21,947 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 947091), id='30f7d679-069f-44bc-a9a0-a76b2684d6fd', symbol=np.float64(513500.0), direction='SELL', quantity=13600, order_type='MARKET', price=None)
-2025-04-30 09:31:21,948 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-12 
-2025-04-30 09:31:21,948 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 30f7d679-069f-44bc-a9a0-a76b2684d6fd with FillEvent 3af8905a-fcd9-4872-ab02-05739ad3f6f7: SELL 13600 of 513500.0 at $3.6822 (Commission: $50.0773, using data at 2024-08-12)
-2025-04-30 09:31:21,948 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 948090), id='f59f14f8-0466-4352-b163-9661eca4766a', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,948 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 13500 513500.0. Required: ~$49781.59, Available (Cash - Reserved): ~$46433.57 (Current Cash: $49541.83, Reserved: $3108.26)
-2025-04-30 09:31:21,948 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 948237), id='7f332923-b7b7-4baa-81b0-b8dc6f7949d3', symbol=np.float64(513500.0), direction='BUY', quantity=13500, order_type='MARKET', price=None) blocked by risk check.
-2025-04-30 09:31:21,948 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 13600 of 513500.0 at 3.6821580000000003. Cash increased by 50027.27. New cash: $99569.10
-2025-04-30 09:31:21,948 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,948 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $99569.10, Reserved Cash: $3108.26, Available Cash: $96460.84, Total Value: $99569.10
-2025-04-30 09:31:21,949 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-13 
-2025-04-30 09:31:21,949 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 949237), id='37070b14-cb13-4a85-9568-1cec7cd934cd', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,949 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 949237), id='4821d044-aea2-4972-87a3-abeaba17e3e1', symbol=np.float64(513500.0), direction='BUY', quantity=13300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,950 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 4821d044-aea2-4972-87a3-abeaba17e3e1 with FillEvent 84da4194-7696-49a1-9d88-c9ab5d95eff1: BUY 13300 of 513500.0 at $3.8299 (Commission: $50.9379, using data at 2024-08-14)
-2025-04-30 09:31:21,950 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13300 of 513500.0 at 3.829914. Cash reduced by 50988.79. New cash: $48580.31
-2025-04-30 09:31:21,950 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13300, Avg Cost: $3.8299
-2025-04-30 09:31:21,950 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48580.31, Reserved Cash: $1802.90, Available Cash: $46777.40, Total Value: $99386.31
-2025-04-30 09:31:21,963 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-09-10 
-2025-04-30 09:31:21,963 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 963519), id='d3b512d4-729d-4bdd-93d5-77f7fea72e81', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,963 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13300).
-2025-04-30 09:31:21,963 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 963519), id='1a2920ee-01dc-4b0d-a9d8-ad221481f746', symbol=np.float64(513500.0), direction='SELL', quantity=13300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,964 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1a2920ee-01dc-4b0d-a9d8-ad221481f746 with FillEvent 5788085b-9ede-4c56-9c16-bce8766a5fb8: SELL 13300 of 513500.0 at $3.8141 (Commission: $50.7274, using data at 2024-09-11)
-2025-04-30 09:31:21,964 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 13300 of 513500.0 at 3.814092. Cash increased by 50676.70. New cash: $99257.00
-2025-04-30 09:31:21,964 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,964 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $99257.00, Reserved Cash: $1802.90, Available Cash: $97454.10, Total Value: $99257.00
-2025-04-30 09:31:21,965 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-09-12 
-2025-04-30 09:31:21,965 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 965535), id='80a487d2-9944-433f-bbb7-be8edecf2f6e', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,965 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 965535), id='ae4d3376-2cac-45ce-9711-f98fb9b63647', symbol=np.float64(513500.0), direction='BUY', quantity=12900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,966 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order ae4d3376-2cac-45ce-9711-f98fb9b63647 with FillEvent eee25f67-cac5-4c6a-a334-b0f603acfd5f: BUY 12900 of 513500.0 at $3.8899 (Commission: $50.1803, using data at 2024-09-13)
-2025-04-30 09:31:21,966 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12900 of 513500.0 at 3.889944. Cash reduced by 50230.46. New cash: $49026.54
-2025-04-30 09:31:21,966 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12900, Avg Cost: $3.8899
-2025-04-30 09:31:21,966 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49026.54, Reserved Cash: $1389.48, Available Cash: $47637.06, Total Value: $99052.74
-2025-04-30 09:31:21,970 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-09-24 
-2025-04-30 09:31:21,970 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 970396), id='7bf9075d-f06c-427a-bdd4-b467be91a160', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,970 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 12900).
-2025-04-30 09:31:21,970 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 970396), id='a8f2d199-bdc5-40f8-9901-89d64eb017e8', symbol=np.float64(513500.0), direction='SELL', quantity=12900, order_type='MARKET', price=None)
-2025-04-30 09:31:21,971 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a8f2d199-bdc5-40f8-9901-89d64eb017e8 with FillEvent 06094e32-58b1-4aa0-a182-cc25b4652845: SELL 12900 of 513500.0 at $3.9000 (Commission: $50.3106, using data at 2024-09-25)
-2025-04-30 09:31:21,971 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 12900 of 513500.0 at 3.900049. Cash increased by 50260.32. New cash: $99286.87
-2025-04-30 09:31:21,971 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,971 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $99286.87, Reserved Cash: $1389.48, Available Cash: $97897.38, Total Value: $99286.87
-2025-04-30 09:31:21,977 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-10-15 
-2025-04-30 09:31:21,978 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 978076), id='2b209e15-dfa6-4c56-84b1-092b8031fa98', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,978 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 978076), id='e51e1f8a-13d9-4449-a246-fc9b634132c1', symbol=np.float64(513500.0), direction='BUY', quantity=12300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,979 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order e51e1f8a-13d9-4449-a246-fc9b634132c1 with FillEvent a0756d76-d434-4d34-befb-73c8b45e4b65: BUY 12300 of 513500.0 at $4.0520 (Commission: $49.8399, using data at 2024-10-16)
-2025-04-30 09:31:21,979 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12300 of 513500.0 at 4.0520249999999995. Cash reduced by 49889.75. New cash: $49397.12
-2025-04-30 09:31:21,979 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12300, Avg Cost: $4.0520
-2025-04-30 09:31:21,979 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49397.12, Reserved Cash: $1389.48, Available Cash: $48007.64, Total Value: $98720.12
-2025-04-30 09:31:21,981 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-10-18 
-2025-04-30 09:31:21,981 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 981155), id='b9ede479-4391-42a3-921d-1fe79ac72b77', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,981 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 12300).
-2025-04-30 09:31:21,981 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 981155), id='b8cdfe00-ec03-4a75-880b-0f25f1d1c5e6', symbol=np.float64(513500.0), direction='SELL', quantity=12300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,982 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-10-21 
-2025-04-30 09:31:21,982 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b8cdfe00-ec03-4a75-880b-0f25f1d1c5e6 with FillEvent d6a77a87-5c2a-476b-936f-36d908257fca: SELL 12300 of 513500.0 at $4.0520 (Commission: $49.8393, using data at 2024-10-21)
-2025-04-30 09:31:21,982 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 982555), id='871f99f5-1133-4f99-b3a5-b80a85868085', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,982 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 12200 513500.0. Required: ~$49239.77, Available (Cash - Reserved): ~$48007.64 (Current Cash: $49397.12, Reserved: $1389.48)
-2025-04-30 09:31:21,982 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 982775), id='d283fb7f-eef0-4495-9319-0b96d08d30ff', symbol=np.float64(513500.0), direction='BUY', quantity=12200, order_type='MARKET', price=None) blocked by risk check.
-2025-04-30 09:31:21,982 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 12300 of 513500.0 at 4.051973. Cash increased by 49789.43. New cash: $99186.55
-2025-04-30 09:31:21,982 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,983 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $99186.55, Reserved Cash: $1389.48, Available Cash: $97797.06, Total Value: $99186.55
-2025-04-30 09:31:21,984 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-10-22 
-2025-04-30 09:31:21,984 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 984262), id='50dedcc1-6f97-40e2-9510-37a81f0fcd07', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,984 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 984262), id='4c1fb7e4-9452-430f-8d06-6dd45a115896', symbol=np.float64(513500.0), direction='BUY', quantity=12300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,985 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 4c1fb7e4-9452-430f-8d06-6dd45a115896 with FillEvent 4df60070-30f9-4f4a-8563-04060828147d: BUY 12300 of 513500.0 at $4.0140 (Commission: $49.3723, using data at 2024-10-23)
-2025-04-30 09:31:21,985 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12300 of 513500.0 at 4.014005999999999. Cash reduced by 49421.65. New cash: $49764.90
-2025-04-30 09:31:21,985 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12300, Avg Cost: $4.0140
-2025-04-30 09:31:21,985 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49764.90, Reserved Cash: $1561.94, Available Cash: $48202.96, Total Value: $98915.70
-2025-04-30 09:31:21,992 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-11-04 
-2025-04-30 09:31:21,993 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 993099), id='90ed19af-42d0-4870-bff7-50e6624b791f', symbol=np.float64(513500.0), direction='FLAT', weight=None)
-2025-04-30 09:31:21,993 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 12300).
-2025-04-30 09:31:21,993 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 993099), id='a536aebd-62d9-4a55-b98a-adf2638c6e80', symbol=np.float64(513500.0), direction='SELL', quantity=12300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,994 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-11-05 
-2025-04-30 09:31:21,994 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a536aebd-62d9-4a55-b98a-adf2638c6e80 with FillEvent d66af52b-be0b-4ef7-998e-82d091a633f0: SELL 12300 of 513500.0 at $3.9180 (Commission: $48.1919, using data at 2024-11-05)
-2025-04-30 09:31:21,994 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 994196), id='a34a77e4-ab91-428e-84f6-d7b15a2eb88f', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,994 - components.portfolio - WARNING - RISK CHECK FAILED: Insufficient projected cash for BUY 12500 513500.0. Required: ~$48898.26, Available (Cash - Reserved): ~$48202.96 (Current Cash: $49764.90, Reserved: $1561.94)
-2025-04-30 09:31:21,994 - components.portfolio - WARNING - MomentumPortfolio: Order generation for OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 994348), id='92d20c0d-8acf-4287-9d92-f969308699b0', symbol=np.float64(513500.0), direction='BUY', quantity=12500, order_type='MARKET', price=None) blocked by risk check.
-2025-04-30 09:31:21,994 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 12300 of 513500.0 at 3.91804. Cash increased by 48143.70. New cash: $97908.60
-2025-04-30 09:31:21,994 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
-2025-04-30 09:31:21,994 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $97908.60, Reserved Cash: $1561.94, Available Cash: $96346.66, Total Value: $97908.60
-2025-04-30 09:31:21,995 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-11-06 
-2025-04-30 09:31:21,995 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 995407), id='25b4f7fd-39df-42ec-8a78-5802eae934bc', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
-2025-04-30 09:31:21,995 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 4, 30, 9, 31, 21, 995407), id='816214c9-20ca-4835-8a3b-9afdd558fb13', symbol=np.float64(513500.0), direction='BUY', quantity=12300, order_type='MARKET', price=None)
-2025-04-30 09:31:21,996 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 816214c9-20ca-4835-8a3b-9afdd558fb13 with FillEvent 6a20a0e2-1d92-48e1-a244-28ad9c32a10a: BUY 12300 of 513500.0 at $4.1321 (Commission: $50.8244, using data at 2024-11-07)
-2025-04-30 09:31:21,996 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12300 of 513500.0 at 4.132065. Cash reduced by 50875.22. New cash: $47033.38
-2025-04-30 09:31:21,996 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12300, Avg Cost: $4.1321
-2025-04-30 09:31:21,996 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $47033.38, Reserved Cash: $330.09, Available Cash: $46703.28, Total Value: $97168.18
-2025-04-30 09:31:22,041 - __main__ - INFO - Data feed task finished.
-2025-04-30 09:31:22,041 - __main__ - INFO - Waiting for all events in the queue to be processed after data feed finished...
-2025-04-30 09:31:22,041 - __main__ - INFO - Event queue is finally empty.
-2025-04-30 09:31:22,041 - __main__ - INFO - Stopping Event Bus...
-2025-04-30 09:31:22,097 - components.metrics - INFO - === 策略性能指标 ===
-2025-04-30 09:31:22,098 - components.metrics - INFO - 夏普比率 (Sharpe Ratio): 0.0535
-2025-04-30 09:31:22,098 - components.metrics - INFO - 索提诺比率 (Sortino Ratio): 0.0697
-2025-04-30 09:31:22,098 - components.metrics - INFO - 最大回撤 (Max Drawdown): -0.1540
-2025-04-30 09:31:22,098 - components.metrics - INFO - 年化累计收益率 (CAGR): 0.0007
-2025-04-30 09:31:22,098 - components.metrics - INFO - 胜率 (Win Ratio): 0.5504
-2025-04-30 09:31:22,098 - components.metrics - INFO - 年化波动率 (Volatility): 0.0819
+2025-05-06 01:20:47,300 - root - INFO - 测试日志输出到文件
+2025-05-06 01:20:47,301 - __main__ - DEBUG - Starting the trading framework in BACKTEST mode...
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Created subscription list for event type: SignalEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Subscribed handler _on_signal_event to event type: SignalEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Created subscription list for event type: FillEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Subscribed handler _on_fill_event to event type: FillEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Created subscription list for event type: MarketEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Subscribed handler _on_market_event to event type: MarketEvent
+2025-05-06 01:20:47,304 - components.portfolio - INFO - MomentumPortfolio initialized with $100000.00 cash.
+2025-05-06 01:20:47,304 - components.portfolio - INFO - MomentumPortfolio initialized with lot_size=100.
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Created subscription list for event type: OrderEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Subscribed handler _on_order_event to event type: OrderEvent
+2025-05-06 01:20:47,304 - core.event_bus - INFO - Subscribed handler _on_market_event_for_settlement to event type: MarketEvent
+2025-05-06 01:20:47,305 - components.execution_handler - INFO - SimulatedExecutionHandler initialized.
+2025-05-06 01:20:47,305 - components.execution_handler - INFO - SimulatedExecutionHandler initialized with commission=0.0010, slippage=0.0005.
+2025-05-06 01:20:47,305 - core.event_bus - INFO - Subscribed handler _on_market_event to event type: MarketEvent
+2025-05-06 01:20:47,305 - components.strategy - INFO - MomentumStrategy initialized.
+2025-05-06 01:20:47,305 - components.strategy - INFO - MomentumStrategy initialized with period=60, weight=0.5.
+2025-05-06 01:20:47,305 - core.event_bus - INFO - Subscribed handler on_market_event to event type: MarketEvent
+2025-05-06 01:20:47,305 - __main__ - INFO - Event Bus run task created.
+2025-05-06 01:20:47,305 - core.event_bus - INFO - Event Bus started.
+2025-05-06 01:20:47,305 - components.csv_data_feed - INFO - CSVDataFeed started. Reading from etf.csv
+2025-05-06 01:20:47,306 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,306 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,307 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,308 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,308 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,309 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,309 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,310 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,310 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,311 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,312 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,312 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,313 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,313 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,314 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,315 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,315 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,316 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,316 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,317 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,317 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,318 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,319 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,319 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,320 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,320 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,321 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,321 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,322 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,323 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,323 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,324 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,324 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,325 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,325 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,326 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,326 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,327 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,328 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,328 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,329 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,329 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,330 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,330 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,331 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,332 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,332 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,333 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,333 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,334 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,334 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,335 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,335 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,336 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,337 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,337 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,338 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,338 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,339 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,340 - components.csv_data_feed - WARNING - Not enough data for symbol 513500.0 to get 61 periods.
+2025-05-06 01:20:47,348 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-05-27 
+2025-05-06 01:20:47,348 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 348168), id='50b8a213-a1fb-4de6-b098-c08c6b11aa2e', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,348 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 348168), id='7b75696e-3d80-45dd-8a7f-63f70a0ce953', symbol=np.float64(513500.0), direction='BUY', quantity=19500, order_type='MARKET', price=None)
+2025-05-06 01:20:47,348 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 7b75696e-3d80-45dd-8a7f-63f70a0ce953 with FillEvent 5f0bb066-fbed-402c-a6d1-7e900362498a: BUY 19500 of 513500.0 at $2.6373 (Commission: $51.4277, using data at 2022-05-30)
+2025-05-06 01:20:47,349 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19500 of 513500.0 at 2.637318. Cash reduced by 51479.13. New cash: $48520.87
+2025-05-06 01:20:47,349 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19500, Avg Cost: $2.6373
+2025-05-06 01:20:47,349 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48520.87, Reserved Cash: $0.00, Available Cash: $48520.87, Total Value: $99376.87
+2025-05-06 01:20:47,351 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-06 
+2025-05-06 01:20:47,351 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 351608), id='bdacba0c-5238-4b51-982f-a80cb110e2ff', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,351 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19500).
+2025-05-06 01:20:47,351 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 351608), id='55852b2d-d205-469f-9685-46c8a4b5be88', symbol=np.float64(513500.0), direction='SELL', quantity=19500, order_type='MARKET', price=None)
+2025-05-06 01:20:47,352 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 55852b2d-d205-469f-9685-46c8a4b5be88 with FillEvent 06ca80ba-3b00-4cdc-9155-d3e37e28ac35: SELL 19500 of 513500.0 at $2.5827 (Commission: $50.3628, using data at 2022-06-07)
+2025-05-06 01:20:47,352 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-06-07 
+2025-05-06 01:20:47,352 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19500 of 513500.0 at 2.5827080000000002. Cash increased by 50312.44. New cash: $98833.31
+2025-05-06 01:20:47,352 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,352 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98833.31, Reserved Cash: $0.00, Available Cash: $98833.31, Total Value: $98833.31
+2025-05-06 01:20:47,352 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 352540), id='f03e75b3-8290-4c21-a5d0-6467998684bb', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,352 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 352540), id='5ca25857-46b6-459d-8fc7-caac82e23c9a', symbol=np.float64(513500.0), direction='BUY', quantity=19200, order_type='MARKET', price=None)
+2025-05-06 01:20:47,353 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 5ca25857-46b6-459d-8fc7-caac82e23c9a with FillEvent a9ffb72f-3ed9-4258-b2d8-6eaa505b1f08: BUY 19200 of 513500.0 at $2.6113 (Commission: $50.1371, using data at 2022-06-08)
+2025-05-06 01:20:47,353 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 19200 of 513500.0 at 2.6113049999999998. Cash reduced by 50187.19. New cash: $48646.12
+2025-05-06 01:20:47,353 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 19200, Avg Cost: $2.6113
+2025-05-06 01:20:47,353 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48646.12, Reserved Cash: $0.00, Available Cash: $48646.12, Total Value: $98642.92
+2025-05-06 01:20:47,355 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-06-13 
+2025-05-06 01:20:47,355 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 355526), id='70724645-6825-4aeb-b8fe-e3ee761f4abc', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,355 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 19200).
+2025-05-06 01:20:47,355 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 355526), id='45131d0d-7f65-437f-99fd-a6d1847fcb0d', symbol=np.float64(513500.0), direction='SELL', quantity=19200, order_type='MARKET', price=None)
+2025-05-06 01:20:47,355 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 45131d0d-7f65-437f-99fd-a6d1847fcb0d with FillEvent ceb4958f-e09a-4bd0-a1ea-879071f773a3: SELL 19200 of 513500.0 at $2.3988 (Commission: $46.0570, using data at 2022-06-14)
+2025-05-06 01:20:47,356 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 19200 of 513500.0 at 2.3988. Cash increased by 46010.90. New cash: $94657.02
+2025-05-06 01:20:47,356 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,356 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $94657.02, Reserved Cash: $0.00, Available Cash: $94657.02, Total Value: $94657.02
+2025-05-06 01:20:47,374 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-08-01 
+2025-05-06 01:20:47,374 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 374534), id='53ecb1b9-6143-49fd-a96a-3dd5ea1f2d62', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,374 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 374534), id='47a9abb7-a290-42f8-a0d5-210833626a7c', symbol=np.float64(513500.0), direction='BUY', quantity=18100, order_type='MARKET', price=None)
+2025-05-06 01:20:47,374 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 47a9abb7-a290-42f8-a0d5-210833626a7c with FillEvent 1458eebe-5c76-4f1d-a471-3505ea5a6226: BUY 18100 of 513500.0 at $2.6213 (Commission: $47.4457, using data at 2022-08-02)
+2025-05-06 01:20:47,375 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18100 of 513500.0 at 2.6213100000000003. Cash reduced by 47493.16. New cash: $47163.87
+2025-05-06 01:20:47,375 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18100, Avg Cost: $2.6213
+2025-05-06 01:20:47,375 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $47163.87, Reserved Cash: $36.25, Available Cash: $47127.61, Total Value: $94441.07
+2025-05-06 01:20:47,388 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-09-01 
+2025-05-06 01:20:47,389 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 389001), id='32c8732d-1457-4c0e-b647-63a0de528cb5', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,389 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18100).
+2025-05-06 01:20:47,389 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 389001), id='df011bf3-00f5-4869-9233-68c5ff2f26dc', symbol=np.float64(513500.0), direction='SELL', quantity=18100, order_type='MARKET', price=None)
+2025-05-06 01:20:47,389 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order df011bf3-00f5-4869-9233-68c5ff2f26dc with FillEvent 30f12f64-12f4-4e9f-be1f-951dacf0c06b: SELL 18100 of 513500.0 at $2.5787 (Commission: $46.6747, using data at 2022-09-02)
+2025-05-06 01:20:47,389 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-09-02 
+2025-05-06 01:20:47,390 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18100 of 513500.0 at 2.57871. Cash increased by 46627.98. New cash: $93791.84
+2025-05-06 01:20:47,390 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,390 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $93791.84, Reserved Cash: $36.25, Available Cash: $93755.59, Total Value: $93791.84
+2025-05-06 01:20:47,390 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 390043), id='077168c7-a51a-40a5-956e-23277c6e84ee', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,390 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 390043), id='cc52982a-f5d3-4920-9f49-4ba764c02515', symbol=np.float64(513500.0), direction='BUY', quantity=18100, order_type='MARKET', price=None)
+2025-05-06 01:20:47,390 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order cc52982a-f5d3-4920-9f49-4ba764c02515 with FillEvent 8b4d11a3-2ac9-43b4-bdd9-f286f04f5186: BUY 18100 of 513500.0 at $2.5633 (Commission: $46.3954, using data at 2022-09-05)
+2025-05-06 01:20:47,391 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18100 of 513500.0 at 2.563281. Cash reduced by 46441.78. New cash: $47350.06
+2025-05-06 01:20:47,391 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18100, Avg Cost: $2.5633
+2025-05-06 01:20:47,391 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $47350.06, Reserved Cash: $326.29, Available Cash: $47023.77, Total Value: $93722.26
+2025-05-06 01:20:47,401 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-09-30 
+2025-05-06 01:20:47,401 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 401719), id='8ffc6866-f829-4537-99f1-ff92a03af2cb', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,401 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18100).
+2025-05-06 01:20:47,401 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 401719), id='7058a20f-0274-4fc5-b17b-9fee6729f464', symbol=np.float64(513500.0), direction='SELL', quantity=18100, order_type='MARKET', price=None)
+2025-05-06 01:20:47,402 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 7058a20f-0274-4fc5-b17b-9fee6729f464 with FillEvent b0e9db6f-ab97-4ef2-92ed-9e1c45930c4e: SELL 18100 of 513500.0 at $2.4188 (Commission: $43.7801, using data at 2022-10-10)
+2025-05-06 01:20:47,404 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18100 of 513500.0 at 2.41879. Cash increased by 43736.32. New cash: $91086.38
+2025-05-06 01:20:47,404 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,404 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91086.38, Reserved Cash: $326.29, Available Cash: $90760.09, Total Value: $91086.38
+2025-05-06 01:20:47,410 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-10-14 
+2025-05-06 01:20:47,410 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 410879), id='7d0e05df-c283-497d-9688-1ab93e6e69d2', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,411 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 410879), id='93ad1799-0657-4006-888e-50cbabcc34dd', symbol=np.float64(513500.0), direction='BUY', quantity=18500, order_type='MARKET', price=None)
+2025-05-06 01:20:47,411 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 93ad1799-0657-4006-888e-50cbabcc34dd with FillEvent 2908870d-9c55-4416-aff2-8bea8fd6af7e: BUY 18500 of 513500.0 at $2.4252 (Commission: $44.8664, using data at 2022-10-17)
+2025-05-06 01:20:47,412 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 18500 of 513500.0 at 2.425212. Cash reduced by 44911.29. New cash: $46175.09
+2025-05-06 01:20:47,412 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 18500, Avg Cost: $2.4252
+2025-05-06 01:20:47,412 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $46175.09, Reserved Cash: $993.29, Available Cash: $45181.80, Total Value: $90945.09
+2025-05-06 01:20:47,415 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-10-20 
+2025-05-06 01:20:47,415 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 415886), id='1f3adc47-fbd8-4c7d-bcc9-fd45b607cfa1', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,416 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 18500).
+2025-05-06 01:20:47,416 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 415886), id='8c8e2e96-3b9e-4fb3-8eae-2cb6c7cdbe57', symbol=np.float64(513500.0), direction='SELL', quantity=18500, order_type='MARKET', price=None)
+2025-05-06 01:20:47,416 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 8c8e2e96-3b9e-4fb3-8eae-2cb6c7cdbe57 with FillEvent 78899589-0a89-4423-a085-54647e0945e8: SELL 18500 of 513500.0 at $2.4628 (Commission: $45.5612, using data at 2022-10-21)
+2025-05-06 01:20:47,417 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 18500 of 513500.0 at 2.462768. Cash increased by 45515.65. New cash: $91690.74
+2025-05-06 01:20:47,417 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,417 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91690.74, Reserved Cash: $993.29, Available Cash: $90697.45, Total Value: $91690.74
+2025-05-06 01:20:47,420 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-10-25 
+2025-05-06 01:20:47,420 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 420415), id='15a4e3af-b0e5-46ca-a30d-7aac150ee583', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,420 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 420415), id='f5ec8df3-9cd9-4b36-a6a8-7b9e18ff2ae1', symbol=np.float64(513500.0), direction='BUY', quantity=17800, order_type='MARKET', price=None)
+2025-05-06 01:20:47,421 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f5ec8df3-9cd9-4b36-a6a8-7b9e18ff2ae1 with FillEvent 5f849a6a-3047-4475-ac81-77d758cdbbcd: BUY 17800 of 513500.0 at $2.5853 (Commission: $46.0182, using data at 2022-10-26)
+2025-05-06 01:20:47,421 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 17800 of 513500.0 at 2.585292. Cash reduced by 46064.22. New cash: $45626.52
+2025-05-06 01:20:47,421 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 17800, Avg Cost: $2.5853
+2025-05-06 01:20:47,421 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45626.52, Reserved Cash: $957.63, Available Cash: $44668.89, Total Value: $91301.32
+2025-05-06 01:20:47,427 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-11-03 
+2025-05-06 01:20:47,427 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 427488), id='6f5b0afe-8ea0-4b1c-9280-f5f3c60c1a98', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,427 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 17800).
+2025-05-06 01:20:47,427 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 427488), id='fab6e5d1-d293-4ee8-b182-01d719629f04', symbol=np.float64(513500.0), direction='SELL', quantity=17800, order_type='MARKET', price=None)
+2025-05-06 01:20:47,428 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order fab6e5d1-d293-4ee8-b182-01d719629f04 with FillEvent 76ff11b7-7938-4e3e-ad9e-5af0f0ce8ad5: SELL 17800 of 513500.0 at $2.5487 (Commission: $45.3673, using data at 2022-11-04)
+2025-05-06 01:20:47,428 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 17800 of 513500.0 at 2.5487249999999997. Cash increased by 45321.94. New cash: $90948.46
+2025-05-06 01:20:47,428 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,428 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $90948.46, Reserved Cash: $957.63, Available Cash: $89990.83, Total Value: $90948.46
+2025-05-06 01:20:47,440 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-11-23 
+2025-05-06 01:20:47,441 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 440964), id='f471d23e-d3c7-4df2-bca8-ecccee4acbf7', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,441 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 440964), id='f8d60553-572a-43ab-8b0a-dfad6f86bda6', symbol=np.float64(513500.0), direction='BUY', quantity=16800, order_type='MARKET', price=None)
+2025-05-06 01:20:47,441 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f8d60553-572a-43ab-8b0a-dfad6f86bda6 with FillEvent 4acf6f35-a88f-466e-be17-8985e0b3a45b: BUY 16800 of 513500.0 at $2.7254 (Commission: $45.7861, using data at 2022-11-24)
+2025-05-06 01:20:47,442 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16800 of 513500.0 at 2.725362. Cash reduced by 45831.87. New cash: $45116.59
+2025-05-06 01:20:47,442 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16800, Avg Cost: $2.7254
+2025-05-06 01:20:47,442 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45116.59, Reserved Cash: $486.53, Available Cash: $44630.07, Total Value: $90812.59
+2025-05-06 01:20:47,448 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-09 
+2025-05-06 01:20:47,448 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 448834), id='22bc41ef-253c-4f3a-a17e-5af28b573b6d', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,448 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16800).
+2025-05-06 01:20:47,448 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 448834), id='69c0f2f6-9776-425c-8860-65113b6c531b', symbol=np.float64(513500.0), direction='SELL', quantity=16800, order_type='MARKET', price=None)
+2025-05-06 01:20:47,449 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 69c0f2f6-9776-425c-8860-65113b6c531b with FillEvent a2331d49-72bd-477c-9985-7da7dc957ff8: SELL 16800 of 513500.0 at $2.5827 (Commission: $43.3895, using data at 2022-12-12)
+2025-05-06 01:20:47,449 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16800 of 513500.0 at 2.5827080000000002. Cash increased by 43346.10. New cash: $88462.70
+2025-05-06 01:20:47,449 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,449 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $88462.70, Reserved Cash: $486.53, Available Cash: $87976.17, Total Value: $88462.70
+2025-05-06 01:20:47,451 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-12-14 
+2025-05-06 01:20:47,451 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 451166), id='c3c06d88-3033-4f69-86e0-99a55c583f8b', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,451 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 451166), id='c5b04dbf-8a56-43d5-b4ec-f42488655ec6', symbol=np.float64(513500.0), direction='BUY', quantity=16700, order_type='MARKET', price=None)
+2025-05-06 01:20:47,451 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order c5b04dbf-8a56-43d5-b4ec-f42488655ec6 with FillEvent 6518f79f-55aa-4304-996b-8ca75a228ac4: BUY 16700 of 513500.0 at $2.6293 (Commission: $43.9095, using data at 2022-12-15)
+2025-05-06 01:20:47,452 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16700 of 513500.0 at 2.629314. Cash reduced by 43953.45. New cash: $44509.25
+2025-05-06 01:20:47,452 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16700, Avg Cost: $2.6293
+2025-05-06 01:20:47,452 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $44509.25, Reserved Cash: $854.48, Available Cash: $43654.77, Total Value: $88263.25
+2025-05-06 01:20:47,454 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2022-12-20 
+2025-05-06 01:20:47,454 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 454267), id='22ce509c-26ba-4207-8633-adae9ebc957f', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,454 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16700).
+2025-05-06 01:20:47,454 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 454267), id='c8cdc757-7eea-4314-8f79-d1ff5cc85ed0', symbol=np.float64(513500.0), direction='SELL', quantity=16700, order_type='MARKET', price=None)
+2025-05-06 01:20:47,454 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order c8cdc757-7eea-4314-8f79-d1ff5cc85ed0 with FillEvent a74da122-71ad-4718-b1e0-954b70962f2d: SELL 16700 of 513500.0 at $2.5227 (Commission: $42.1297, using data at 2022-12-21)
+2025-05-06 01:20:47,455 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16700 of 513500.0 at 2.522738. Cash increased by 42087.59. New cash: $86596.84
+2025-05-06 01:20:47,455 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,455 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86596.84, Reserved Cash: $854.48, Available Cash: $85742.36, Total Value: $86596.84
+2025-05-06 01:20:47,455 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2022-12-22 
+2025-05-06 01:20:47,456 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 455965), id='f2353666-bb94-4b23-afa5-aad5cb34e286', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,456 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 455965), id='88391259-42a1-4b9e-9d2d-c5e18214b97c', symbol=np.float64(513500.0), direction='BUY', quantity=16900, order_type='MARKET', price=None)
+2025-05-06 01:20:47,456 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 88391259-42a1-4b9e-9d2d-c5e18214b97c with FillEvent 2b01c8cb-e39d-48c9-a573-33c0ae915b34: BUY 16900 of 513500.0 at $2.5233 (Commission: $42.6431, using data at 2022-12-23)
+2025-05-06 01:20:47,456 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16900 of 513500.0 at 2.5232609999999998. Cash reduced by 42685.75. New cash: $43911.09
+2025-05-06 01:20:47,456 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16900, Avg Cost: $2.5233
+2025-05-06 01:20:47,456 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43911.09, Reserved Cash: $1531.49, Available Cash: $42379.59, Total Value: $86532.89
+2025-05-06 01:20:47,465 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-01-18 
+2025-05-06 01:20:47,465 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 465881), id='0b34b7f9-699e-4bcd-87bc-a060be72d9eb', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,465 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16900).
+2025-05-06 01:20:47,466 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 465881), id='69bf91df-b8a7-44fb-9753-d1e78e72d833', symbol=np.float64(513500.0), direction='SELL', quantity=16900, order_type='MARKET', price=None)
+2025-05-06 01:20:47,466 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 69bf91df-b8a7-44fb-9753-d1e78e72d833 with FillEvent cdf0c657-d459-4794-8716-f7a00799eabf: SELL 16900 of 513500.0 at $2.4987 (Commission: $42.2289, using data at 2023-01-19)
+2025-05-06 01:20:47,466 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16900 of 513500.0 at 2.49875. Cash increased by 42186.65. New cash: $86097.73
+2025-05-06 01:20:47,466 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,466 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86097.73, Reserved Cash: $1531.49, Available Cash: $84566.24, Total Value: $86097.73
+2025-05-06 01:20:47,468 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-01-30 
+2025-05-06 01:20:47,468 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 468102), id='ddcb4f96-b28d-4a50-b10e-9bfb998fb631', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,468 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 468102), id='eb9d9743-6b5f-4cc6-a8ec-4843163a64c2', symbol=np.float64(513500.0), direction='BUY', quantity=16700, order_type='MARKET', price=None)
+2025-05-06 01:20:47,468 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order eb9d9743-6b5f-4cc6-a8ec-4843163a64c2 with FillEvent 7b3d56d9-8cbd-4079-844c-bc530a1f176a: BUY 16700 of 513500.0 at $2.5533 (Commission: $42.6397, using data at 2023-01-31)
+2025-05-06 01:20:47,469 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-01-31 
+2025-05-06 01:20:47,469 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16700 of 513500.0 at 2.553276. Cash reduced by 42682.35. New cash: $43415.38
+2025-05-06 01:20:47,469 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16700, Avg Cost: $2.5533
+2025-05-06 01:20:47,469 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43415.38, Reserved Cash: $1899.45, Available Cash: $41515.94, Total Value: $85900.18
+2025-05-06 01:20:47,469 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 469063), id='28a1584e-b914-4fa1-a51e-216f16660179', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,469 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16700).
+2025-05-06 01:20:47,469 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 469063), id='d69bcb7a-fe3a-459d-901e-6886ae09c737', symbol=np.float64(513500.0), direction='SELL', quantity=16700, order_type='MARKET', price=None)
+2025-05-06 01:20:47,469 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order d69bcb7a-fe3a-459d-901e-6886ae09c737 with FillEvent 72f24e99-ef12-45f0-b85d-a89f44496f9e: SELL 16700 of 513500.0 at $2.5727 (Commission: $42.9643, using data at 2023-02-01)
+2025-05-06 01:20:47,469 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16700 of 513500.0 at 2.572713. Cash increased by 42921.34. New cash: $86336.73
+2025-05-06 01:20:47,470 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,470 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86336.73, Reserved Cash: $1899.45, Available Cash: $84437.28, Total Value: $86336.73
+2025-05-06 01:20:47,471 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-02-03 
+2025-05-06 01:20:47,471 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 471338), id='71babf17-3080-4f86-864e-e2170ee72793', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,471 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 471338), id='f4d3f8f9-353f-4481-9243-dfc891aaa853', symbol=np.float64(513500.0), direction='BUY', quantity=16400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,471 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f4d3f8f9-353f-4481-9243-dfc891aaa853 with FillEvent 9089fe70-2c69-41fa-b583-13f09c9dcb68: BUY 16400 of 513500.0 at $2.6313 (Commission: $43.1536, using data at 2023-02-06)
+2025-05-06 01:20:47,472 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16400 of 513500.0 at 2.631315. Cash reduced by 43196.72. New cash: $43140.01
+2025-05-06 01:20:47,472 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16400, Avg Cost: $2.6313
+2025-05-06 01:20:47,472 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43140.01, Reserved Cash: $2030.84, Available Cash: $41109.16, Total Value: $86075.21
+2025-05-06 01:20:47,475 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-02-13 
+2025-05-06 01:20:47,475 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 475359), id='e482c5ba-36e3-4b73-a850-338af97e69ac', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,475 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16400).
+2025-05-06 01:20:47,475 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 475359), id='0ff3cd4a-e596-47ae-a79d-28333ca2fd90', symbol=np.float64(513500.0), direction='SELL', quantity=16400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,475 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 0ff3cd4a-e596-47ae-a79d-28333ca2fd90 with FillEvent e0d9f63e-09b1-442b-b0b1-ceaf6099ab75: SELL 16400 of 513500.0 at $2.6427 (Commission: $43.3399, using data at 2023-02-14)
+2025-05-06 01:20:47,476 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16400 of 513500.0 at 2.642678. Cash increased by 43296.58. New cash: $86436.59
+2025-05-06 01:20:47,476 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,476 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $86436.59, Reserved Cash: $2030.84, Available Cash: $84405.74, Total Value: $86436.59
+2025-05-06 01:20:47,476 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-02-15 
+2025-05-06 01:20:47,477 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 477053), id='9ae8103f-d943-41e8-a882-3227918c238f', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,477 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 477053), id='0f7d70ea-ca7c-49e9-b344-f60397a97b66', symbol=np.float64(513500.0), direction='BUY', quantity=16300, order_type='MARKET', price=None)
+2025-05-06 01:20:47,477 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 0f7d70ea-ca7c-49e9-b344-f60397a97b66 with FillEvent 5fd417bc-5fe9-4a14-8250-057949579551: BUY 16300 of 513500.0 at $2.6733 (Commission: $43.5754, using data at 2023-02-16)
+2025-05-06 01:20:47,477 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16300 of 513500.0 at 2.673336. Cash reduced by 43618.95. New cash: $42817.63
+2025-05-06 01:20:47,478 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16300, Avg Cost: $2.6733
+2025-05-06 01:20:47,478 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $42817.63, Reserved Cash: $1606.41, Available Cash: $41211.23, Total Value: $86338.63
+2025-05-06 01:20:47,478 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-02-17 
+2025-05-06 01:20:47,478 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 478754), id='a5b239c7-e07b-4a74-b1ff-88e6b80867c6', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,478 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16300).
+2025-05-06 01:20:47,478 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 478754), id='495a4e95-d0e1-4de2-9017-cc6630ed9179', symbol=np.float64(513500.0), direction='SELL', quantity=16300, order_type='MARKET', price=None)
+2025-05-06 01:20:47,479 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 495a4e95-d0e1-4de2-9017-cc6630ed9179 with FillEvent 357597f3-2f2f-4f55-a1d9-89af4a5ea909: SELL 16300 of 513500.0 at $2.6327 (Commission: $42.9127, using data at 2023-02-20)
+2025-05-06 01:20:47,479 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16300 of 513500.0 at 2.632683. Cash increased by 42869.82. New cash: $85687.45
+2025-05-06 01:20:47,479 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,479 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $85687.45, Reserved Cash: $1606.41, Available Cash: $84081.05, Total Value: $85687.45
+2025-05-06 01:20:47,487 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-09 
+2025-05-06 01:20:47,487 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 487170), id='afdce5e2-20c3-46ef-971b-8b0a268269b5', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,487 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 487170), id='a52d6ffe-f6a2-4343-b300-bc552cb29060', symbol=np.float64(513500.0), direction='BUY', quantity=16400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,487 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a52d6ffe-f6a2-4343-b300-bc552cb29060 with FillEvent de5816b0-f24c-4133-b972-264ee3b4222c: BUY 16400 of 513500.0 at $2.5593 (Commission: $41.9722, using data at 2023-03-10)
+2025-05-06 01:20:47,488 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-10 
+2025-05-06 01:20:47,488 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16400 of 513500.0 at 2.5592789999999996. Cash reduced by 42014.15. New cash: $43673.31
+2025-05-06 01:20:47,488 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16400, Avg Cost: $2.5593
+2025-05-06 01:20:47,488 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $43673.31, Reserved Cash: $2591.88, Available Cash: $41081.42, Total Value: $85427.71
+2025-05-06 01:20:47,488 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 488092), id='087ef7dc-d811-4fda-b158-8793f95d99aa', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,488 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16400).
+2025-05-06 01:20:47,488 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 488092), id='5f795a8c-1bd7-4c91-82c2-d62474827701', symbol=np.float64(513500.0), direction='SELL', quantity=16400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,488 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 5f795a8c-1bd7-4c91-82c2-d62474827701 with FillEvent 98168332-b5f3-4509-a64f-5e01e7ac7596: SELL 16400 of 513500.0 at $2.5387 (Commission: $41.6352, using data at 2023-03-13)
+2025-05-06 01:20:47,489 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16400 of 513500.0 at 2.53873. Cash increased by 41593.54. New cash: $85266.84
+2025-05-06 01:20:47,489 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,489 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $85266.84, Reserved Cash: $2591.88, Available Cash: $82674.96, Total Value: $85266.84
+2025-05-06 01:20:47,493 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-21 
+2025-05-06 01:20:47,493 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 493116), id='89a77f71-a066-43f9-bf39-d768de93b18b', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,493 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 493116), id='42089aaa-1ff4-4fd4-965c-4ccaa7a4a89c', symbol=np.float64(513500.0), direction='BUY', quantity=16600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,493 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 42089aaa-1ff4-4fd4-965c-4ccaa7a4a89c with FillEvent 4fc0734d-c427-4714-8d0d-b21151176cc1: BUY 16600 of 513500.0 at $2.5873 (Commission: $42.9491, using data at 2023-03-22)
+2025-05-06 01:20:47,494 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16600 of 513500.0 at 2.587293. Cash reduced by 42992.01. New cash: $42274.83
+2025-05-06 01:20:47,494 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16600, Avg Cost: $2.5873
+2025-05-06 01:20:47,494 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $42274.83, Reserved Cash: $2093.14, Available Cash: $40181.69, Total Value: $85202.43
+2025-05-06 01:20:47,495 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-03-24 
+2025-05-06 01:20:47,495 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 495281), id='e5d2d25c-fa03-4760-af1d-bdf33a13cda1', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,495 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16600).
+2025-05-06 01:20:47,495 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 495281), id='b36c2537-aeaa-4198-a443-19e57291172a', symbol=np.float64(513500.0), direction='SELL', quantity=16600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,495 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b36c2537-aeaa-4198-a443-19e57291172a with FillEvent 5c3613d7-2057-457a-979e-c3d356daff88: SELL 16600 of 513500.0 at $2.5727 (Commission: $42.7070, using data at 2023-03-27)
+2025-05-06 01:20:47,496 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-03-27 
+2025-05-06 01:20:47,496 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16600 of 513500.0 at 2.572713. Cash increased by 42664.33. New cash: $84939.16
+2025-05-06 01:20:47,496 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,496 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $84939.16, Reserved Cash: $2093.14, Available Cash: $82846.02, Total Value: $84939.16
+2025-05-06 01:20:47,496 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 496187), id='553d9e3f-b000-471b-9b96-8145d4d57ea7', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,496 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 496187), id='34ddd661-6b91-428d-a10e-54a604f75795', symbol=np.float64(513500.0), direction='BUY', quantity=16400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,496 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 34ddd661-6b91-428d-a10e-54a604f75795 with FillEvent 44126628-e910-467e-af63-e40a7ef88d0d: BUY 16400 of 513500.0 at $2.5753 (Commission: $42.2347, using data at 2023-03-28)
+2025-05-06 01:20:47,497 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 16400 of 513500.0 at 2.575287. Cash reduced by 42276.94. New cash: $42662.22
+2025-05-06 01:20:47,497 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 16400, Avg Cost: $2.5753
+2025-05-06 01:20:47,497 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $42662.22, Reserved Cash: $2125.99, Available Cash: $40536.23, Total Value: $84843.02
+2025-05-06 01:20:47,566 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-09-22 
+2025-05-06 01:20:47,566 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 566554), id='c9e27f51-20b5-4c3d-b82e-dc9f042dd747', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,566 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 16400).
+2025-05-06 01:20:47,566 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 566554), id='d1abc186-59a2-4356-84ca-3bf6ad9bc373', symbol=np.float64(513500.0), direction='SELL', quantity=16400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,566 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order d1abc186-59a2-4356-84ca-3bf6ad9bc373 with FillEvent 9953b602-fa21-44d9-a579-ecb79bc9007b: SELL 16400 of 513500.0 at $2.9745 (Commission: $48.7820, using data at 2023-09-25)
+2025-05-06 01:20:47,567 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 16400 of 513500.0 at 2.974512. Cash increased by 48733.21. New cash: $91395.43
+2025-05-06 01:20:47,567 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,567 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91395.43, Reserved Cash: $2125.99, Available Cash: $89269.45, Total Value: $91395.43
+2025-05-06 01:20:47,571 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-10-12 
+2025-05-06 01:20:47,571 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 571377), id='f09bacdb-4286-4260-8386-86f513985f7e', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,571 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 571377), id='9fce5194-7588-4eef-8a80-57dbd55add4f', symbol=np.float64(513500.0), direction='BUY', quantity=15100, order_type='MARKET', price=None)
+2025-05-06 01:20:47,571 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 9fce5194-7588-4eef-8a80-57dbd55add4f with FillEvent f45c7f38-b2a3-4585-82bc-d729d2711f1d: BUY 15100 of 513500.0 at $3.0015 (Commission: $45.3227, using data at 2023-10-13)
+2025-05-06 01:20:47,572 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-10-13 
+2025-05-06 01:20:47,572 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 15100 of 513500.0 at 3.0015. Cash reduced by 45367.97. New cash: $46027.46
+2025-05-06 01:20:47,572 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 15100, Avg Cost: $3.0015
+2025-05-06 01:20:47,572 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $46027.46, Reserved Cash: $2458.68, Available Cash: $43568.78, Total Value: $91206.66
+2025-05-06 01:20:47,572 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 572321), id='c3a74598-7a1b-4a51-8d55-b29632f3a28e', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,572 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 15100).
+2025-05-06 01:20:47,572 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 572321), id='0d939d25-b259-4158-bce1-8a22f1c05788', symbol=np.float64(513500.0), direction='SELL', quantity=15100, order_type='MARKET', price=None)
+2025-05-06 01:20:47,572 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 0d939d25-b259-4158-bce1-8a22f1c05788 with FillEvent e6213b50-e497-4b95-977b-ad1143e06a9e: SELL 15100 of 513500.0 at $2.9825 (Commission: $45.0359, using data at 2023-10-16)
+2025-05-06 01:20:47,573 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 15100 of 513500.0 at 2.982508. Cash increased by 44990.83. New cash: $91018.29
+2025-05-06 01:20:47,573 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,573 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $91018.29, Reserved Cash: $2458.68, Available Cash: $88559.61, Total Value: $91018.29
+2025-05-06 01:20:47,586 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-11-16 
+2025-05-06 01:20:47,586 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 586649), id='cc8257ca-e484-403f-8f52-70b3bb50d038', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,586 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 586649), id='bba6a93e-4192-41a7-acd8-6eb9a17205d0', symbol=np.float64(513500.0), direction='BUY', quantity=14800, order_type='MARKET', price=None)
+2025-05-06 01:20:47,587 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order bba6a93e-4192-41a7-acd8-6eb9a17205d0 with FillEvent 00a9384d-f13f-4e6c-bb78-9e1fd91ce751: BUY 14800 of 513500.0 at $3.0855 (Commission: $45.6660, using data at 2023-11-17)
+2025-05-06 01:20:47,587 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14800 of 513500.0 at 3.0855420000000002. Cash reduced by 45711.69. New cash: $45306.61
+2025-05-06 01:20:47,587 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14800, Avg Cost: $3.0855
+2025-05-06 01:20:47,587 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45306.61, Reserved Cash: $2369.75, Available Cash: $42936.86, Total Value: $90831.41
+2025-05-06 01:20:47,592 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-11-30 
+2025-05-06 01:20:47,592 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 592950), id='01abad04-7953-49e6-a06a-e0875349e895', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,593 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14800).
+2025-05-06 01:20:47,593 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 592950), id='732e0d41-d294-4b51-85bd-5ada0e0992b1', symbol=np.float64(513500.0), direction='SELL', quantity=14800, order_type='MARKET', price=None)
+2025-05-06 01:20:47,593 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 732e0d41-d294-4b51-85bd-5ada0e0992b1 with FillEvent 27d3f9fc-aca3-4fc0-9d0c-e40809338f02: SELL 14800 of 513500.0 at $3.0685 (Commission: $45.4133, using data at 2023-12-01)
+2025-05-06 01:20:47,593 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14800 of 513500.0 at 3.0684649999999998. Cash increased by 45367.87. New cash: $90674.48
+2025-05-06 01:20:47,593 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,593 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $90674.48, Reserved Cash: $2369.75, Available Cash: $88304.73, Total Value: $90674.48
+2025-05-06 01:20:47,594 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-12-04 
+2025-05-06 01:20:47,594 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 594716), id='2da454ef-a798-4981-aaf0-341a9707d6b1', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,594 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 594716), id='9182f196-16ad-463b-99f8-a8e3fc5c10f2', symbol=np.float64(513500.0), direction='BUY', quantity=14600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,595 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 9182f196-16ad-463b-99f8-a8e3fc5c10f2 with FillEvent 039e0c23-6ed0-4b01-82fc-4b4cc8236244: BUY 14600 of 513500.0 at $3.0795 (Commission: $44.9613, using data at 2023-12-05)
+2025-05-06 01:20:47,595 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2023-12-05 
+2025-05-06 01:20:47,595 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14600 of 513500.0 at 3.079539. Cash reduced by 45006.23. New cash: $45668.25
+2025-05-06 01:20:47,595 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14600, Avg Cost: $3.0795
+2025-05-06 01:20:47,595 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45668.25, Reserved Cash: $2632.94, Available Cash: $43035.30, Total Value: $90461.05
+2025-05-06 01:20:47,595 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 595647), id='da8f0c7f-d210-41e7-b683-4b2aa841d1bd', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,595 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14600).
+2025-05-06 01:20:47,595 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 595647), id='d0c9a935-8dbf-4bb6-8b90-cb0bfbac081b', symbol=np.float64(513500.0), direction='SELL', quantity=14600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,596 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order d0c9a935-8dbf-4bb6-8b90-cb0bfbac081b with FillEvent 2ead42d9-32c6-4e5e-8d50-4154ed1943c3: SELL 14600 of 513500.0 at $3.0885 (Commission: $45.0914, using data at 2023-12-06)
+2025-05-06 01:20:47,596 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14600 of 513500.0 at 3.0884549999999997. Cash increased by 45046.35. New cash: $90714.60
+2025-05-06 01:20:47,596 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,596 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $90714.60, Reserved Cash: $2632.94, Available Cash: $88081.65, Total Value: $90714.60
+2025-05-06 01:20:47,597 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2023-12-08 
+2025-05-06 01:20:47,598 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 598007), id='7285d85e-823e-4d41-92f5-d15bd1d76903', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,598 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 598007), id='f11c9589-9f26-4bcb-829c-e133c695cc14', symbol=np.float64(513500.0), direction='BUY', quantity=14600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,598 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order f11c9589-9f26-4bcb-829c-e133c695cc14 with FillEvent ca607e98-4267-418b-acb3-5185f68d687a: BUY 14600 of 513500.0 at $3.1156 (Commission: $45.4871, using data at 2023-12-11)
+2025-05-06 01:20:47,598 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 14600 of 513500.0 at 3.115557. Cash reduced by 45532.62. New cash: $45181.98
+2025-05-06 01:20:47,599 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 14600, Avg Cost: $3.1156
+2025-05-06 01:20:47,599 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $45181.98, Reserved Cash: $2252.78, Available Cash: $42929.20, Total Value: $90617.18
+2025-05-06 01:20:47,683 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-08-05 
+2025-05-06 01:20:47,683 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 683660), id='3c81a08b-58dd-47ff-8495-401152214062', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,683 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 14600).
+2025-05-06 01:20:47,683 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 683660), id='d35647f3-7cc8-40ce-84eb-c93c4168a37f', symbol=np.float64(513500.0), direction='SELL', quantity=14600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,684 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order d35647f3-7cc8-40ce-84eb-c93c4168a37f with FillEvent 7ca72942-1fd5-4b1f-9ee4-f4a12e4c9282: SELL 14600 of 513500.0 at $3.6242 (Commission: $52.9131, using data at 2024-08-06)
+2025-05-06 01:20:47,684 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 14600 of 513500.0 at 3.624187. Cash increased by 52860.22. New cash: $98042.19
+2025-05-06 01:20:47,684 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,684 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98042.19, Reserved Cash: $2252.78, Available Cash: $95789.42, Total Value: $98042.19
+2025-05-06 01:20:47,685 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-07 
+2025-05-06 01:20:47,685 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 685367), id='8b1669c2-f2ec-4ffb-9225-7e14263319e9', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,685 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 685367), id='1200824e-9b34-4773-a716-5606d35c2f0c', symbol=np.float64(513500.0), direction='BUY', quantity=13500, order_type='MARKET', price=None)
+2025-05-06 01:20:47,685 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 1200824e-9b34-4773-a716-5606d35c2f0c with FillEvent ebcd608a-035b-4da1-93bf-55adb1b01770: BUY 13500 of 513500.0 at $3.5878 (Commission: $48.4352, using data at 2024-08-08)
+2025-05-06 01:20:47,686 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-08-08 
+2025-05-06 01:20:47,686 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13500 of 513500.0 at 3.587793. Cash reduced by 48483.64. New cash: $49558.55
+2025-05-06 01:20:47,686 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13500, Avg Cost: $3.5878
+2025-05-06 01:20:47,686 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49558.55, Reserved Cash: $2820.63, Available Cash: $46737.93, Total Value: $97672.55
+2025-05-06 01:20:47,686 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 686281), id='635f5cdb-aaa9-40e6-8091-16a0a7ce5ab4', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,686 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13500).
+2025-05-06 01:20:47,686 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 686281), id='b77fed7f-0264-440a-af60-0f9b1e34ad31', symbol=np.float64(513500.0), direction='SELL', quantity=13500, order_type='MARKET', price=None)
+2025-05-06 01:20:47,686 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b77fed7f-0264-440a-af60-0f9b1e34ad31 with FillEvent ce695b63-af8b-4d5c-837e-84478dd498fe: SELL 13500 of 513500.0 at $3.6702 (Commission: $49.5472, using data at 2024-08-09)
+2025-05-06 01:20:47,687 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 13500 of 513500.0 at 3.670164. Cash increased by 49497.67. New cash: $99056.22
+2025-05-06 01:20:47,687 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,687 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $99056.22, Reserved Cash: $2820.63, Available Cash: $96235.59, Total Value: $99056.22
+2025-05-06 01:20:47,688 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-08-12 
+2025-05-06 01:20:47,688 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 688093), id='c9fdb51f-123b-403f-88e9-88abf356c0ba', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,688 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 688093), id='cb984bee-9edf-435c-bb50-bd8e4e6f972d', symbol=np.float64(513500.0), direction='BUY', quantity=13400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,688 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order cb984bee-9edf-435c-bb50-bd8e4e6f972d with FillEvent f2f57afd-3554-45c5-b964-93188c18e0b2: BUY 13400 of 513500.0 at $3.7259 (Commission: $49.9266, using data at 2024-08-13)
+2025-05-06 01:20:47,688 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13400 of 513500.0 at 3.7258620000000002. Cash reduced by 49976.48. New cash: $49079.74
+2025-05-06 01:20:47,689 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13400, Avg Cost: $3.7259
+2025-05-06 01:20:47,689 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49079.74, Reserved Cash: $2283.82, Available Cash: $46795.92, Total Value: $98954.54
+2025-05-06 01:20:47,700 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-09-10 
+2025-05-06 01:20:47,700 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 700182), id='2551ce98-c061-4f56-9709-d35a901c65d6', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,700 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13400).
+2025-05-06 01:20:47,700 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 700182), id='2185862f-e493-4ae4-be4e-09f7b06c4c9e', symbol=np.float64(513500.0), direction='SELL', quantity=13400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,700 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 2185862f-e493-4ae4-be4e-09f7b06c4c9e with FillEvent 54298d97-09e6-4de2-addc-90e5cfcfe214: SELL 13400 of 513500.0 at $3.8141 (Commission: $51.1088, using data at 2024-09-11)
+2025-05-06 01:20:47,701 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 13400 of 513500.0 at 3.814092. Cash increased by 51057.72. New cash: $100137.47
+2025-05-06 01:20:47,701 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,701 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $100137.47, Reserved Cash: $2283.82, Available Cash: $97853.65, Total Value: $100137.47
+2025-05-06 01:20:47,701 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-09-12 
+2025-05-06 01:20:47,701 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 701855), id='297c7495-4a26-4d3c-a060-7b27b54be00d', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,701 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 701855), id='085a9c00-3cb6-4e14-9df3-c010f1670649', symbol=np.float64(513500.0), direction='BUY', quantity=13000, order_type='MARKET', price=None)
+2025-05-06 01:20:47,702 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 085a9c00-3cb6-4e14-9df3-c010f1670649 with FillEvent 9596abee-34a5-4258-a455-5aba0c2dcbef: BUY 13000 of 513500.0 at $3.8899 (Commission: $50.5693, using data at 2024-09-13)
+2025-05-06 01:20:47,702 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 13000 of 513500.0 at 3.889944. Cash reduced by 50619.84. New cash: $49517.63
+2025-05-06 01:20:47,702 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 13000, Avg Cost: $3.8899
+2025-05-06 01:20:47,702 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49517.63, Reserved Cash: $1867.20, Available Cash: $47650.43, Total Value: $99931.63
+2025-05-06 01:20:47,705 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-09-24 
+2025-05-06 01:20:47,705 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 705462), id='a83b1b76-ae89-4968-83eb-d1330bcbe636', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,705 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 13000).
+2025-05-06 01:20:47,705 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 705462), id='b229861f-f564-46c4-af0b-13b79a5b82ea', symbol=np.float64(513500.0), direction='SELL', quantity=13000, order_type='MARKET', price=None)
+2025-05-06 01:20:47,705 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order b229861f-f564-46c4-af0b-13b79a5b82ea with FillEvent f2ea8bae-eed6-44a0-8f99-2126dc141726: SELL 13000 of 513500.0 at $3.9000 (Commission: $50.7006, using data at 2024-09-25)
+2025-05-06 01:20:47,706 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 13000 of 513500.0 at 3.900049. Cash increased by 50649.94. New cash: $100167.56
+2025-05-06 01:20:47,706 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,706 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $100167.56, Reserved Cash: $1867.20, Available Cash: $98300.36, Total Value: $100167.56
+2025-05-06 01:20:47,711 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-10-15 
+2025-05-06 01:20:47,711 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 711078), id='4a7bc218-8a52-47d7-a5c4-fe362235ce2d', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,711 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 711078), id='a7d5dd06-d1a4-4291-8ba4-de5c2d422683', symbol=np.float64(513500.0), direction='BUY', quantity=12400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,711 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order a7d5dd06-d1a4-4291-8ba4-de5c2d422683 with FillEvent 34a227ab-cf87-45e3-804c-68c738503408: BUY 12400 of 513500.0 at $4.0520 (Commission: $50.2451, using data at 2024-10-16)
+2025-05-06 01:20:47,711 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12400 of 513500.0 at 4.0520249999999995. Cash reduced by 50295.36. New cash: $49872.21
+2025-05-06 01:20:47,711 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12400, Avg Cost: $4.0520
+2025-05-06 01:20:47,712 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $49872.21, Reserved Cash: $1867.20, Available Cash: $48005.01, Total Value: $99596.21
+2025-05-06 01:20:47,713 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-10-18 
+2025-05-06 01:20:47,713 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 713170), id='0cb1a4c7-f69f-432d-95e1-199d084410f2', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,713 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 12400).
+2025-05-06 01:20:47,713 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 713170), id='10eec5f3-b8a1-476b-9e37-9a188797cda6', symbol=np.float64(513500.0), direction='SELL', quantity=12400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,713 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 10eec5f3-b8a1-476b-9e37-9a188797cda6 with FillEvent 602b5ef6-80cf-4381-b335-65f103878281: SELL 12400 of 513500.0 at $4.0520 (Commission: $50.2445, using data at 2024-10-21)
+2025-05-06 01:20:47,714 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-10-21 
+2025-05-06 01:20:47,714 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 12400 of 513500.0 at 4.051973. Cash increased by 50194.22. New cash: $100066.43
+2025-05-06 01:20:47,714 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,714 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $100066.43, Reserved Cash: $1867.20, Available Cash: $98199.23, Total Value: $100066.43
+2025-05-06 01:20:47,714 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 714048), id='5b745322-abf8-4b4f-95b8-63b236eb686c', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,714 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 714048), id='88be3674-930b-4675-b5f5-216ebb7062dc', symbol=np.float64(513500.0), direction='BUY', quantity=12400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,714 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 88be3674-930b-4675-b5f5-216ebb7062dc with FillEvent 5cf00069-2160-49eb-998c-10fef5b44f7a: BUY 12400 of 513500.0 at $4.0320 (Commission: $49.9970, using data at 2024-10-22)
+2025-05-06 01:20:47,714 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12400 of 513500.0 at 4.032015. Cash reduced by 50046.98. New cash: $50019.44
+2025-05-06 01:20:47,715 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12400, Avg Cost: $4.0320
+2025-05-06 01:20:47,715 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $50019.44, Reserved Cash: $2115.57, Available Cash: $47903.88, Total Value: $99743.44
+2025-05-06 01:20:47,719 - components.strategy - INFO - MomentumStrategy: 平多 513500.0 at 2024-11-04 
+2025-05-06 01:20:47,719 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 719766), id='936ae3c2-0185-4a28-905e-af241be488aa', symbol=np.float64(513500.0), direction='FLAT', weight=None)
+2025-05-06 01:20:47,719 - components.portfolio - INFO - MomentumPortfolio: Received FLAT signal for 513500.0. Generating order to close confirmed position (SELL 12400).
+2025-05-06 01:20:47,719 - components.portfolio - INFO - MomentumPortfolio: Publishing FLAT OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 719766), id='eb3cce09-755c-4ea9-add0-339ec278105e', symbol=np.float64(513500.0), direction='SELL', quantity=12400, order_type='MARKET', price=None)
+2025-05-06 01:20:47,720 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order eb3cce09-755c-4ea9-add0-339ec278105e with FillEvent 175a9cda-0fe9-4a92-99cd-2955d5de2c94: SELL 12400 of 513500.0 at $3.9180 (Commission: $48.5837, using data at 2024-11-05)
+2025-05-06 01:20:47,720 - components.strategy - INFO - MomentumStrategy: 做多 513500.0 at 2024-11-05 
+2025-05-06 01:20:47,720 - components.portfolio - INFO - Portfolio: CONFIRMED SELL fill for 12400 of 513500.0 at 3.91804. Cash increased by 48535.11. New cash: $98554.56
+2025-05-06 01:20:47,720 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 0, Avg Cost: $0.0000
+2025-05-06 01:20:47,720 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $98554.56, Reserved Cash: $2115.57, Available Cash: $96438.99, Total Value: $98554.56
+2025-05-06 01:20:47,720 - components.portfolio - INFO - 收到交易信号: SignalEvent(type='SIGNAL', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 720629), id='07bbe574-08ba-4a6c-8ed0-3fae203ca93b', symbol=np.float64(513500.0), direction='LONG', weight=0.5)
+2025-05-06 01:20:47,720 - components.portfolio - INFO - MomentumPortfolio: Publishing OrderEvent: OrderEvent(type='ORDER', timestamp=datetime.datetime(2025, 5, 6, 1, 20, 47, 720629), id='787e3fd3-8c86-4258-adc3-d337ad554b03', symbol=np.float64(513500.0), direction='BUY', quantity=12600, order_type='MARKET', price=None)
+2025-05-06 01:20:47,721 - components.execution_handler - INFO - SimulatedExecutionHandler: Settled Order 787e3fd3-8c86-4258-adc3-d337ad554b03 with FillEvent 879cb3b3-e2a0-456e-9c3f-05b04bd543c9: BUY 12600 of 513500.0 at $3.9940 (Commission: $50.3243, using data at 2024-11-06)
+2025-05-06 01:20:47,721 - components.portfolio - INFO - Portfolio: CONFIRMED BUY fill for 12600 of 513500.0 at 3.993996. Cash reduced by 50374.67. New cash: $48179.88
+2025-05-06 01:20:47,721 - components.portfolio - INFO - Portfolio: Updated CONFIRMED position for 513500.0. New quantity: 12600, Avg Cost: $3.9940
+2025-05-06 01:20:47,721 - components.portfolio - INFO - MomentumPortfolio Post-Fill Summary: Cash: $48179.88, Reserved Cash: $1232.25, Available Cash: $46947.64, Total Value: $98277.48
+2025-05-06 01:20:47,753 - __main__ - INFO - Data feed task finished.
+2025-05-06 01:20:47,753 - __main__ - INFO - Waiting for all events in the queue to be processed after data feed finished...
+2025-05-06 01:20:47,754 - __main__ - INFO - Event queue is finally empty.
+2025-05-06 01:20:47,754 - __main__ - INFO - Stopping Event Bus...
+2025-05-06 01:20:47,799 - components.metrics - INFO - === 策略性能指标 ===
+2025-05-06 01:20:47,799 - components.metrics - INFO - 夏普比率 (Sharpe Ratio): 0.1559
+2025-05-06 01:20:47,799 - components.metrics - INFO - 索提诺比率 (Sortino Ratio): 0.2048
+2025-05-06 01:20:47,799 - components.metrics - INFO - 最大回撤 (Max Drawdown): -0.1559
+2025-05-06 01:20:47,799 - components.metrics - INFO - 年化累计收益率 (CAGR): 0.0063
+2025-05-06 01:20:47,799 - components.metrics - INFO - 胜率 (Win Ratio): 0.5504
+2025-05-06 01:20:47,799 - components.metrics - INFO - 年化波动率 (Volatility): 0.0820

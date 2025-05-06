@@ -46,8 +46,8 @@ async def main():
     # 3. 创建组件实例并注入 Event Bus
     data_feed = CSVDataFeed(bus, csv_file='etf.csv')
     portfolio = MomentumPortfolio(bus, initial_cash=100000.0, lot_size=100)
-    strategy = MomentumStrategy(bus, data_feed, portfolio, momentum_period=60, default_weight=0.5)
     execution_handler = SimulatedExecutionHandler(bus, commission_percent=0.001, slippage_percent=0.0005)
+    strategy = MomentumStrategy(bus, data_feed, portfolio, momentum_period=60, default_weight=0.5)
     metrics = Metrics(bus, portfolio)
     # -------------------------------------------------------------------------
 
