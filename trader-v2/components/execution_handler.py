@@ -141,7 +141,7 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
                 timestamp=current_timestamp
             )
 
-            logger.info(f"SimulatedExecutionHandler: Settled Order {order.id} with FillEvent {fill_event.id}: {fill_event.direction} {fill_event.quantity} of {fill_event.symbol} at ${fill_event.price:.4f} (Commission: ${fill_event.commission:.4f}, using data at {current_timestamp})")
+            logger.info(f"SimulatedExecutionHandler: 撮合订单 {order.id} with FillEvent {fill_event.id}: {fill_event.direction} {fill_event.quantity} of {fill_event.symbol} at ${fill_event.price:.4f} (Commission: ${fill_event.commission:.4f}, using data at {current_timestamp})")
 
             # Publish FillEvent
             self.event_bus.publish(fill_event)
