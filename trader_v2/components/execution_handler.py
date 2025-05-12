@@ -1,8 +1,6 @@
 import logging
-import asyncio
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import Dict, Optional, Any
-import uuid
 
 from components.base import BaseComponent
 from core.event_bus import EventBus
@@ -21,18 +19,23 @@ class BaseExecutionHandler(BaseComponent):
         logger.info(f"{self.__class__.__name__} initialized.")
 
     def _setup_event_handlers(self):
-        self.event_bus.subscribe(OrderEvent, self._on_order_event)
+        self.event_bus.subscribe(OrderEvent, self.on_order_event)
+        self.event_bus.subscribe(MarketEvent, self.on_market_event)
 
-    async def _on_order_event(self, event: OrderEvent):
-        await self.execute_order(event)
-
-    async def execute_order(self, order_event: OrderEvent):
-        logger.debug(f"BaseExecutionHandler received order {order_event.id}. Override execute_order in subclass.")
+    async def on_order_event(self, event: OrderEvent):
+        logger.debug(f"BaseExecutionHandler received order {event.id}. Override _on_order_event in subclass.")
+        pass
+    async def on_market_event(self, event: MarketEvent):
+        logger.debug(f"BaseExecutionHandler received market event {event.symbol} at {event.timestamp}. Override _on_market_event in subclass.")
         pass
 
 
 class SimulatedExecutionHandler(BaseExecutionHandler):
-    def __init__(self, event_bus: EventBus, commission_percent: float = 0.0, slippage_percent: float = 0.0):
+    def __init__(self, 
+        event_bus: EventBus, 
+        commission_percent: float = 0.0, 
+        slippage_percent: float = 0.0
+    ):
         """
         Args:
             event_bus: The central Event Bus instance.
@@ -49,35 +52,16 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
 
         logger.info(f"{self.__class__.__name__} initialized with commission={self.commission_percent:.4f}, slippage={self.slippage_percent:.4f}.")
     # -------------------------------------------------------------
-
-
-    def _setup_event_handlers(self):
-        super()._setup_event_handlers()
-        self.event_bus.subscribe(MarketEvent, self._on_market_event_for_settlement)
-
-
-    async def _on_order_event(self, order_event: OrderEvent):
-        logger.debug(f"SimulatedExecutionHandler received OrderEvent {order_event.id}. Adding to pending list.")
+    async def on_order_event(self, order_event: OrderEvent):
+        logger.info('接受订单事件')
         self._pending_orders[order_event.id] = order_event
-        # logger.info(f"SimulatedExecutionHandler: Order {order_event.id} added to pending list ({len(self._pending_orders)} pending).")
-        await self.execute_order(order_event)
 
-
-    async def execute_order(self, order_event: OrderEvent):
-         logger.debug(f"SimulatedExecutionHandler executing (adding to pending) Order: {order_event.id}")
-         pass
-
-
-    async def _on_market_event_for_settlement(self, market_event: MarketEvent):
+    async def on_market_event(self, market_event: MarketEvent):
         current_timestamp = market_event.timestamp
         # Update the last known price for this symbol regardless of whether it's a new timestep
         self._update_last_price_for_symbol(market_event.symbol, market_event.data)
 
         is_new_time_step = (self._last_market_timestamp is None or current_timestamp > self._last_market_timestamp)
-
-        # Store current timestamp for the next step *before* checking settlements for the *previous* step
-        # self._last_market_timestamp = current_timestamp # Moved update to end
-
 
         if not is_new_time_step:
             logger.debug(f"SimulatedExecutionHandler: Still processing data for timestamp {current_timestamp}. No settlement triggered yet.")
@@ -159,7 +143,6 @@ class SimulatedExecutionHandler(BaseExecutionHandler):
 
 
     def _update_last_price_for_symbol(self, symbol: str, data: Dict[str, Any]):
-        # ... (This method remains the same) ...
         """Helper to store latest prices."""
         price = None
         if 'close' in data:

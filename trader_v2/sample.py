@@ -1,20 +1,16 @@
  # main.py
 import asyncio
 import logging
-from datetime import datetime, timezone
-import uuid
 
 # 导入所有组件和事件
 from core.events import (
-    MarketEvent, SignalEvent, OrderEvent, FillEvent, HeartbeatEvent,
-    BacktestStartEvent, BacktestEndEvent, Event
+    BacktestStartEvent
 )
 from core.event_bus import EventBus
 from components.csv_data_feed import CSVDataFeed
 from components.strategy import MomentumStrategy
-from components.portfolio import MomentumPortfolio
+from components.portfolio import MomentumBroker
 from components.metrics import Metrics
-from components.execution_handler import SimulatedExecutionHandler # Import SimulatedExecutionHandler
 
 
 # 配置日志
@@ -45,9 +41,8 @@ async def main():
 
     # 3. 创建组件实例并注入 Event Bus
     data_feed = CSVDataFeed(bus, csv_file='etf_data.csv')
-    portfolio = MomentumPortfolio(bus, initial_cash=100000.0, lot_size=100)
-    execution_handler = SimulatedExecutionHandler(bus, commission_percent=0.001, slippage_percent=0.0005)
-    strategy = MomentumStrategy(bus, data_feed, portfolio, momentum_period=20, default_weight=0.1)
+    portfolio = MomentumBroker(bus, data_feed, initial_cash=100000.0, lot_size=100, commission_percent=0.001, slippage_percent=0.0005)
+    strategy = MomentumStrategy(bus, data_feed, portfolio, momentum_period=13, default_weight=0.3)
     metrics = Metrics(bus, portfolio)
     # -------------------------------------------------------------------------
 
@@ -79,7 +74,7 @@ async def main():
         logger.info("Event Bus run task was cancelled successfully.")
 
     metrics.display_metrics()
-
+    metrics.plot_net_value_curve()
 
 if __name__ == "__main__":
     asyncio.run(main())

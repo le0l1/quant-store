@@ -14,13 +14,8 @@ class Event:
 
 @dataclass(kw_only=True)
 class MarketEvent(Event):
-    """Market data event."""
-    # 定义子类特有的非默认字段
-    symbol: str
-    data: Dict[str, Any]
-
     # 重新定义父类中需要排在后面的带默认值字段
-    type: str = "MARKET" # 覆盖父类type，作为默认值
+    type: str = "MARKET"
 
 
 @dataclass(kw_only=True)
