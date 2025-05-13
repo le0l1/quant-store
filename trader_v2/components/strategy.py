@@ -1,7 +1,5 @@
 # components/strategy.py
 import logging
-import asyncio # Import asyncio for potential async operations
-from typing import Any, Dict
 
 from components.base import BaseComponent
 from components.portfolio import BaseBroker
@@ -62,10 +60,13 @@ class MomentumStrategy(BaseStrategy):
     def on_init(self):
         self.momentum_period = self.params.get('momentum_period', 20)
         self.default_weight = self.params.get('default_weight', 0.10)
+        self.index = 1
         logger.info(f"{self.__class__.__name__} initialized with period={self.momentum_period}, weight={self.default_weight}.")
 
-    async def on_market_data(self, market_event: MarketEvent):
-        timestamp = market_event.timestamp
+    async def on_market_data(self, event: MarketEvent):
+        self.index += 1
+        if self.index % 10 != 1:
+            return
 
         history_df = self.get_histroy(self.momentum_period + 1) # Get historical prices without symbol
         if history_df is None or len(history_df) < self.momentum_period + 1:
@@ -77,30 +78,27 @@ class MomentumStrategy(BaseStrategy):
         momentum_dict = {}
         for symbol in symbols:
             symbol_df = history_df[history_df['symbol'] == symbol]
-            if len(symbol_df) >= self.momentum_period + 1:
-                momentum = symbol_df.iloc[0]['close'] - symbol_df.iloc[-1]['close']
-                momentum_dict[symbol] = momentum
+            momentum = symbol_df.iloc[0]['close'] - symbol_df.iloc[-1]['close']
+            momentum_dict[symbol] = momentum
         
         # Sort symbols by momentum (descending order)
         sorted_momentum = sorted(momentum_dict.items(), key=lambda x: x[1], reverse=True)
         
         # Get top 3 momentum symbols
         top_3_symbols = [x[0] for x in sorted_momentum[:3]]
-        
+
         # Handle positions for all symbols
         for symbol in symbols:
             has_position = self.portfolio.get_current_position_quantity(symbol) != 0
-            
-            if symbol in top_3_symbols:
+
+            if not symbol in top_3_symbols:
+                if has_position:
+                    direction = "FLAT"
+                    signal_event = SignalEvent(symbol=symbol, direction=direction)
+                    self.event_bus.publish(signal_event)
+            else:
                 if not has_position:
                     direction = "LONG"
                     weight = self.default_weight
-                    logger.info(f"MomentumStrategy: 做多 {symbol} at {timestamp} ")
                     signal_event = SignalEvent(symbol=symbol, direction=direction, weight=weight)
-                    self.event_bus.publish(signal_event)
-            else:
-                if has_position:
-                    direction = "FLAT"
-                    logger.info(f"MomentumStrategy: 平多 {symbol} at {timestamp} ")
-                    signal_event = SignalEvent(symbol=symbol, direction=direction)
                     self.event_bus.publish(signal_event)

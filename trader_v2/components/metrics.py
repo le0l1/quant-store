@@ -5,8 +5,6 @@ import logging
 import pandas as pd
 import quantstats as qs  # Import quantstats for performance metrics
 from core.events import MarketEvent
-import matplotlib.pyplot as plt # Import matplotlib for plotting
-import matplotlib.dates as mdates # Import for date formatting on the x-axis
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +14,7 @@ class Metrics(BaseComponent):
         super().__init__(event_bus)
         self.portfolio = portfolio
         self._net_data = list()
-        self._setup_event_handlers() # Call setup event handlers
+        self.holds = pd.DataFrame(columns=['timestamp', 'symbol', 'quantity', 'price'])
 
     def _setup_event_handlers(self):
         self.event_bus.subscribe(MarketEvent, self.on_market_event)
@@ -27,6 +25,10 @@ class Metrics(BaseComponent):
             market_event.timestamp,
             self.portfolio.get_total_portfolio_value()
         ])
+        positions_df = self.portfolio.get_positions()
+        if not positions_df.empty:
+            positions_df['timestamp'] = market_event.timestamp
+            self.holds = pd.concat([self.holds, positions_df], ignore_index=True)
 
     def get_metrics(self):
         data = self._net_data
@@ -81,5 +83,6 @@ class Metrics(BaseComponent):
         df = pd.DataFrame(data, columns=['timestamp', 'netvalue'])
         df['timestamp'] = pd.to_datetime(df['timestamp'])
         df.set_index('timestamp', inplace=True)
+        self.holds.to_csv('holds.csv')
         return df['netvalue'].to_csv('returns.csv')
     

@@ -54,8 +54,13 @@ class CSVDataFeed(BaseDataFeed):
             logger.warning(f"Symbol {symbol} not found in CSV data.")
             return None
 
-        # Get the most recent entry for this symbol
-        symbol_data = self._df[symbol_mask]
+        current_timestamp = self._df.index[self._current_index]
+        # Get the most recent entry for this symbol up to current timestamp
+        symbol_data = self._df[symbol_mask & (self._df.index <= current_timestamp)]
+        if symbol_data.empty:
+            logger.warning(f"No data available for {symbol} before current timestamp.")
+            return None
+            
         latest_row = symbol_data.iloc[-1]
         
         return float(latest_row['close'])

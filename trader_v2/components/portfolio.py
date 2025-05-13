@@ -3,6 +3,8 @@ from datetime import datetime
 from typing import Any, Dict, Optional
 import uuid
 import math
+import pandas as pd
+
 from collections import defaultdict
 
 from components.base import BaseComponent
@@ -38,7 +40,6 @@ class BaseBroker(BaseComponent):
         self.event_bus.subscribe(MarketEvent, self._on_market_event)
 
     async def _on_signal_event(self, event: SignalEvent):
-        logger.info(f"TradingSystem received SignalEvent: {event}")
         await self.on_signal(event)
 
     async def _on_market_event(self, event: MarketEvent):
@@ -109,6 +110,28 @@ class BaseBroker(BaseComponent):
     def get_current_position_quantity(self, symbol: str) -> int:
         return self.positions.get(symbol, {}).get('quantity', 0)
 
+    def get_positions(self):
+        data = []
+        for symbol, pos_info in self.positions.items():
+            current_price = self.get_latest_price(symbol)
+            quantity = pos_info['quantity']
+            cost_basis = pos_info['cost_basis']
+            if current_price is not None and current_price > 0:
+                profit_loss = (current_price - cost_basis) * quantity
+                profit_loss_pct = (profit_loss / (cost_basis * quantity)) if cost_basis != 0 else 0
+            else:
+                profit_loss = 0
+                profit_loss_pct = 0
+            data.append({
+                'symbol': symbol,
+                'quantity': quantity,
+                'cost_basis': cost_basis,
+                'current_price': current_price if current_price is not None else 0,
+                'profit_loss': profit_loss,
+                'profit_loss_pct': profit_loss_pct
+            })
+        return pd.DataFrame(data)
+
     def get_available_cash(self) -> float:
         return self.cash
 
@@ -151,7 +174,6 @@ class MomentumBroker(BaseBroker):
                     f"commission={self.commission_percent:.4f}, slippage={self.slippage_percent:.4f}.")
 
     async def on_signal(self, signal_event: SignalEvent):
-        logger.info(f"MomentumTradingSystem processing signal: {signal_event}")
         symbol = signal_event.symbol
         direction = signal_event.direction
         weight = signal_event.weight
@@ -234,95 +256,142 @@ class MomentumBroker(BaseBroker):
             self._pending_orders[order_event.id] = order_event
         else:
             logger.warning(f"FLAT Order for {order_event} blocked by risk check.")
-
     async def on_market_event(self, market_event: MarketEvent):
         current_timestamp = market_event.timestamp
         is_new_time_step = (self._last_market_timestamp is None or current_timestamp > self._last_market_timestamp)
         if not is_new_time_step:
             logger.debug(f"Still processing timestamp {current_timestamp}.")
             return
-        
-        # Process all pending orders
+
         orders_to_settle_ids = list(self._pending_orders.keys())
         for order_id in orders_to_settle_ids:
             order = self._pending_orders.get(order_id)
             if not order:
-                logger.warning(f"Pending order {order_id} not found.")
+                logger.warning(f"Pending order {order_id} not found during settlement.")
                 continue
-            
+
             symbol = order.symbol
-            quantity = order.quantity
+            order_quantity = order.quantity # This is the absolute quantity of the order
             direction = order.direction
-            
-            # Get latest price from data_feed instead of MarketEvent
+
             latest_price = self.data_feed.get_latest_price(symbol)
             if latest_price is None or latest_price <= 0:
-                logger.warning(f"Invalid price for {symbol} at {current_timestamp}.")
+                logger.warning(f"Invalid or missing price for {symbol} ({latest_price}) at {current_timestamp}. Skipping order {order_id}.")
                 continue
-                
+            
             base_simulated_price = latest_price
-            if base_simulated_price is None or base_simulated_price <= 0:
-                logger.warning(f"Invalid price for {symbol} at {current_timestamp}.")
-                continue
-                
             final_fill_price = base_simulated_price
             slippage_amount = base_simulated_price * self.slippage_percent
+
             if direction == "BUY":
-                final_fill_price += slippage_amount
+                final_fill_price += slippage_amount # Buyer gets slightly worse price
             elif direction == "SELL":
-                final_fill_price -= slippage_amount
-            
+                final_fill_price -= slippage_amount # Seller gets slightly worse price
+
             if final_fill_price <= 0:
-                logger.warning(f"Final price for {symbol} is non-positive ({final_fill_price}).")
+                logger.warning(f"Final fill price for {symbol} is non-positive ({final_fill_price}) after slippage. Skipping order {order_id}.")
                 continue
-                
-            simulated_commission = final_fill_price * quantity * self.commission_percent
-            logger.info(f"Settling order {order_id}: {direction} {quantity} of {symbol} "
-                        f"at ${final_fill_price:.4f} (Commission: ${simulated_commission:.4f})")
-            # Update portfolio state directly
-            current_qty = self.get_current_position_quantity(symbol)
+
+            simulated_commission = final_fill_price * order_quantity * self.commission_percent
+
+            # Initialize position if it doesn't exist
+            if symbol not in self.positions:
+                self.positions[symbol] = {'quantity': 0.0, 'cost_basis': 0.0}
+
+            current_qty = self.positions[symbol]['quantity']
+            current_cost_basis = self.positions[symbol]['cost_basis']
+
             if direction == "BUY":
-                cost = (quantity * final_fill_price) + simulated_commission
-                if cost > self.cash:
-                    logger.error(f"ERROR: Insufficient cash for BUY. Required: ${cost:.2f}, Available: ${self.cash:.2f}.")
+                cost = (order_quantity * final_fill_price) + simulated_commission
+                if cost > self.cash and (current_qty + order_quantity > 0): # Only check if not covering a short that would net cash or be cash neutral
+                    # More sophisticated check needed if allowing leveraged short covering
+                    logger.warning(f"Insufficient cash for BUY order {order_id} for {symbol}. Cost: {cost:.2f}, Cash: {self.cash:.2f}. Skipping.")
                     continue
+                
                 self.cash -= cost
-                new_total_qty = current_qty + quantity
-                if new_total_qty > 0:
-                    current_cost_value = current_qty * self.positions[symbol]['cost_basis']
-                    fill_cost_value = quantity * final_fill_price
-                    new_cost_basis = (current_cost_value + fill_cost_value) / new_total_qty
-                    self.positions[symbol]['quantity'] = new_total_qty
-                    self.positions[symbol]['cost_basis'] = new_cost_basis
-                elif new_total_qty == 0:
-                    self.positions[symbol]['quantity'] = 0
-                    self.positions[symbol]['cost_basis'] = 0.0
-                else:
-                    self.positions[symbol]['quantity'] = new_total_qty
-                    logger.warning(f"BUY resulted in short position for {symbol}.")
-            elif direction == "SELL":
-                if quantity > current_qty:
-                    quantity = current_qty
-                proceeds = (quantity * final_fill_price) - simulated_commission
-                self.cash += proceeds
-                new_total_qty = current_qty - quantity
+                
+                new_total_qty = current_qty + order_quantity
+                
+                if current_qty < 0: # Was short
+                    qty_covered = min(order_quantity, abs(current_qty))
+                    qty_going_long = order_quantity - qty_covered
+                    
+                    # P&L for covered short part is implicitly realized in cash change
+                    # For cost basis, if we flip to long, new basis is for the long part
+                    if new_total_qty > 0: # Flipped to long
+                        self.positions[symbol]['cost_basis'] = final_fill_price # Cost basis for the new long shares
+                    elif new_total_qty == 0: # Flattened
+                        self.positions[symbol]['cost_basis'] = 0.0
+                    else: # Reduced short position
+                        # Cost basis (avg short price) remains the same for remaining short
+                        pass
+                else: # Was flat or long
+                    if new_total_qty > 0: # Avoid division by zero if current_qty and order_quantity are 0 (though order_quantity > 0)
+                        new_cost_basis = (current_qty * current_cost_basis + order_quantity * final_fill_price) / new_total_qty
+                        self.positions[symbol]['cost_basis'] = new_cost_basis
+                    else: # Should not happen if current_qty >=0 and order_qty > 0
+                        logger.error(f"Unexpected new_total_qty {new_total_qty} in BUY logic for {symbol}")
+                        self.positions[symbol]['cost_basis'] = 0.0
+
+
                 self.positions[symbol]['quantity'] = new_total_qty
                 if new_total_qty == 0:
-                    self.positions[symbol]['cost_basis'] = 0.0
-                elif new_total_qty < 0:
-                    self.positions[symbol]['cost_basis'] = 0.0
-                    logger.warning(f"SELL resulted in short position for {symbol}.")
-                del self.positions[symbol]
+                     self.positions[symbol]['cost_basis'] = 0.0
+
+
+            elif direction == "SELL":
+                proceeds = (order_quantity * final_fill_price) - simulated_commission
+                self.cash += proceeds
+                
+                new_total_qty = current_qty - order_quantity
+
+                if current_qty > 0: # Was long
+                    qty_sold_from_long = min(order_quantity, current_qty)
+                    qty_going_short = order_quantity - qty_sold_from_long
+
+                    # P&L for sold long part is implicitly realized
+                    if new_total_qty < 0: # Flipped to short
+                        self.positions[symbol]['cost_basis'] = final_fill_price # Avg entry price for the new short shares
+                    elif new_total_qty == 0: # Flattened
+                        self.positions[symbol]['cost_basis'] = 0.0
+                    else: # Reduced long position
+                        # Cost basis of remaining long shares doesn't change
+                        pass
+                else: # Was flat or short (opening new short or increasing short)
+                    if new_total_qty < 0: # Avoid division by zero; abs(current_qty) for old short value
+                        # (abs(current_qty) * current_cost_basis) is total value sold short previously
+                        # (order_quantity * final_fill_price) is value of new shares shorted
+                        # abs(new_total_qty) is total shares shorted
+                        new_cost_basis = (abs(current_qty) * current_cost_basis + order_quantity * final_fill_price) / abs(new_total_qty)
+                        self.positions[symbol]['cost_basis'] = new_cost_basis
+                    else: # Should not happen if current_qty <=0 and order_qty > 0 leading to new_total_qty > 0
+                          # This would mean selling while flat/short resulted in a long position, which is wrong.
+                          # Unless order_quantity was negative, but we defined it as positive.
+                        logger.error(f"Unexpected new_total_qty {new_total_qty} in SELL logic for {symbol}")
+                        self.positions[symbol]['cost_basis'] = 0.0
+
+
+                self.positions[symbol]['quantity'] = new_total_qty
+                if new_total_qty == 0:
+                     self.positions[symbol]['cost_basis'] = 0.0
+
+            logger.info(f"After {direction} {symbol}: Qty={self.positions[symbol]['quantity']}, CostBasis={self.positions[symbol]['cost_basis']:.2f}, Cash={self.cash:.2f}")
+
             # Remove settled order
             if order_id in self._pending_orders:
                 del self._pending_orders[order_id]
+            
             # Log portfolio state
-            non_zero_positions = {sym: pos['quantity'] for sym, pos in self.positions.items() if pos['quantity'] != 0}
+            non_zero_positions = {
+                sym: {"qty": pos['quantity'], "cb": f"{pos['cost_basis']:.2f}"}
+                for sym, pos in self.positions.items() if pos['quantity'] != 0
+            }
             logger.info(f"Post-Settlement Summary: Cash: ${self.cash:.2f}, Total Value: ${self.get_total_portfolio_value():.2f}")
             logger.info(f"Positions: {non_zero_positions or 'No open positions.'}")
             if self._pending_orders:
                 logger.info(f"Pending Orders ({len(self._pending_orders)}): "
-                            f"{[f'{order.direction} {order.quantity} {order.symbol}' for order in self._pending_orders.values()]}")
+                            f"{[f'{o.direction} {o.quantity} {o.symbol}' for o in self._pending_orders.values()]}")
             else:
                 logger.info("Pending Orders: None.")
+
         self._last_market_timestamp = current_timestamp

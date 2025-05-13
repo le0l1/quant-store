@@ -15,7 +15,7 @@ class Event:
 @dataclass(kw_only=True)
 class MarketEvent(Event):
     # 重新定义父类中需要排在后面的带默认值字段
-    type: str = "MARKET"
+    type: str = "MARKET" # 覆盖父类type，作为默认值
 
 
 @dataclass(kw_only=True)
