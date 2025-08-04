@@ -11,6 +11,28 @@ import json
 from typing import Dict, Any, Optional
 
 
+# 请在此处填入你的Cookie
+COOKIE = ""
+
+
+def check_cookie() -> bool:
+    """
+    检查Cookie是否已设置
+    """
+    if not COOKIE or COOKIE.strip() == "":
+        print("❌ 错误: Cookie未设置!")
+        print("\n请按以下步骤获取Cookie:")
+        print("1. 打开浏览器，访问 https://www.jisilu.cn/")
+        print("2. 登录你的账户")
+        print("3. 按F12打开开发者工具")
+        print("4. 切换到Network标签页")
+        print("5. 刷新页面，找到对 www.jisilu.cn 的请求")
+        print("6. 在请求头中找到Cookie字段并复制")
+        print("7. 将Cookie填入脚本中的COOKIE变量")
+        return False
+    return True
+
+
 def fetch_cb_data() -> Optional[Dict[str, Any]]:
     """
     从集思录API获取可转债数据
@@ -18,6 +40,9 @@ def fetch_cb_data() -> Optional[Dict[str, Any]]:
     Returns:
         Dict: API返回的JSON数据，如果请求失败返回None
     """
+    if not check_cookie():
+        return None
+        
     url = "https://www.jisilu.cn/webapi/cb/list/"
     
     # 设置请求头，模拟浏览器访问
@@ -29,7 +54,7 @@ def fetch_cb_data() -> Optional[Dict[str, Any]]:
         'Connection': 'keep-alive',
         'Columns': '1,70,2,3,5,6,11,12,14,15,16,29,30,32,34,44,46,47,50,52,53,54,56,57,58,59,60,62,63,67',
         'Init': '1',
-        'Cookie': '',
+        'Cookie': COOKIE,
         'Referer': 'https://www.jisilu.cn/',
     }
     
@@ -112,7 +137,7 @@ def filter_and_sort_data(df: pd.DataFrame) -> pd.DataFrame:
         print(f"数据列名: {list(df.columns)}")
         
         # 检查必需的字段是否存在
-        required_fields = ['bond_nm', 'price_tips', 'icons', 'sprice', 'dblow']
+        required_fields = ['bond_nm', 'price_tips', 'icons', 'sprice', 'dblow', 'curr_iss_amt']
         missing_fields = [field for field in required_fields if field not in df.columns]
         if missing_fields:
             print(f"缺少必需字段: {missing_fields}")
@@ -142,8 +167,12 @@ def filter_and_sort_data(df: pd.DataFrame) -> pd.DataFrame:
         df_filtered = df_filtered[df_filtered['sprice'] > 3]
         print(f"过滤sprice > 3后: {len(df_filtered)} 条")
         
-        # 5. 根据 dblow 进行升序排序，输出最小的 top 20
-        df_sorted = df_filtered.sort_values('dblow', ascending=True)
+        # 5. 计算排序指标: rank_indicator = dblow + curr_iss_amt
+        df_filtered['rank_indicator'] = df_filtered['dblow'] + df_filtered['curr_iss_amt']
+        print(f"计算排序指标: rank_indicator = dblow + curr_iss_amt")
+        
+        # 6. 根据 rank_indicator 进行升序排序，输出最小的 top 20
+        df_sorted = df_filtered.sort_values('rank_indicator', ascending=True)
         result_df = df_sorted.head(20)
         
         print(f"最终筛选结果: {len(result_df)} 条")
@@ -191,7 +220,8 @@ def main():
     print("2. 剔除 'price_tips': '待上市'")
     print("3. 剔除 'icons'下有R的 和 有O的")
     print("4. sprice > 3")
-    print("5. 根据 dblow 进行升序排序，输出最小的 top 20")
+    print("5. 计算排序指标: rank_indicator = dblow + curr_iss_amt")
+    print("6. 根据 rank_indicator 进行升序排序，输出最小的 top 20")
     print("="*50)
     
     filtered_df = filter_and_sort_data(df)
@@ -211,7 +241,7 @@ def main():
     pd.set_option('display.max_colwidth', 15)
     
     # 显示关键字段
-    key_columns = ['bond_id', 'bond_nm', 'price', 'sprice', 'dblow', 'premium_rt', 'increase_rt']
+    key_columns = ['bond_id', 'bond_nm', 'price', 'sprice', 'dblow', 'curr_iss_amt', 'rank_indicator', 'premium_rt', 'increase_rt']
     available_columns = [col for col in key_columns if col in filtered_df.columns]
     
     print(f"\n筛选结果 (显示字段: {', '.join(available_columns)}):")
@@ -221,6 +251,10 @@ def main():
     print(f"\n筛选结果统计:")
     if 'dblow' in filtered_df.columns:
         print(f"dblow范围: {filtered_df['dblow'].min():.2f} - {filtered_df['dblow'].max():.2f}")
+    if 'curr_iss_amt' in filtered_df.columns:
+        print(f"curr_iss_amt范围: {filtered_df['curr_iss_amt'].min():.2f} - {filtered_df['curr_iss_amt'].max():.2f}")
+    if 'rank_indicator' in filtered_df.columns:
+        print(f"rank_indicator范围: {filtered_df['rank_indicator'].min():.2f} - {filtered_df['rank_indicator'].max():.2f}")
     if 'sprice' in filtered_df.columns:
         print(f"sprice范围: {filtered_df['sprice'].min():.2f} - {filtered_df['sprice'].max():.2f}")
     if 'price' in filtered_df.columns:
