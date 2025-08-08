@@ -137,7 +137,7 @@ def filter_and_sort_data(df: pd.DataFrame) -> pd.DataFrame:
         print(f"数据列名: {list(df.columns)}")
         
         # 检查必需的字段是否存在
-        required_fields = ['bond_nm', 'price_tips', 'icons', 'sprice', 'dblow', 'curr_iss_amt']
+        required_fields = ['bond_nm', 'price_tips', 'icons', 'sprice', 'dblow', 'curr_iss_amt', 'rating_cd']
         missing_fields = [field for field in required_fields if field not in df.columns]
         if missing_fields:
             print(f"缺少必需字段: {missing_fields}")
@@ -167,11 +167,15 @@ def filter_and_sort_data(df: pd.DataFrame) -> pd.DataFrame:
         df_filtered = df_filtered[df_filtered['sprice'] > 3]
         print(f"过滤sprice > 3后: {len(df_filtered)} 条")
         
-        # 5. 计算排序指标: rank_indicator = dblow + curr_iss_amt
+        # 5. 剔除 rating_cd 包含 'B' 的
+        df_filtered = df_filtered[~df_filtered['rating_cd'].astype(str).str.contains('B', case=False, na=False)]
+        print(f"剔除 rating_cd 包含 'B' 的后: {len(df_filtered)} 条")
+        
+        # 6. 计算排序指标: rank_indicator = dblow + curr_iss_amt
         df_filtered['rank_indicator'] = df_filtered['dblow'] + df_filtered['curr_iss_amt']
         print(f"计算排序指标: rank_indicator = dblow + curr_iss_amt")
         
-        # 6. 根据 rank_indicator 进行升序排序，输出最小的 top 20
+        # 7. 根据 rank_indicator 进行升序排序，输出最小的 top 20
         df_sorted = df_filtered.sort_values('rank_indicator', ascending=True)
         result_df = df_sorted.head(20)
         
@@ -220,8 +224,9 @@ def main():
     print("2. 剔除 'price_tips': '待上市'")
     print("3. 剔除 'icons'下有R的 和 有O的")
     print("4. sprice > 3")
-    print("5. 计算排序指标: rank_indicator = dblow + curr_iss_amt")
-    print("6. 根据 rank_indicator 进行升序排序，输出最小的 top 20")
+    print("5. 剔除 rating_cd 包含 'B' 的")
+    print("6. 计算排序指标: rank_indicator = dblow + curr_iss_amt")
+    print("7. 根据 rank_indicator 进行升序排序，输出最小的 top 20")
     print("="*50)
     
     filtered_df = filter_and_sort_data(df)
