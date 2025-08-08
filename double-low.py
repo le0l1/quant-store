@@ -8,11 +8,11 @@
 import requests
 import pandas as pd
 import json
+import os
 from typing import Dict, Any, Optional
 
-
-# 请在此处填入你的Cookie
-COOKIE = ""
+# 从环境变量读取Cookie，更安全，避免提交泄漏
+COOKIE = os.getenv("JISILU_COOKIE", "")
 
 
 def check_cookie() -> bool:
@@ -21,14 +21,16 @@ def check_cookie() -> bool:
     """
     if not COOKIE or COOKIE.strip() == "":
         print("❌ 错误: Cookie未设置!")
-        print("\n请按以下步骤获取Cookie:")
+        print("\n推荐做法: 通过环境变量设置，避免提交泄漏")
+        print("export JISILU_COOKIE='你的Cookie字符串'")
+        print("或在运行时临时设置: JISILU_COOKIE='你的Cookie' python double-low.py")
+        print("\n获取Cookie步骤:")
         print("1. 打开浏览器，访问 https://www.jisilu.cn/")
         print("2. 登录你的账户")
         print("3. 按F12打开开发者工具")
         print("4. 切换到Network标签页")
         print("5. 刷新页面，找到对 www.jisilu.cn 的请求")
         print("6. 在请求头中找到Cookie字段并复制")
-        print("7. 将Cookie填入脚本中的COOKIE变量")
         return False
     return True
 
@@ -167,9 +169,9 @@ def filter_and_sort_data(df: pd.DataFrame) -> pd.DataFrame:
         df_filtered = df_filtered[df_filtered['sprice'] > 3]
         print(f"过滤sprice > 3后: {len(df_filtered)} 条")
         
-        # 5. 剔除 rating_cd 包含 'B' 的
-        df_filtered = df_filtered[~df_filtered['rating_cd'].astype(str).str.contains('B', case=False, na=False)]
-        print(f"剔除 rating_cd 包含 'B' 的后: {len(df_filtered)} 条")
+        # 5. 剔除 rating_cd 不包含 'A' 的
+        df_filtered = df_filtered[df_filtered['rating_cd'].astype(str).str.contains('A', case=False, na=False)]
+        print(f"剔除 rating_cd 不包含 'A' 的后: {len(df_filtered)} 条")
         
         # 6. 计算排序指标: rank_indicator = dblow + curr_iss_amt
         df_filtered['rank_indicator'] = df_filtered['dblow'] + df_filtered['curr_iss_amt']
@@ -224,7 +226,7 @@ def main():
     print("2. 剔除 'price_tips': '待上市'")
     print("3. 剔除 'icons'下有R的 和 有O的")
     print("4. sprice > 3")
-    print("5. 剔除 rating_cd 包含 'B' 的")
+    print("5. 剔除 rating_cd 不包含 'A' 的")
     print("6. 计算排序指标: rank_indicator = dblow + curr_iss_amt")
     print("7. 根据 rank_indicator 进行升序排序，输出最小的 top 20")
     print("="*50)
