@@ -1,8 +1,12 @@
 version: '3.8'
 services:
   notebook:
-    image: quay.io/jupyter/base-notebook 
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8889:8888"  # 宿主机端口 8080 映射到容器端口 80 [[6]]
     volumes:
       - .:/home/jovyan/data
+    environment:
+      - TZ=Asia/Shanghai
