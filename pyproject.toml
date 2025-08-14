@@ -6,14 +6,18 @@ authors = [
     {name = "Quant Store", email = "your-email@example.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
-    "adata>=2.9.3",
+    "akshare>=1.17.34",
+    "backtrader>=1.9.78.123",
     "duckdb>=0.9.0",
+    "matplotlib>=3.10.5",
     "numpy>=1.24.4",
     "pandas>=1.5.0",
+    "pyfolio-reloaded>=0.9.9",
     "requests>=2.28.0",
     "schedule>=1.2.0",
+    "skfolio>=0.11.0",
 ]
 
 [project.optional-dependencies]
@@ -21,6 +25,9 @@ dev = [
     "pytest>=7.0.0",
     "black>=22.0.0",
     "flake8>=5.0.0",
+    "ipykernel", 
+    "jupyterlab",
+    "ipywidgets>=7.7",
 ]
 
 [build-system]

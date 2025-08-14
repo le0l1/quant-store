@@ -11,6 +11,7 @@ import logging
 import os
 from datetime import datetime
 from update import QuantDataManager
+from update_etf import update_etf_data
 
 # 配置日志
 logging.basicConfig(
@@ -49,6 +50,16 @@ def daily_update_job():
         logger.error(f"每日更新任务执行失败: {e}")
 
 
+def daily_update_etf_job():
+    """每日ETF数据更新任务"""
+    logger.info("开始执行每日ETF数据更新任务")
+    try:
+        update_etf_data()
+        logger.info("每日ETF数据更新成功")
+    except Exception as e:
+        logger.error(f"每日ETF更新任务执行失败: {e}")
+
+
 def setup_schedule():
     """设置定时任务"""
     # 设置时区为东八区（北京时间）
@@ -60,18 +71,26 @@ def setup_schedule():
         logger.info("⚠️  tzset() 不可用，使用环境变量设置时区")
     
     # 每个工作日15:50更新数据（北京时间）
-    schedule.every().monday.at("17:30").do(daily_update_job)
-    schedule.every().tuesday.at("17:30").do(daily_update_job)
-    schedule.every().wednesday.at("17:30").do(daily_update_job)
-    schedule.every().thursday.at("17:30").do(daily_update_job)
-    schedule.every().friday.at("17:30").do(daily_update_job)
+    schedule.every().monday.at("15:30").do(daily_update_job)
+    schedule.every().tuesday.at("15:30").do(daily_update_job)
+    schedule.every().wednesday.at("15:30").do(daily_update_job)
+    schedule.every().thursday.at("15:30").do(daily_update_job)
+    schedule.every().friday.at("15:30").do(daily_update_job)
+
+    # 每个工作日17:35更新ETF数据（北京时间）
+    schedule.every().monday.at("15:35").do(daily_update_etf_job)
+    schedule.every().tuesday.at("15:35").do(daily_update_etf_job)
+    schedule.every().wednesday.at("15:35").do(daily_update_etf_job)
+    schedule.every().thursday.at("15:35").do(daily_update_etf_job)
+    schedule.every().friday.at("15:35").do(daily_update_etf_job)
     
     # 显示当前时区信息
     current_time = datetime.now()
     logger.info(f"当前时间: {current_time}")
     logger.info(f"当前时区: {time.tzname}")
     logger.info("定时任务设置完成")
-    logger.info("工作日 17:30 (北京时间) - 更新可转债数据")
+    logger.info("工作日 15:30 (北京时间) - 更新可转债数据")
+    logger.info("工作日 15:35 (北京时间) - 更新ETF数据")
 
 
 def run_scheduler():
