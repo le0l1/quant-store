@@ -26,38 +26,33 @@ logger = logging.getLogger(__name__)
 
 
 def daily_update_job():
-    """每日数据更新任务"""
-    logger.info("开始执行每日数据更新任务")
-    
+    """每日可转债数据更新任务"""
+    logger.info("--- 开始执行每日可转债数据更新任务 ---")
     try:
+        # QuantDataManager is now just a logical wrapper for the update process
         data_manager = QuantDataManager()
-        
-        # 更新可转债数据
         success = data_manager.update_convertible_bonds()
         
         if success:
-            logger.info("每日数据更新成功")
-            
-            # 获取统计信息
-            stats = data_manager.get_data_statistics()
-            logger.info(f"更新统计: {stats}")
+            logger.info("--- 每日可转债数据更新任务调度成功 ---")
         else:
-            logger.error("每日数据更新失败")
-        
-        data_manager.close()
-        
+            logger.error("--- 每日可转债数据更新任务执行失败 ---")
+            
     except Exception as e:
-        logger.error(f"每日更新任务执行失败: {e}")
+        logger.error(f"每日可转债更新任务执行期间发生未捕获的异常: {e}")
 
 
 def daily_update_etf_job():
     """每日ETF数据更新任务"""
-    logger.info("开始执行每日ETF数据更新任务")
+    logger.info("--- 开始执行每日ETF数据更新任务 ---")
     try:
+        # The update_etf_data function now handles its own logging internally
         update_etf_data()
-        logger.info("每日ETF数据更新成功")
+        logger.info("--- 每日ETF数据更新任务调度成功 ---")
+        # Note: Success/failure is logged within update_etf_data itself.
+        # This log indicates the scheduler successfully completed the call.
     except Exception as e:
-        logger.error(f"每日ETF更新任务执行失败: {e}")
+        logger.error(f"每日ETF更新任务执行期间发生未捕获的异常: {e}")
 
 
 def setup_schedule():
