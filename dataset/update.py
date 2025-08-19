@@ -63,6 +63,17 @@ def save_data_to_parquet(df: pd.DataFrame, output_dir: str, table_name: str):
     df['year_month'] = df[DATE_COLUMN].dt.strftime('%Y-%m')
     logger.info("已创建 'year_month' 分区列。\n")
 
+    # --- 通用类型问题解决方案 ---
+    # 遍历所有列，将 object 类型的列统一转换为字符串，以避免 Parquet 写入错误。
+    # 这可以处理包含列表、字典等复杂对象的列。
+    for col in df.columns:
+        if df[col].dtype == 'object':
+            # 对于list或dict类型，使用json.dumps进行序列化，其他类型直接转为字符串
+            df[col] = df[col].apply(lambda x: json.dumps(x, ensure_ascii=False) if isinstance(x, (dict, list)) else x)
+            df[col] = df[col].astype(str) # 再次确保最终类型为string
+            logger.info(f"已将 object 类型的列 '{col}' 统一转换为字符串以确保兼容性。")
+    # --- 解决方案结束 ---
+
     # 按月份对新数据进行分组，以便逐月处理
     for year_month, group_df in df.groupby('year_month'):
         partition_path = os.path.join(output_dir, table_name, f"year_month={year_month}")
@@ -102,6 +113,7 @@ def save_data_to_parquet(df: pd.DataFrame, output_dir: str, table_name: str):
         except Exception as e:
             logger.error(f"❌ 处理分区 {partition_path} 时发生错误: {e}\n")
 
+
 class QuantDataManager:
     """量化数据管理器 - Parquet版本"""
 
@@ -120,6 +132,12 @@ class QuantDataManager:
         url = "https://www.jisilu.cn/webapi/cb/list/"
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
+            'Columns': '1,70,2,3,5,6,11,12,14,15,16,29,30,32,34,44,46,47,50,52,53,54,56,57,58,59,60,62,63,67',
+            'Init': '1',
             'Cookie': COOKIE,
             'Referer': 'https://www.jisilu.cn/',
         }

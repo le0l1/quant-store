@@ -165,9 +165,9 @@ def filter_and_sort_data(df: pd.DataFrame) -> pd.DataFrame:
         df_filtered = df_filtered[df_filtered['icons'].apply(filter_icons)]
         print(f"剔除icons包含R或O的可转债后: {len(df_filtered)} 条")
         
-        # 4. sprice > 3
-        df_filtered = df_filtered[df_filtered['sprice'] > 3]
-        print(f"过滤sprice > 3后: {len(df_filtered)} 条")
+        # 4. price < 150
+        df_filtered = df_filtered[df_filtered['price'] < 150]
+        print(f"过滤price > 150后: {len(df_filtered)} 条")
         
         # 5. 剔除 rating_cd 不包含 'A' 的
         df_filtered = df_filtered[df_filtered['rating_cd'].astype(str).str.contains('A', case=False, na=False)]
@@ -225,7 +225,7 @@ def main():
     print("1. 剔除 bond_nm 包含 '退' 字的行")
     print("2. 剔除 'price_tips': '待上市'")
     print("3. 剔除 'icons'下有R的 和 有O的")
-    print("4. sprice > 3")
+    print("4. 剔除 price > 130")
     print("5. 剔除 rating_cd 不包含 'A' 的")
     print("6. 计算排序指标: rank_indicator = dblow + curr_iss_amt")
     print("7. 根据 rank_indicator 进行升序排序，输出最小的 top 20")
